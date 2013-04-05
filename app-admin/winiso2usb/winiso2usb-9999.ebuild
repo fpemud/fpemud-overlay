@@ -23,7 +23,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=">=app-shells/bash-4.2
          app-arch/p7zip
-         app-cdr/cdrtools
+         virtual/cdrtools
          sys-fs/ntfs3g
          >=sys-boot/grub-2.00"
 
