@@ -19,7 +19,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="app-emulation/libvirt[qemu]"
+RDEPEND="net-misc/spice-gtk"
 DEPEND=""
 
 pkg_postrm() {  
