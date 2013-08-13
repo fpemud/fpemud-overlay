@@ -14,7 +14,8 @@ KEYWORDS="-* amd64 x86"
 IUSE=""
 
 DEPEND="app-arch/p7zip"
-RDEPEND=">=app-emulation/wine-1.4.1[win32]
+RDEPEND="|| ( >=app-emulation/wine-1.4.1[win32] 
+              >=app-emulation/wine-1.6[abi_x86_32] )
          >=app-emulation/winetricks-744"
 
 src_unpack() {

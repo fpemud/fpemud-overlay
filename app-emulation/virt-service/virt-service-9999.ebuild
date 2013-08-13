@@ -20,7 +20,8 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="net-misc/bridge-utils
-         net-misc/openvpn
+         net-dns/dnsmasq
+         net-fs/samba
          >=sys-apps/iproute2-2.6.34"
 DEPEND=""
 

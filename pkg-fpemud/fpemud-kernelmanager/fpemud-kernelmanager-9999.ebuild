@@ -26,10 +26,10 @@ RDEPEND="sys-kernel/gentoo-sources
 DEPEND="${RDEPEND}"
 
 pkg_postrm() {
-	find "${EROOT}/usr/share/fpemud-kernelmanager" -name "*.pyc" | xargs rm -f
+	find "${EROOT}/usr/lib/fpemud-kernelmanager" -name "*.pyc" | xargs rm -f
  
 	# Delete empty parent directories.
-	local dir="${EROOT}/usr/share/fpemud-kernelmanager"
+	local dir="${EROOT}/usr/lib/fpemud-kernelmanager"
 	while [[ "${dir}" != "${EROOT%/}" ]]; do
 		rmdir "${dir}" 2> /dev/null || break
 		dir="${dir%/*}"

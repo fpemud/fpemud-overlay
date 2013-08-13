@@ -19,7 +19,8 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/spice-gtk"
+RDEPEND="net-misc/spice-gtk
+         dev-python/pexpect"
 DEPEND=""
 
 pkg_postrm() {  
