@@ -1,0 +1,38 @@
+#!/bin/sh
+# Copyright 2006-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+_run_hooks() {
+	hookf=hook_$1
+	for f in /etc/portage/bashrc.d/* ; do
+		source "${f}"
+		if [ "`type -t ${hookf}`" = "function" ] ; then
+			${hookf}
+		fi
+		unset -f hook_post_src_unpack
+		unset -f hook_post_src_prepare
+		unset -f hook_post_src_configure
+		unset -f hook_post_src_compile
+		unset -f hook_post_src_install
+	done
+}
+
+post_src_unpack() {
+	_run_hooks post_src_unpack
+}
+
+post_src_prepare() {
+	_run_hooks post_src_prepare
+}
+
+post_src_configure() {
+	_run_hooks post_src_configure
+}
+
+post_src_compile() {
+	_run_hooks post_src_compile
+}
+
+post_src_install() {
+	_run_hooks post_src_install
+}

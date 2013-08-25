@@ -1,0 +1,13 @@
+#!/bin/sh
+
+hook_post_src_install() {
+	for fn in `find "${D}" -group wheel` ; do
+		local fnstr=${fn#$D}
+		if [ "${fnstr:0:1}" != "/" ] ; then
+			fnstr="/${fnstr}"
+		fi
+
+		echo ">>> Change group wheel to root for file \"${fnstr}\""
+		chown :root "${fn}"
+	done
+}
