@@ -1,0 +1,17 @@
+diff --git a/dlls/d3d9/surface.c b/dlls/d3d9/surface.c
+index a031c6e..324273f 100644
+--- a/dlls/d3d9/surface.c
++++ b/dlls/d3d9/surface.c
+@@ -89,6 +89,12 @@ static ULONG WINAPI d3d9_surface_Release(IDirect3DSurface9 *iface)
+         return IUnknown_Release(surface->forwardReference);
+     }
+ 
++    if (surface->refcount == 0)
++    {
++        WARN("Surface doesn't have any references.\n");
++        return 0;
++    }
++
+     refcount = InterlockedDecrement(&surface->refcount);
+     TRACE("%p decreasing refcount to %u.\n", iface, refcount);
+ 
