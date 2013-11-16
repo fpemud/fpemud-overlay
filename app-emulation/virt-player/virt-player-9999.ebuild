@@ -21,14 +21,15 @@ IUSE=""
 
 RDEPEND="net-misc/spice-gtk
          dev-python/pexpect
-         dev-python/elemlib"
+         dev-python/elemlib
+         app-emulation/virt-service"
 DEPEND=""
 
 pkg_postrm() {  
-	find "${EROOT}/usr/share/virt-player" -name "*.pyc" | xargs rm -f
+	find "${EROOT}/usr/bin/virt-player" -name "*.pyc" | xargs rm -f
 
 	# Delete empty parent directories.
-	local dir="${EROOT}/usr/share/virt-player"
+	local dir="${EROOT}/usr/bin/virt-player"
 	while [[ "${dir}" != "${EROOT%/}" ]]; do
 		rmdir "${dir}" 2> /dev/null || break
 		dir="${dir%/*}"
