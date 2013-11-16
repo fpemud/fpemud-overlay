@@ -20,7 +20,8 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="net-misc/spice-gtk
-         dev-python/pexpect"
+         dev-python/pexpect
+         dev-python/elemlib"
 DEPEND=""
 
 pkg_postrm() {  
