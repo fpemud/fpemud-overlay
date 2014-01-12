@@ -19,7 +19,10 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="app-portage/mirrorselect"
+RDEPEND="app-portage/mirrorselect
+         net-misc/wget
+         sys-fs/squashfs-tools
+         sys-apps/portage"
 DEPEND="${RDEPEND}"
 
 pkg_postrm() {  
