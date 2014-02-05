@@ -19,7 +19,9 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND=""
+RDEPEND="dev-python/pyopenssl
+         dev-python/python-daemon
+         dev-python/strict_pgs"
 DEPEND=""
 
 pkg_postrm() {  
