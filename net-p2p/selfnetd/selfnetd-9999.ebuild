@@ -21,6 +21,7 @@ IUSE=""
 
 RDEPEND="dev-python/pyopenssl
          dev-python/python-daemon
+         dev-python/netifaces
          dev-python/strict_pgs"
 DEPEND=""
 
