@@ -22,7 +22,8 @@ IUSE=""
 RDEPEND="dev-python/pyopenssl
          dev-python/python-daemon
          dev-python/netifaces
-         dev-python/strict_pgs"
+         dev-python/strict_pgs
+         sys-apps/systemd"
 DEPEND=""
 
 pkg_postrm() {  
