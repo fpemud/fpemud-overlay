@@ -22,11 +22,10 @@ IUSE=""
 RDEPEND="app-portage/mirrorselect
          net-misc/wget
          sys-fs/squashfs-tools
-         sys-apps/portage
-         dev-python/git-python"
+         sys-apps/portage"
 DEPEND="${RDEPEND}"
 
-pkg_postrm() {  
+pkg_postrm() {
 	find "${EROOT}/usr/bin/fpemud-portage" -name "*.pyc" | xargs rm -f
 
 	# Delete empty parent directories.
