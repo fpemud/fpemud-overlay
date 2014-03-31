@@ -22,7 +22,8 @@ IUSE=""
 RDEPEND="app-portage/mirrorselect
          net-misc/wget
          sys-fs/squashfs-tools
-         sys-apps/portage"
+         sys-apps/portage
+         sys-apps/systemd"
 DEPEND="${RDEPEND}"
 
 pkg_postrm() {

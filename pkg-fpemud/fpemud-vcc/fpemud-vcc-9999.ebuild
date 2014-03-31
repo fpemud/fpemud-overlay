@@ -23,7 +23,7 @@ RDEPEND="net-p2p/selfnetd
          dev-vcs/git"
 DEPEND="${RDEPEND}"
 
-pkg_postrm() {  
+pkg_postrm() {
 	find "${EROOT}/usr/bin/fpemud-vcc" -name "*.pyc" | xargs rm -f
 
 	# Delete empty parent directories.
