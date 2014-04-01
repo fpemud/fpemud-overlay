@@ -20,8 +20,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="net-p2p/selfnetd
-         dev-vcs/git
-         dev-python/pyinotify"
+         dev-vcs/git"
 DEPEND="${RDEPEND}"
 
 pkg_postrm() {
