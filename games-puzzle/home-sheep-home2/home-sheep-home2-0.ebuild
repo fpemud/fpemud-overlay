@@ -7,10 +7,10 @@ inherit eutils games
 
 DESCRIPTION="Home Sheep Home 2 - A Little Epic"
 HOMEPAGE="http://homesheephome2.com"
-SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}.zip
+SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}
          ftp://fpemud-workstation/distfiles-private/${PN}.desktop
          ftp://fpemud-workstation/distfiles-private/${PN}.png
-         ftp://fpemud-workstation/distfiles-private/${PN}"
+         ftp://fpemud-workstation/distfiles-private/${PN}.zip"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
