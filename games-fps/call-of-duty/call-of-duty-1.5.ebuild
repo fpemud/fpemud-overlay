@@ -17,6 +17,7 @@ LICENSE=""
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
+RESTRICT="mirror"
 
 DEPEND="app-arch/unzip"
 RDEPEND=">=app-emulation/wine-1.6[abi_x86_32]"

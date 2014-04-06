@@ -15,6 +15,7 @@ LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
+RESTRICT="mirror"
 
 DEPEND="app-arch/unzip"
 RDEPEND="games-emulation/dosbox"
