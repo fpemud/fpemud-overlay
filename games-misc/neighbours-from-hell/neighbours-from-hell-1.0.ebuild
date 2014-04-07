@@ -6,7 +6,7 @@ EAPI=3
 inherit eutils games
 
 DESCRIPTION="Neighbours from Hell"
-HOMEPAGE="http://www.${PN}.com"
+HOMEPAGE="http://www.neighbours-from-hell.com"
 SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}
          ftp://fpemud-workstation/distfiles-private/${PN}.desktop
          ftp://fpemud-workstation/distfiles-private/${PN}.png
