@@ -26,7 +26,7 @@ RDEPEND="app-emulation/qemu
          app-arch/unzip"
 DEPEND=""
 
-pkg_postrm() {  
+pkg_postrm() {
 	find "${EROOT}/usr/lib/windows-virtmanager" -name "*.pyc" | xargs rm -f
 
 	# Delete empty parent directories.
