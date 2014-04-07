@@ -4,17 +4,12 @@
 
 EAPI="4"
 
-if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://github.com/fpemud/fpemud-kernelmanager.git"
-	inherit git-2
-	SRC_URI=""
-	KEYWORDS="-* amd64 x86"
-else
-	die "Invalid version"
-fi
+inherit git-2
 
 DESCRIPTION="Build boot environment(kernel/initrd/bootloader/...) for fpemud's systems"
-
+SRC_URI=""
+EGIT_REPO_URI="git://github.com/fpemud/fpemud-kernelmanager.git"
+KEYWORDS="-* amd64 x86"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
