@@ -17,7 +17,16 @@ IUSE=""
 RESTRICT="mirror"
 
 RDEPEND="app-emulation/windows-virtmanager"
-DEPEND=""
+DEPEND="app-arch/unzip"
+
+EGIT_NOUNPACK=1
+
+src_install() {
+	default
+
+	cp "${DISTDIR}/source-insight-setup.exe" "${D}/opt/windows-virtmanager/plugins/source-insight"
+	unzip "${DISTDIR}/source-insight-CLF.zip" -d "${D}/opt/windows-virtmanager/plugins/source-insight/languages"
+}
 
 pkg_postrm() {
 	find "${EROOT}/usr/lib/windows-virtmanager/plugins/source-insight" -name "*.pyc" | xargs rm -f

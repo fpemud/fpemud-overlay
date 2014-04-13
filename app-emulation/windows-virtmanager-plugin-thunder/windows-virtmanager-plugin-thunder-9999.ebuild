@@ -19,6 +19,16 @@ RESTRICT="mirror"
 RDEPEND="app-emulation/windows-virtmanager"
 DEPEND=""
 
+EGIT_NOUNPACK=1
+
+src_install() {
+	default
+
+	for f in ${A} ; do
+		cp "${DISTDIR}/${f}" "${D}/opt/windows-virtmanager/plugins/thunder"
+	done
+}
+
 pkg_postrm() {
 	find "${EROOT}/usr/lib/windows-virtmanager/plugins/thunder" -name "*.pyc" | xargs rm -f
 

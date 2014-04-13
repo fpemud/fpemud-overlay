@@ -21,6 +21,16 @@ RESTRICT="mirror"
 RDEPEND="app-emulation/windows-virtmanager"
 DEPEND=""
 
+EGIT_NOUNPACK=1
+
+src_install() {
+	default
+
+	for f in ${A} ; do
+		cp "${DISTDIR}/${f}" "${D}/opt/windows-virtmanager/plugins/active-python"
+	done
+}
+
 pkg_postrm() {
 	find "${EROOT}/usr/lib/windows-virtmanager/plugins/active-python" -name "*.pyc" | xargs rm -f
 
@@ -31,4 +41,3 @@ pkg_postrm() {
 		dir="${dir%/*}"
 	done
 }
-
