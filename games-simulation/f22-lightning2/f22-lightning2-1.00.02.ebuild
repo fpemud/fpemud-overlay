@@ -5,12 +5,12 @@
 EAPI=3
 inherit eutils games
 
-DESCRIPTION="CISCO HEAT"
+DESCRIPTION="F-22 Lightning 2"
 HOMEPAGE=""
 SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}
          ftp://fpemud-workstation/distfiles-private/${PN}.desktop
          ftp://fpemud-workstation/distfiles-private/${PN}-dosbox.conf
-         ftp://fpemud-workstation/distfiles-private/${PN}.zip"
+         ftp://fpemud-workstation/distfiles-private/F-22.Lightning.2.zip"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
@@ -21,18 +21,20 @@ DEPEND="app-arch/unzip"
 RDEPEND="games-emulation/dosbox"
 
 src_unpack() {
-	mkdir "${WORKDIR}/gamedir"
-	unzip "${DISTDIR}/${PN}.zip" -d "${WORKDIR}/gamedir"
+
+	unzip "${DISTDIR}/F-22.Lightning.2.zip" -d "${WORKDIR}/gamedir"
 	cp "${DISTDIR}/${PN}-dosbox.conf" "${WORKDIR}/gamedir/dosbox.conf"
 }
 
 src_prepare() {
+
 	# Prepare the wrapper script
 	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/${PN}/g" \
 	    -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/${PN}/g" "${DISTDIR}/${PN}" > "${WORKDIR}/${PN}"
 }
 
 src_install() {
+
 	dodir "${GAMES_PREFIX_OPT}/${PN}"
 	cp -r gamedir/* "${D}/${GAMES_PREFIX_OPT}/${PN}"
 
