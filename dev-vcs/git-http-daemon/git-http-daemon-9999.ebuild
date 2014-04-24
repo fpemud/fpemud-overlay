@@ -16,5 +16,6 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="www-servers/apache
-         www-servers/pwauth"
+         www-apache/mod_authnz_external
+         www-apache/pwauth"
 DEPEND=""
