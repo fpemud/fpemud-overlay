@@ -15,7 +15,5 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="www-servers/apache
-         www-apache/mod_authnz_external
-         www-apache/pwauth"
+RDEPEND="www-servers/apache"
 DEPEND=""
