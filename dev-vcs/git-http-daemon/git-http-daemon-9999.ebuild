@@ -15,5 +15,5 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="www-servers/apache"
+RDEPEND=">=www-servers/apache-2.4.9"
 DEPEND=""
