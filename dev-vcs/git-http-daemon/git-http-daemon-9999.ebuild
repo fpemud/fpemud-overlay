@@ -15,5 +15,6 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND=">=www-servers/apache-2.4.9"
+RDEPEND=">=www-servers/apache-2.4.9
+         sys-apps/systemd"
 DEPEND=""
