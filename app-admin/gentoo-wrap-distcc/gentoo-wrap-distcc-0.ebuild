@@ -5,7 +5,7 @@
 EAPI=3
 inherit eutils
 
-DESCRIPTION="Remove wheel group"
+DESCRIPTION="Create distcc wrapper to workaround cross-compiling problem"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -21,5 +21,5 @@ src_prepare() {
 
 src_install() {
 	dodir "/etc/portage/bashrc.d"
-	cp -r "${FILESDIR}/bashrc.d/remove-wheel-group" "${D}/etc/portage/bashrc.d"
+	cp -r "${FILESDIR}/bashrc.d/wrap-distcc" "${D}/etc/portage/bashrc.d"
 }
