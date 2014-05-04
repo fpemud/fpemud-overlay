@@ -23,7 +23,9 @@ RDEPEND="app-portage/mirrorselect
          net-misc/wget
          sys-fs/squashfs-tools
          sys-apps/portage
-         sys-apps/systemd"
+         sys-apps/systemd
+         dev-vcs/git
+         dev-vcs/subversion"
 DEPEND="${RDEPEND}"
 
 pkg_postrm() {
