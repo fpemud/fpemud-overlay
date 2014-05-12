@@ -25,7 +25,10 @@ RDEPEND="app-portage/mirrorselect
          sys-apps/portage
          sys-apps/systemd
          dev-vcs/git
-         dev-vcs/subversion"
+         dev-vcs/subversion
+         dev-vcs/mercurial
+         dev-vcs/bzr
+         dev-vcs/cvs"
 DEPEND="${RDEPEND}"
 
 pkg_postrm() {
