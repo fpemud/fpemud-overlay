@@ -20,6 +20,6 @@ src_prepare() {
 
 src_install() {
 	dodir "/etc/NetworkManager/dispatcher.d"
-	cp "${FILESDIR}/10-upnpc-ssh" "${D}/etc/NetworkManager/dispatcher.d"
-	chmod 755 "${D}/etc/NetworkManager/dispatcher.d/10-upnpc-ssh"
+	cp "${FILESDIR}/10-fpemud-upnpc-ssh" "${D}/etc/NetworkManager/dispatcher.d"
+	chmod 755 "${D}/etc/NetworkManager/dispatcher.d/10-fpemud-upnpc-ssh"
 }
