@@ -1,0 +1,116 @@
+#!/usr/bin/python2
+
+"""
+This script should be invoked in /etc/portage/bashrc
+
+post_src_install() {
+    /usr/libexec/gentoo-record-pkgchksum "$D"
+}
+"""
+
+import argparse
+import os
+import subprocess
+import sys
+import ConfigParser
+
+
+dirs = ["bin", "sbin", "lib", "lib32", "lib64"]
+image_dir = ""
+
+
+def full_name(fname):
+    if fname[0] == "/":
+        fname = fname[1:]
+    return "%s/%s" % (image_dir, fname)
+
+def get_makeconf_var(makeConfFile, varName):
+    """Returns variable value, returns None when not found
+       Multiline variable definition is not supported yet
+       Substitution is not supported yet"""
+
+    buf = ""
+    with open(makeConfFile, 'r') as f:
+        buf = f.read()
+
+    m = re.search("^%s=\"(.*)\"$"%(varName), buf, re.MULTILINE)
+    if m is None:
+        return None
+    varVal = m.group(1)
+
+    while True:
+        m = re.search("\${(\S+)?}", varVal)
+        if m is None:
+            break
+        varName2 = m.group(1)
+        varVal2 = FmUtil.getMakeConfVar(makeConfFile, varName2)
+        if varVal2 is None:
+            varVal2 = ""
+
+        varVal = varVal.replace(m.group(0), varVal2)
+
+    return varVal
+
+def store_pkgchksum(srcdir, cfgObj):
+    """dirName is absolute path of directory, pdirName is relative path of directory"""
+
+    full_root_name = full_name(srcdir)
+    for fb in sorted(os.listdir(full_root_name)):
+        fr = os.path.join(srcdir, fb)
+        f = os.path.join(full_root_name, fb)
+
+        if os.path.islink(f):
+            tname = "symlink"
+            target = os.readlink(f)
+        elif os.path.isdir(f):
+            tname = "dir"
+        elif os.path.isfile(f):
+            tname = "file"
+            md5sum = ""
+        else:
+            assert False
+        mode = oct(os.lstat(f).st_mode & 0777)
+        username = pwd.getpwuid(os.lstat(f).st_uid)[0]
+        grouppname = grp.getgrgid(os.lstat(f).st_gid)[0]
+
+        cfgObj.add_section(fr)
+        cfgObj.set(fr, "tname", tname)
+        cfgObj.set(fr, "mode", mode)
+        cfgObj.set(fr, "owner", "%s:%s"%(username, grouppname))
+
+        if tname == "symlink":
+            cfgObj.set(fr, "target", target)
+        elif tname == "file":
+            cfgObj.set(fr, "md5sum", md5sum)
+
+        if os.path.isdir(f) and not os.path.islink(f):
+            store_pkgchksum(fr, cfgObj)
+
+def main():
+    global image_dir
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("image_dir", help="Image directory")
+    parser.add_argument("pkg_category", help="Package category")
+    parser.add_argument("pkg_name", help="Package name")
+    args = parser.parse_args()
+    image_dir = os.path.abspath(args.image_dir)
+    if image_dir[-1] == "/":
+        image_dir = image_dir[:-1]
+
+    cfgobj = ConfigParser.RawConfigParser()
+    store_pkgchksum("/", cfgobj)
+
+    dstdir = get_makeconf_var("/etc/portage/make.conf", "PKGCHKSUMDIR")
+    if dstdir is None:
+        dstdir = "/usr/portage/pkgchksums"
+    dstdir = os.path.join(dstdir, args.pkg_category, args.pkg_name)
+    os.makedirs(dstdir)
+
+    dstfile = os.path.join(dstdir, "%s.pkgchksum"%(args.pkg_name))
+    with open(dstfile, "w") as f:
+        cfgobj.write(f)
+
+if __name__ == "__main__":
+    main()
+

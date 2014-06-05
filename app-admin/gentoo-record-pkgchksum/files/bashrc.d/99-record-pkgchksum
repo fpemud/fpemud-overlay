@@ -1,0 +1,5 @@
+#!/bin/sh
+
+hook_post_src_install() {
+	/usr/libexec/gentoo-record-pkgchksum "${D}"
+}
