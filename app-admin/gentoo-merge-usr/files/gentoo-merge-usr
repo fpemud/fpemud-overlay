@@ -80,7 +80,13 @@ def do_merge(file_keep, file_remove):
             os.makedirs(full_usr_dir_name)
         for fname in sorted(os.listdir(full_root_dir_name)):
             root_name = "/%s/%s" % (dir_name, fname)
-            os.rename(full_name(root_name), full_name("/usr%s" % root_name))
+            full_root_name = full_name(root_name)
+            if os.path.islink(full_root_name):
+                ref = os.readlink(full_root_name)
+                if ref.startswith("../"):
+                    os.remove(full_root_name)
+                    os.symlink("../%s" % ref, full_root_name)
+            os.rename(full_root_name, full_name("/usr%s" % root_name))
         os.rmdir(full_root_dir_name)
         if not image_dir:
             os.symlink("usr/%s" % dir_name, full_root_dir_name)
