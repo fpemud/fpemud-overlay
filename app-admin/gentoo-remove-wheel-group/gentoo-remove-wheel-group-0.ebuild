@@ -21,5 +21,5 @@ src_prepare() {
 
 src_install() {
 	dodir "/etc/portage/bashrc.d"
-	cp -r "${FILESDIR}/bashrc.d/remove-wheel-group" "${D}/etc/portage/bashrc.d"
+	cp -r "${FILESDIR}/bashrc.d"/* "${D}/etc/portage/bashrc.d"
 }

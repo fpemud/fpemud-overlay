@@ -24,7 +24,7 @@ src_install() {
 	doexe "${FILESDIR}/gentoo-merge-usr"
 
 	dodir "/etc/portage/bashrc.d"
-	cp -r "${FILESDIR}/bashrc.d/merge-usr" "${D}/etc/portage/bashrc.d"
+	cp -r "${FILESDIR}/bashrc.d"/* "${D}/etc/portage/bashrc.d"
 }
 
 pkg_postinst() {
