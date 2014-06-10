@@ -10,7 +10,8 @@ HOMEPAGE=""
 SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}
          ftp://fpemud-workstation/distfiles-private/${PN}.desktop
          ftp://fpemud-workstation/distfiles-private/${PN}-dosbox.conf
-         ftp://fpemud-workstation/distfiles-private/F-22.Lightning.2.zip"
+         ftp://fpemud-workstation/distfiles-private/F-22.Lightning.2.zip
+         ftp://fpemud-workstation/distfiles-private/${PN}-setup.cfg-dosbox.patch"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
@@ -24,6 +25,7 @@ src_unpack() {
 
 	unzip "${DISTDIR}/F-22.Lightning.2.zip" -d "${WORKDIR}/gamedir"
 	cp "${DISTDIR}/${PN}-dosbox.conf" "${WORKDIR}/gamedir/dosbox.conf"
+	patch "${WORKDIR}/gamedir/SETUP.CFG" "${DISTDIR}/${PN}-setup.cfg-dosbox.patch"
 }
 
 src_prepare() {
