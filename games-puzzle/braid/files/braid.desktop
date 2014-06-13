@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Braid
+GenericName=Braid
+Comment=Time-bending puzzle video game
+Icon=/opt/braid/braid.png
+Exec=/usr/games/bin/braid
+TryExec=/usr/games/bin/braid
+Categories=Game;
