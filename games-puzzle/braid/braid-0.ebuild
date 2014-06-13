@@ -7,12 +7,12 @@ inherit eutils games
 
 DESCRIPTION="Braid"
 HOMEPAGE="http://braid-game.com"
-SRC_URI="ftp://fpemud-workstation/distfiles-private/Braid.linux"
+SRC_URI="Braid.linux"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
-RESTRICT="strip"
+RESTRICT="fetch strip"
 
 DEPEND="app-arch/p7zip"
 RDEPEND=""
