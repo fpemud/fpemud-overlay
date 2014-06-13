@@ -32,6 +32,7 @@ src_install() {
 	cp -r data/${ARCH}/* "${D}/${GAMES_PREFIX_OPT}/${PN}"
 
 	dogamesbin "${PN}"
+	doicon "data/gamedata/braid.png"
 	domenu "${FILESDIR}/${PN}.desktop"
 	prepgamesdirs
 }
