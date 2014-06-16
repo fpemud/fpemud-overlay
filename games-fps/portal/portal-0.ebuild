@@ -39,7 +39,7 @@ src_install() {
 	dodir "${GAMES_PREFIX_OPT}"
 	tar -xzf "${DISTDIR}/Portal.tar.gz" -C "${D}/${GAMES_PREFIX_OPT}"
 
-	games_make_wrapper "${PN}" "./${PN}" "${dir}"
+	games_make_wrapper "${PN}" "./portal.sh" "${dir}"
 	make_desktop_entry "${PN}" "Portal" "${PN}"
 
 	prepgamesdirs
