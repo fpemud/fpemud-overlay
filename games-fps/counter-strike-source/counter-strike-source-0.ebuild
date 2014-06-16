@@ -5,9 +5,9 @@
 EAPI=4
 inherit games
 
-DESCRIPTION="Half-life2"
+DESCRIPTION="Counter Strike: Source"
 HOMEPAGE="http://orange.half-life2.com/portal.html"
-SRC_URI="HL2.tar.gz"
+SRC_URI="Counter-Strike-Source.tar.gz"
 
 LICENSE="unknown"
 SLOT="0"
@@ -33,13 +33,13 @@ src_unpack() {
 }
 
 src_install() {
-	local dir="${GAMES_PREFIX_OPT}/HL2"
+	local dir="${GAMES_PREFIX_OPT}/Counter-Strike-Source"
 
 	dodir "${GAMES_PREFIX_OPT}"
-	tar -xzf "${DISTDIR}/HL2.tar.gz" -C "${D}/${GAMES_PREFIX_OPT}"
+	tar -xzf "${DISTDIR}/Counter-Strike-Source.tar.gz" -C "${D}/${GAMES_PREFIX_OPT}"
 
 	games_make_wrapper "${PN}" "./${PN}" "${dir}"
-	make_desktop_entry "${PN}" "Half-life2" "${PN}"
+	make_desktop_entry "${PN}" "Counter Strike: Source" "${PN}"
 
 	prepgamesdirs
 }

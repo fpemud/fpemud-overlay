@@ -1,6 +1,0 @@
-#!/bin/sh
-
-GAMEDIR=		# fill by ebuild
-
-cd "${GAMEDIR}"
-./braid

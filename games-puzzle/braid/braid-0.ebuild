@@ -2,37 +2,62 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
-inherit eutils games
+EAPI=4
 
-DESCRIPTION="Braid"
+inherit games
+
+DESCRIPTION="Platform game where you manipulate flow of time"
 HOMEPAGE="http://braid-game.com"
 SRC_URI="Braid.linux"
-LICENSE="unknown"
+ZIP_OFFSET="191620"
+
+LICENSE="Arphic CCPL-Attribution-ShareAlike-NonCommercial-1.0 MIT"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
+
 IUSE=""
-RESTRICT="fetch strip"
+RESTRICT="strip fetch"
 
-DEPEND="app-arch/p7zip"
+DEPEND="app-arch/unzip"
 RDEPEND=""
+#RDEPEND="media-libs/libsdl[sound,joystick,video]
+#         x11-libs/libX11
+#         x11-libs/libXau
+#         x11-libs/libxcb
+#         x11-libs/libXdmcp
+#         x11-libs/libXext
+#         virtual/opengl"
+#       media-gfx/nvidia-cg-toolkit"
+#	video_cards_nvidia? ( media-gfx/nvidia-cg-toolkit )"
 
-src_unpack() {
-	7z x "${DISTDIR}/Braid.linux" -o"${WORKDIR}"
+S=${WORKDIR}/data
+
+pkg_nofetch() {
+	echo
+	elog "Download ${SRC_URI} from ${HOMEPAGE} and place it in ${DISTDIR}"
+	echo
 }
 
-src_prepare() {
-	# Prepare the wrapper script
-	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/${PN}/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${PN}"
+src_unpack() {
+	# remove the exe stuff
+	tail --bytes=+$(( ${ZIP_OFFSET} + 1 )) "${DISTDIR}/${A}" > "${MY_P}.zip"
+	unzip -q "${MY_P}.zip" || die "unpacking failed"
+	rm -f "${MY_P}.zip"
 }
 
 src_install() {
-	dodir "${GAMES_PREFIX_OPT}/${PN}"
-	cp -r data/gamedata/* "${D}/${GAMES_PREFIX_OPT}/${PN}"
-	cp -r data/${ARCH}/* "${D}/${GAMES_PREFIX_OPT}/${PN}"
+	local dir="${GAMES_PREFIX_OPT}/Braid"
 
-	dogamesbin "${PN}"
-	doicon "data/gamedata/braid.png"
-	domenu "${FILESDIR}/${PN}.desktop"
+	insinto "${dir}"
+	exeinto "${dir}"
+
+	doins -r gamedata/* || die "doins failed"
+	doexe ${ARCH}/* || die "doexe failed"
+
+	doicon "gamedata/braid.png" || die "doicon failed"
+
+	games_make_wrapper "${PN}" "./${PN}" "${dir}"
+	make_desktop_entry "${PN}" "Braid" "${PN}"
+
 	prepgamesdirs
 }
