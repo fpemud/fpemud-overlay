@@ -38,7 +38,12 @@ src_install() {
 	dodir "${GAMES_PREFIX_OPT}"
 	tar -xzf "${DISTDIR}/Counter-Strike-Source.tar.gz" -C "${D}/${GAMES_PREFIX_OPT}"
 
-	games_make_wrapper "${PN}" "./${PN}" "${dir}"
+	find "${D}/${dir}" -name "*.so" | xargs chmod 750
+	chmod 750 "${D}/${dir}/hl2_linux"
+	chmod 750 "${D}/${dir}/hl2.sh"
+	chmod 750 "${D}/${dir}/css.sh"
+
+	games_make_wrapper "${PN}" "./css.sh" "${dir}"
 	make_desktop_entry "${PN}" "Counter Strike: Source" "${PN}"
 
 	prepgamesdirs
