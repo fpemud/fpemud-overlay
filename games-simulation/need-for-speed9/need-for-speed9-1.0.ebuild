@@ -28,7 +28,7 @@ DEPEND="app-arch/unzip
         app-arch/p7zip"
 RDEPEND=">=app-emulation/wine-1.6[abi_x86_32]
          >=app-emulation/winetricks-744
-         media-libs/libtxc_dxtn"
+         media-libs/libtxc_dxtn[abi_x86_32]"
 
 CHECKREQS_DISK_BUILD=5G
 

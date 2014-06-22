@@ -16,8 +16,10 @@ IUSE=""
 
 RDEPEND="sys-kernel/gentoo-sources
          >=sys-kernel/dracut-019
+         sys-apps/kmod
          sys-apps/diffutils
-         dev-python/kconfiglib"
+         dev-python/kconfiglib
+         dev-python/pyudev"
 DEPEND="${RDEPEND}"
 
 pkg_postrm() {
