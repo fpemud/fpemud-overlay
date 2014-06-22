@@ -24,7 +24,8 @@ RDEPEND="dev-libs/nss[abi_x86_32]
          x11-libs/cairo[abi_x86_32]
          x11-libs/gtk+:2[abi_x86_32]
          net-print/cups[abi_x86_32]
-         media-libs/libpng:1.2[abi_x86_32]"
+         media-libs/libpng:1.2[abi_x86_32]
+         media-libs/libtxc_dxtn[abi_x86_32]"
 
 S="${WORKDIR}"
 
