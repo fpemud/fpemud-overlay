@@ -44,6 +44,8 @@ src_install() {
 	chmod 750 "${D}/${dir}/hl2.sh"
 	chmod 750 "${D}/${dir}/css.sh"
 
+	doicon "${D}/${GAMES_PREFIX_OPT}/Counter-Strike-Source/cstrike/resource/game.ico"
+
 	games_make_wrapper "${PN}" "./css.sh" "${dir}"
 	make_desktop_entry "${PN}" "Counter Strike: Source" "${PN}"
 

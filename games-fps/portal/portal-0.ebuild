@@ -34,13 +34,22 @@ src_unpack() {
 	return
 }
 
+src_prepare() {
+
+	# Prepare the wrapper script
+	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/Portal/g" \
+	    -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/Portal/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${PN}"
+}
+
 src_install() {
 	local dir="${GAMES_PREFIX_OPT}/Portal"
 
 	dodir "${GAMES_PREFIX_OPT}"
 	tar -xzf "${DISTDIR}/Portal.tar.gz" -C "${D}/${GAMES_PREFIX_OPT}"
+	find "${D}/${GAMES_PREFIX_OPT}/Portal" -name *.cache -print0 | xargs -0 rm
 
-	games_make_wrapper "${PN}" "./portal.sh" "${dir}"
+	dogamesbin "${PN}"
+	doicon "${D}/${GAMES_PREFIX_OPT}/Portal/portal/resource/game.ico"
 	make_desktop_entry "${PN}" "Portal" "${PN}"
 
 	prepgamesdirs
