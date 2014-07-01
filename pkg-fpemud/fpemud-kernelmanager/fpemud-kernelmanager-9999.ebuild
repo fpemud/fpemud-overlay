@@ -15,7 +15,6 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="sys-kernel/gentoo-sources
-         >=sys-kernel/dracut-019
          sys-apps/kmod
          sys-apps/diffutils
          dev-python/kconfiglib
@@ -24,7 +23,7 @@ DEPEND="${RDEPEND}"
 
 pkg_postrm() {
 	find "${EROOT}/usr/lib/fpemud-kernelmanager" -name "*.pyc" | xargs rm -f
- 
+
 	# Delete empty parent directories.
 	local dir="${EROOT}/usr/lib/fpemud-kernelmanager"
 	while [[ "${dir}" != "${EROOT%/}" ]]; do
