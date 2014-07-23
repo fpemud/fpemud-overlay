@@ -6,7 +6,7 @@ EAPI="4"
 
 inherit git-2
 
-DESCRIPTION="Build boot environment(kernel/initrd/bootloader/...) for fpemud's systems"
+DESCRIPTION="Build boot stack(kernel/initrd/bootloader/...) for fpemud's systems"
 SRC_URI=""
 EGIT_REPO_URI="git://github.com/fpemud/fpemud-kernelmanager.git"
 KEYWORDS="-* amd64 x86"
@@ -19,7 +19,8 @@ RDEPEND="sys-kernel/gentoo-sources
          sys-apps/diffutils
          dev-python/kconfiglib
          dev-python/pyudev"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+        virtual/pkgconfig"
 
 pkg_postrm() {
 	find "${EROOT}/usr/lib/fpemud-kernelmanager" -name "*.pyc" | xargs rm -f
