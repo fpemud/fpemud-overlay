@@ -49,7 +49,7 @@ src_install() {
 	find "${D}/${GAMES_PREFIX_OPT}/Portal" -name *.cache -print0 | xargs -0 rm
 
 	dogamesbin "${PN}"
-	doicon "${D}/${GAMES_PREFIX_OPT}/Portal/portal/resource/game.ico"
+	newicon "${D}/${GAMES_PREFIX_OPT}/Portal/portal/resource/game.ico" "${PN}.ico"
 	make_desktop_entry "${PN}" "Portal" "${PN}"
 
 	prepgamesdirs
