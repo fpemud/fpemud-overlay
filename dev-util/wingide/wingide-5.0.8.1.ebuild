@@ -46,7 +46,7 @@ src_install() {
 		Name=WingIDE
 		Comment=Wing IDE - advanced Python IDE
 		Exec=wingide
-		Icon=wingide.png
+		Icon=wingide
 		Categories=Application;Development;
 		MimeType=application/x-python;
 	EOF
