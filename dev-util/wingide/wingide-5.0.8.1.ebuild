@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit eutils multilib-minimal rpm versionator
+inherit eutils multilib-minimal rpm versionator gnome2-utils
 
 MY_PV=$(replace_version_separator 3 '-')
 MY_PV1=${PV%.*}		# eg: 5.0.8
@@ -52,8 +52,7 @@ src_install() {
 	EOF
 
 	for res in 16 32 48 64 128; do
-		insinto /usr/share/icons/hicolor/${res}x${res}/apps/
-		newins "${WORKDIR}"/usr/lib/wingide${MY_PV3}/resources/wing${res}.png wingide.png
+		newicon -s ${res} "${WORKDIR}"/usr/lib/wingide${MY_PV3}/resources/wing${res}.png wingide.png
 	done
 
 	insinto /usr/share/applications/
@@ -61,7 +60,13 @@ src_install() {
 
 }
 
+pkg_preinst() {
+        gnome2_icon_savelist
+}
+
 pkg_postinst() {
+        gnome2_icon_cache_update
+
 	einfo ""
 	einfo "To run Wing IDE Professional use wingide command"
 	einfo ""
@@ -69,3 +74,8 @@ pkg_postinst() {
 	einfo "and select in menu Help-Check for updates"
 	einfo ""
 }
+
+pkg_postrm() {
+        gnome2_icon_cache_update
+}
+
