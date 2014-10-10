@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-#EGIT_REPO_URI="git://github.com/fpemud/fpemud-portage.git"
+#EGIT_REPO_URI="http://github.com/fpemud/fpemud-portage.git"
 #inherit git-2
 SRC_URI=""
 KEYWORDS="-* amd64 x86"

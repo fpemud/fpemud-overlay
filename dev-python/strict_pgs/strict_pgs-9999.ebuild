@@ -9,7 +9,7 @@ inherit distutils-r1 git-2
 
 DESCRIPTION="Python module used for extracting passwd/group/shadow information"
 HOMEPAGE=""
-EGIT_REPO_URI="git://github.com/fpemud/strict_pgs.git"
+EGIT_REPO_URI="http://github.com/fpemud/strict_pgs.git"
 
 LICENSE="GPLv3"
 SLOT="0"

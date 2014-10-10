@@ -6,7 +6,7 @@ EAPI="4"
 inherit eutils
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://github.com/fpemud/winiso2usb.git"
+	EGIT_REPO_URI="http://github.com/fpemud/winiso2usb.git"
 	inherit git-2
 	SRC_URI=""
 	KEYWORDS="-* amd64 x86"

@@ -6,8 +6,8 @@ EAPI="4"
 
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="2"
-EGIT_REPO_URI="git://github.com/fpemud/Kconfiglib.git"
-#EGIT_REPO_URI="git://github.com/ulfalizer/Kconfiglib.git"
+EGIT_REPO_URI="http://github.com/fpemud/Kconfiglib.git"
+#EGIT_REPO_URI="http://github.com/ulfalizer/Kconfiglib.git"
 
 inherit distutils git-2
 

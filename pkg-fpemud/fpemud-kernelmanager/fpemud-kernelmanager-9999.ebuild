@@ -8,7 +8,7 @@ inherit git-2
 
 DESCRIPTION="Build boot stack(kernel/initrd/bootloader/...) for fpemud's systems"
 SRC_URI=""
-EGIT_REPO_URI="git://github.com/fpemud/fpemud-kernelmanager.git"
+EGIT_REPO_URI="http://github.com/fpemud/fpemud-kernelmanager.git"
 KEYWORDS="-* amd64 x86"
 LICENSE="GPL-3"
 SLOT="0"

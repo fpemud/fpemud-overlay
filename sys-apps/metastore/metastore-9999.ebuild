@@ -7,7 +7,7 @@ inherit git-2
 DESCRIPTION="Tool to store the metadata of files,directories,links in a file tree"
 HOMEPAGE="http://david.hardeman.nu/software.php"
 #EGIT_REPO_URI="git://git.hardeman.nu/metastore.git"
-EGIT_REPO_URI="git://github.com/przemoc/metastore"
+EGIT_REPO_URI="http://github.com/przemoc/metastore"
 
 LICENSE="GPL-2"
 SLOT="0"

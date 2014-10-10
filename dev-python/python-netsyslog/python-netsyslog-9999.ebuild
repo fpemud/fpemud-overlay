@@ -6,7 +6,7 @@ EAPI="4"
 
 inherit distutils eutils git-2
 
-EGIT_REPO_URI="git://github.com/gma/python-netsyslog.git"
+EGIT_REPO_URI="http://github.com/gma/python-netsyslog.git"
 PYTHON_DEPEND="2:2.6"
 DISTUTILS_SRC_TEST="setup.py"
 

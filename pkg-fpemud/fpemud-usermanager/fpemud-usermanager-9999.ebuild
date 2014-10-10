@@ -6,7 +6,7 @@ EAPI="4"
 
 inherit git-2
 
-EGIT_REPO_URI="git://github.com/fpemud/fpemud-usermanager.git"
+EGIT_REPO_URI="http://github.com/fpemud/fpemud-usermanager.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
