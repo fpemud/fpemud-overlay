@@ -15,7 +15,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="sys-kernel/gentoo-sources
-         sys-apps/kmod
+         sys-apps/kmod[python]
          sys-apps/diffutils
          dev-python/kconfiglib
          dev-python/pyudev"
