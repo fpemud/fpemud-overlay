@@ -5,7 +5,7 @@
 EAPI="4"
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://github.com/fpemud/virt-player.git"
+	EGIT_REPO_URI="http://github.com/fpemud/virt-player.git"
 	inherit git-2
 	SRC_URI=""
 	KEYWORDS="-* amd64 x86"

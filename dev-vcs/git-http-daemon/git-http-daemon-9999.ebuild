@@ -6,7 +6,7 @@ EAPI="4"
 
 inherit git-2
 
-EGIT_REPO_URI="git://github.com/fpemud/git-http-daemon.git"
+EGIT_REPO_URI="http://github.com/fpemud/git-http-daemon.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
