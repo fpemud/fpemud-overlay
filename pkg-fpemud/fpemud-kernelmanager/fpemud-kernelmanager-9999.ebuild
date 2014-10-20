@@ -17,6 +17,7 @@ IUSE=""
 RDEPEND="sys-kernel/gentoo-sources
          sys-apps/kmod[python]
          sys-apps/diffutils
+         sys-apps/systemd
          dev-python/pylkc
          dev-python/pyudev"
 DEPEND="${RDEPEND}
