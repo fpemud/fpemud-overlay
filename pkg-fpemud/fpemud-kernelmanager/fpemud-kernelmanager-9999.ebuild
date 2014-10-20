@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND="sys-kernel/gentoo-sources
          sys-apps/kmod[python]
          sys-apps/diffutils
-         dev-python/kconfiglib
+         dev-python/pylkc
          dev-python/pyudev"
 DEPEND="${RDEPEND}
         virtual/pkgconfig"
