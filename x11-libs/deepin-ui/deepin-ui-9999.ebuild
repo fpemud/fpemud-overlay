@@ -40,10 +40,5 @@ src_install() {
 	python setup.py install \
 		--root="${D}" \
 		--optimize=2 || die "Install failed!"
-
-	mv ${D}/usr/dtk/theme ${D}/usr/$(get_libdir)/python2.7/site-packages/dtk || die
-	mv ${D}/usr/dtk/locale ${D}/usr/share/ || die
-	rm ${D}/usr/share/locale/*.po*
-	rm -r ${D}/usr/dtk
 }
 

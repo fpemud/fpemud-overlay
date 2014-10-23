@@ -48,10 +48,10 @@ src_install() {
 	echo "python2 /usr/share/${PN}/src/${PN}.py" >> ${PN}
 	dobin ${PN}
 
-	doicon -s 128 ${S}/debian/${PN}.png
+	doicon -s 128 ${FILESDIR}/${PN}.png
 
 	insinto "/usr/share/applications"
-	doins ${S}/debian/${PN}.desktop
+	doins ${FILESDIR}/${PN}.desktop
 }
 
 pkg_postinst() {
