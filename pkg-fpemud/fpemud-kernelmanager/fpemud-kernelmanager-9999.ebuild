@@ -19,7 +19,8 @@ RDEPEND="sys-kernel/gentoo-sources
          sys-apps/diffutils
          sys-apps/systemd
          dev-python/pylkc
-         dev-python/pyudev"
+         dev-python/pyudev
+         dev-python/libebuild2"
 DEPEND="${RDEPEND}
         virtual/pkgconfig"
 
