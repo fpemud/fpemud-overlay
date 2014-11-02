@@ -16,5 +16,6 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="dev-python/pyopenssl
-         net-misc/openvpn"
+         net-misc/openvpn
+         net-misc/networkmanager-openvpn"
 DEPEND=""
