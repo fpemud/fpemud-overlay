@@ -2,43 +2,24 @@
 # Distributed under the terms of the GNU General Public License v3
 # $Header: $
 
-EAPI="4"
-PYTHON_DEPEND=2:2.7
+EAPI=5
 
-inherit git-2 python versionator
+inherit git-2 eutils qmake-utils
 
-DESCRIPTION="UI toolkit for Linux Deepin."
-HOMEPAGE="https://github.com/linuxdeepin/deepin-ui"
-EGIT_REPO_URI="http://github.com/linuxdeepin/deepin-ui.git"
+DESCRIPTION="Deepin Qml Widgets"
+HOMEPAGE="https://github.com/linuxdeepin/deepin-qml-widgets"
+EGIT_REPO_URI="http://github.com/linuxdeepin/deepin-qml-widgets.git"
 
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/python-2.7:2.7
-		x11-libs/gtk+:2
-		x11-libs/cairo
-		dev-python/pygtk:2
-		net-libs/webkit-gtk
-		dev-python/pywebkitgtk
-		sci-libs/scipy
-		dev-python/python-xlib
-		dev-python/deepin-utils
-		|| ( dev-python/imaging dev-python/pillow )"
-DEPEND="${RDEPEND}
-		dev-python/pycairo
-		dev-python/setuptools
-		sys-devel/gettext"
+RDEPEND="dev-qt/qtcore:5
+         dev-qt/qtx11extras:5"
+DEPEND="${RDEPEND}"
 
-pkg_setup() {
-	python_set_active_version 2.7
-	python_pkg_setup
-}
-
-src_install() {
-	python setup.py install \
-		--root="${D}" \
-		--optimize=2 || die "Install failed!"
+src_configure() {
+	eqmake5
 }
 
