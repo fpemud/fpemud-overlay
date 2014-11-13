@@ -15,46 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-qt/assistant-5.3.2
-	>=dev-qt/designer-5.3.2
-	>=dev-qt/linguist-5.3.2
-	>=dev-qt/linguist-tools-5.3.2
-	>=dev-qt/pixeltool-5.3.2
-	>=dev-qt/qdbus-5.3.2
-	>=dev-qt/qdbusviewer-5.3.2
-	>=dev-qt/qdoc-5.3.2
-	>=dev-qt/qtconcurrent-5.3.2
-	>=dev-qt/qtcore-5.3.2
-	>=dev-qt/qtdbus-5.3.2
-	>=dev-qt/qtdeclarative-5.3.2
-	>=dev-qt/qtdiag-5.3.2
-	>=dev-qt/qtgraphicaleffects-5.3.2
-	>=dev-qt/qtgui-5.3.2
-	>=dev-qt/qthelp-5.3.2
-	>=dev-qt/qtimageformats-5.3.2
-	>=dev-qt/qtmultimedia-5.3.2
-	>=dev-qt/qtnetwork-5.3.2
-	>=dev-qt/qtopengl-5.3.2
-	>=dev-qt/qtpaths-5.3.2
-	>=dev-qt/qtpositioning-5.3.2
-	>=dev-qt/qtprintsupport-5.3.2
-	>=dev-qt/qtquick1-5.3.2
-	>=dev-qt/qtquickcontrols-5.3.2
-	>=dev-qt/qtscript-5.3.2
-	>=dev-qt/qtsensors-5.3.2
-	>=dev-qt/qtserialport-5.3.2
-	>=dev-qt/qtsql-5.3.2
-	>=dev-qt/qtsvg-5.3.2
-	>=dev-qt/qttest-5.3.2
-	>=dev-qt/qttranslations-5.3.2
-	>=dev-qt/qtwebkit-5.3.2
-	>=dev-qt/qtwebsockets-5.3.2
-	>=dev-qt/qtwidgets-5.3.2
-	>=dev-qt/qtx11extras-5.3.2
-	>=dev-qt/qtxml-5.3.2
-	>=dev-qt/qtxmlpatterns-5.3.2
-	>=dev-python/sip-4.15.3
-	>=dev-python/PyQt5-5.3.2"
+RDEPEND="x11-libs/xpyb
+         x11-libs/xpybutil
+         dev-python/python-ass
+         dev-python/pysrt
+         >=dev-python/PyQt5-5.3.2[declarative,multimedia,network,printsupport,webkit,widgets]"
 DEPEND="${RDEPEND}"
 S=${WORKDIR}/${PN}-${MY_VER}
 src_prepare() {
