@@ -23,3 +23,6 @@ src_configure() {
 	eqmake5
 }
 
+src_install() {
+	emake INSTALL_ROOT="${D}" install
+}
