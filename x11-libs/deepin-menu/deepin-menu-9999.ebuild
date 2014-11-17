@@ -2,10 +2,11 @@
 # Distributed under the terms of the GNU General Public License v3
 # $Header: $
 
-EAPI="4"
-PYTHON_DEPEND=2:2.7
+EAPI=5
+PYTHON_COMPAT=( python{2_6,2_7} )
+DISTUTILS_OPTIONAL=1
 
-inherit git-2 python versionator
+inherit git-2 distutils-r1 qmake-utils
 
 DESCRIPTION="Menu service for Linux Deepin"
 HOMEPAGE="https://github.com/linuxdeepin/deepin-menu"
@@ -16,17 +17,29 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/python-2.7:2.7"
-DEPEND="${RDEPEND}
-        dev-python/setuptools"
+RDEPEND=""
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
-pkg_setup() {
-	python_set_active_version 2.7
-	python_pkg_setup
+src_prepare() {
+	distutils-r1_src_prepare
+}
+
+src_configure() {
+	echo "debug1"
+	eqmake5
+	echo "debug2"
+	distutils-r1_src_configure
+}
+
+src_compile() {
+	echo "debug3"
+	emake
+	echo "debug4"
+	distutils-r1_src_compile
 }
 
 src_install() {
-	python setup.py install \
-		--root="${D}" \
-		--optimize=2 || die "Install failed!"
+	emake INSTALL_ROOT="${D}" install
+	distutils-r1_src_install
 }
+
