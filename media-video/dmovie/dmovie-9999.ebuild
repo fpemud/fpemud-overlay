@@ -26,11 +26,6 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	rm locale/*.po*
-
-	# add patch for mplayer binary name problem
-	#epatch ${FILESDIR}/deepin-media-player-backend.patch
-	#sed -i "s|\"mplayer\"|\"mplayer2\"|g" ${S}/src/mplayer/player.py
-	#sed -i "s|mplayer\ |mplayer2\ |g" ${S}/src/mplayer/player.py
 }
 
 src_install() {
@@ -38,7 +33,7 @@ src_install() {
 	doins -r ${S}/*
 
 	echo "#!/bin/sh" > DMovie
-	echo "python2 /usr/share/${PN}/main.py" >> DMovie
+	echo "python2 /usr/share/${PN}/main.py \\$@" >> DMovie
 	dobin DMovie
 
 	doicon -s 128 ${S}/image/deepin-movie.svg
