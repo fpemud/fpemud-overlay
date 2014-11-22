@@ -17,9 +17,16 @@ IUSE=""
 
 RDEPEND="x11-libs/xpyb
          x11-libs/xpybutil
+         x11-libs/deepin-menu
+         dev-qt/deepin-qml-widgets
+         dev-qt/qtgraphicaleffects
+         dev-qt/qtmultimedia[qml]
+         dev-qt/qtquickcontrols
          dev-python/python-ass
          dev-python/pysrt
-         >=dev-python/PyQt5-5.3.2[declarative,multimedia,network,printsupport,webkit,widgets]"
+         dev-python/dbus-python
+         >=dev-python/python-magic-0.4.6-r1
+         >=dev-python/PyQt5-5.3.2[dbus,declarative,multimedia,network,printsupport,webkit,widgets]"
 DEPEND="${RDEPEND}"
 
 #S=${WORKDIR}/${PN}-${MY_VER}
