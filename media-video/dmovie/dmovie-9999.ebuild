@@ -22,26 +22,16 @@ RDEPEND="x11-libs/xpyb
          dev-qt/qtgraphicaleffects
          dev-qt/qtmultimedia[qml]
          dev-qt/qtquickcontrols
+         dev-qt/qtwebkit[qml]
          dev-python/python-ass
          dev-python/pysrt
          dev-python/dbus-python
          >=dev-python/python-magic-0.4.6-r1
          >=dev-python/PyQt5-5.3.2[dbus,declarative,multimedia,network,printsupport,webkit,widgets]"
-DEPEND="${RDEPEND}"
-
-#S=${WORKDIR}/${PN}-${MY_VER}
-
-src_prepare() {
-	rm locale/*.po*
-}
+DEPEND=""
 
 src_install() {
-	insinto "/usr/share/${PN}"
-	doins -r ${S}/*
-
-	echo "#!/bin/sh" > DMovie
-	echo "python2 /usr/share/${PN}/main.py \\$@" >> DMovie
-	dobin DMovie
+	default
 
 	doicon -s 128 ${S}/image/deepin-movie.svg
 
