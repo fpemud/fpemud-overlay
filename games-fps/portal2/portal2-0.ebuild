@@ -6,9 +6,9 @@ EAPI=4
 
 inherit games
 
-DESCRIPTION="Portal"
-HOMEPAGE="http://www.valvesoftware.com/games/portal.html"
-SRC_URI="Portal.tar.gz"
+DESCRIPTION="Portal 2"
+HOMEPAGE="http://www.valvesoftware.com/games/portal2.html"
+SRC_URI="Portal2.tar.gz"
 
 LICENSE="unknown"
 SLOT="0"
@@ -18,7 +18,8 @@ IUSE=""
 RESTRICT="strip fetch"
 
 DEPEND=""
-RDEPEND="dev-libs/nss[abi_x86_32]
+RDEPEND="sys-apps/util-linux[abi_x86_32]
+         dev-libs/nss[abi_x86_32]
          dev-libs/nspr[abi_x86_32]
          dev-libs/libgcrypt:11[abi_x86_32]
          media-libs/libsdl2[abi_x86_32]
@@ -35,22 +36,19 @@ src_unpack() {
 }
 
 src_prepare() {
-
 	# Prepare the wrapper script
-	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/Portal/g" \
-	    -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/Portal/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${PN}"
+	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/Portal2/g" \
+	    -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/Portal2/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${PN}"
 }
 
 src_install() {
-	local dir="${GAMES_PREFIX_OPT}/Portal"
-
 	dodir "${GAMES_PREFIX_OPT}"
-	tar -xzf "${DISTDIR}/Portal.tar.gz" -C "${D}/${GAMES_PREFIX_OPT}"
-	find "${D}/${GAMES_PREFIX_OPT}/Portal" -name *.cache -print0 | xargs -0 rm
+	tar -xzf "${DISTDIR}/Portal2.tar.gz" -C "${D}/${GAMES_PREFIX_OPT}"
+        rm "${D}/${GAMES_PREFIX_OPT}/Portal2/bin/libstdc++.so.6"               # bug: https://github.com/ValveSoftware/steam-for-linux/issues/3273
 
 	dogamesbin "${PN}"
-	newicon "${D}/${GAMES_PREFIX_OPT}/Portal/portal/resource/game.ico" "${PN}.ico"
-	make_desktop_entry "${PN}" "Portal" "${PN}"
+	doicon "${D}/${GAMES_PREFIX_OPT}/Portal2/portal2.png"
+	make_desktop_entry "${PN}" "Portal 2" "${PN}"
 
 	prepgamesdirs
 }
