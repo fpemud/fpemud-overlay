@@ -24,7 +24,8 @@ RDEPEND="dev-libs/nss[abi_x86_32]
          x11-libs/cairo[abi_x86_32]
          x11-libs/gtk+:2[abi_x86_32]
          net-print/cups[abi_x86_32]
-         media-libs/libpng:1.2[abi_x86_32]"
+         media-libs/libpng:1.2[abi_x86_32]
+         media-fonts/font-ibm-type1"
 
 S="${WORKDIR}"
 
@@ -32,14 +33,34 @@ src_unpack() {
 	return
 }
 
+src_prepare() {
+
+	# Prepare the wrapper script
+	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/HL2/g" \
+	    -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/HL2/g" "${FILESDIR}/launcher.sh" > "${WORKDIR}/launcher.sh"
+
+	sed -e "s/^EXEC=.*$/EXEC=hl1.sh/g" "${WORKDIR}/launcher.sh" > "${WORKDIR}/half-life"
+	sed -e "s/^EXEC=.*$/EXEC=hl2.sh/g" "${WORKDIR}/launcher.sh" > "${WORKDIR}/half-life2"
+	sed -e "s/^EXEC=.*$/EXEC=episodic.sh/g" "${WORKDIR}/launcher.sh" > "${WORKDIR}/half-life2-episodic"
+	sed -e "s/^EXEC=.*$/EXEC=ep2.sh/g" "${WORKDIR}/launcher.sh" > "${WORKDIR}/half-life2-episode2"
+	sed -e "s/^EXEC=.*$/EXEC=lostcoast.sh/g" "${WORKDIR}/launcher.sh" > "${WORKDIR}/half-life2-lostcoast"
+}
+
 src_install() {
 	local dir="${GAMES_PREFIX_OPT}/HL2"
 
 	dodir "${GAMES_PREFIX_OPT}"
 	tar -xzf "${DISTDIR}/HL2.tar.gz" -C "${D}/${GAMES_PREFIX_OPT}"
+	find "${D}/${GAMES_PREFIX_OPT}" -name "*.cache" | xargs rm -f
 
-	games_make_wrapper "${PN}" "./${PN}" "${dir}"
-	make_desktop_entry "${PN}" "Half-life2" "${PN}"
+	dogamesbin "half-life"
+	make_desktop_entry "half-life" "Half Life" "half-life"
+
+	dogamesbin "half-life2"
+	make_desktop_entry "half-life2" "Half Life 2" "half-life2"
+
+	dogamesbin "half-life2-episode2"
+	make_desktop_entry "half-life2-episode2" "Half Life 2 Episode 2" "half-life2-episode2"
 
 	prepgamesdirs
 }
