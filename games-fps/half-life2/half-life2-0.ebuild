@@ -41,7 +41,7 @@ src_prepare() {
 
 	sed -e "s/^EXEC=.*$/EXEC=hl1.sh/g" "${WORKDIR}/launcher.sh" > "${WORKDIR}/half-life"
 	sed -e "s/^EXEC=.*$/EXEC=hl2.sh/g" "${WORKDIR}/launcher.sh" > "${WORKDIR}/half-life2"
-	sed -e "s/^EXEC=.*$/EXEC=episodic.sh/g" "${WORKDIR}/launcher.sh" > "${WORKDIR}/half-life2-episodic"
+	sed -e "s/^EXEC=.*$/EXEC=episodic.sh/g" "${WORKDIR}/launcher.sh" > "${WORKDIR}/half-life2-episode1"
 	sed -e "s/^EXEC=.*$/EXEC=ep2.sh/g" "${WORKDIR}/launcher.sh" > "${WORKDIR}/half-life2-episode2"
 	sed -e "s/^EXEC=.*$/EXEC=lostcoast.sh/g" "${WORKDIR}/launcher.sh" > "${WORKDIR}/half-life2-lostcoast"
 }
@@ -54,13 +54,19 @@ src_install() {
 	find "${D}/${GAMES_PREFIX_OPT}" -name "*.cache" | xargs rm -f
 
 	dogamesbin "half-life"
-	make_desktop_entry "half-life" "Half Life" "half-life"
+	make_desktop_entry "half-life" "Half-Life" "half-life"
 
 	dogamesbin "half-life2"
-	make_desktop_entry "half-life2" "Half Life 2" "half-life2"
+	make_desktop_entry "half-life2" "Half-Life2" "half-life2"
+
+	dogamesbin "half-life2-episode1"
+	make_desktop_entry "half-life2-episode1" "Half-Life2: Episode 1" "half-life2-episode1"
 
 	dogamesbin "half-life2-episode2"
-	make_desktop_entry "half-life2-episode2" "Half Life 2 Episode 2" "half-life2-episode2"
+	make_desktop_entry "half-life2-episode2" "Half-Life2: Episode 2" "half-life2-episode2"
+
+	dogamesbin "half-life2-lostcoast"
+	# don't add menu entry for test episode
 
 	prepgamesdirs
 }
