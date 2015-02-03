@@ -22,7 +22,8 @@ IUSE=""
 RDEPEND="net-misc/bridge-utils
          net-dns/dnsmasq
          net-fs/samba
-         >=sys-apps/iproute2-2.6.34"
+         >=sys-apps/iproute2-2.6.34
+         net-firewall/nftables"
 DEPEND=""
 
 #pkg_postrm() {  
