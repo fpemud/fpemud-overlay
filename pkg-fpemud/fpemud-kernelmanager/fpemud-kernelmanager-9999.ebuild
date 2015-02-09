@@ -15,7 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="sys-kernel/gentoo-sources
+RDEPEND="sys-fs/lvm2
          sys-apps/kmod[python]
          sys-apps/diffutils
          sys-apps/systemd
