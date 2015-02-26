@@ -21,6 +21,7 @@ IUSE=""
 
 RDEPEND="dev-python/dbus-python
          app-portage/mirrorselect
+         app-portage/cpuinfo2cpuflags
          net-misc/wget
          sys-fs/squashfs-tools
          sys-apps/portage
