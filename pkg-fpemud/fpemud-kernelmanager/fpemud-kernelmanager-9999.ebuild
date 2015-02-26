@@ -16,6 +16,8 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="sys-fs/lvm2
+         sys-fs/reiserfsprogs
+         sys-fs/xfsprogs
          sys-apps/kmod[python]
          sys-apps/diffutils
          sys-apps/systemd
