@@ -19,7 +19,8 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/spice-gtk
+RDEPEND="app-emulation/qemu[spice]
+         net-misc/spice-gtk
          dev-python/pexpect
          dev-python/elemlib
          app-emulation/virt-service"
