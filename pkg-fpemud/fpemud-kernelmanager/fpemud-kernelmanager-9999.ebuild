@@ -15,7 +15,9 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="sys-fs/lvm2
+RDEPEND=">=sys-boot/grub-2.00
+         sys-boot/gummiboot
+         sys-fs/lvm2
          sys-fs/reiserfsprogs
          sys-fs/xfsprogs
          sys-apps/kmod[python]
