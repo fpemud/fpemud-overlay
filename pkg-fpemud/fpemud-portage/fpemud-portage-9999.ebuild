@@ -19,7 +19,8 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-python/dbus-python
+RDEPEND="dev-python/pyudev
+         dev-python/dbus-python
          app-portage/mirrorselect
          net-misc/wget
          sys-fs/squashfs-tools
