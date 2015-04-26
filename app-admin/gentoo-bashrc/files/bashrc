@@ -4,7 +4,7 @@
 
 _run_hooks() {
 	hookf=hook_$1
-	for f in /etc/portage/bashrc.d/* ; do
+	for f in `/usr/bin/find /etc/portage/bashrc.d -type f` ; do
 		source "${f}"
 		if [ "`type -t ${hookf}`" = "function" ] ; then
 			${hookf}
