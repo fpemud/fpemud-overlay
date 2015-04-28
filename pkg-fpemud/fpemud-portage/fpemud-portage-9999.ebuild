@@ -19,7 +19,8 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-python/pyudev
+RDEPEND="app-admin/gentoo-bashrc
+         dev-python/pyudev
          dev-python/dbus-python
          app-portage/mirrorselect
          net-misc/wget
@@ -43,4 +44,3 @@ pkg_postrm() {
 		dir="${dir%/*}"
 	done
 }
-
