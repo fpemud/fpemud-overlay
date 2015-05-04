@@ -15,7 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="sys-boot/grub:2
+RDEPEND="sys-boot/grub:2[grub_platforms_pc]
          sys-boot/gummiboot
          sys-fs/lvm2
          sys-fs/reiserfsprogs

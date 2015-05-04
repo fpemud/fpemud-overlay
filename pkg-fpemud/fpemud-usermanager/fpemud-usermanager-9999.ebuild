@@ -15,7 +15,8 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-python/strict_pgs"
+RDEPEND="dev-python/strict_pgs
+         dev-python/passlib"
 DEPEND="${RDEPEND}"
 
 pkg_postrm() {
