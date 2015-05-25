@@ -17,6 +17,7 @@ IUSE=""
 
 RDEPEND="sys-boot/grub:2[grub_platforms_pc]
          sys-boot/gummiboot
+         sys-boot/os-prober
          sys-fs/lvm2
          sys-fs/reiserfsprogs
          sys-fs/xfsprogs
