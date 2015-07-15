@@ -15,8 +15,8 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="sys-boot/grub:2[grub_platforms_pc]
-         sys-boot/gummiboot
+RDEPEND="sys-boot/grub:2[grub_platforms_pc,grub_platforms_efi-64]
+         sys-boot/efibootmgr
          sys-boot/os-prober
          sys-fs/lvm2
          sys-fs/reiserfsprogs
