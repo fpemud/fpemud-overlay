@@ -21,7 +21,6 @@ IUSE=""
 
 RDEPEND="app-emulation/qemu[spice]
          net-misc/spice-gtk
-         dev-python/pexpect
          dev-python/python-qemu-qmp
          dev-python/elemlib
          app-emulation/virt-service"
