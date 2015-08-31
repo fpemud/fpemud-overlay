@@ -25,7 +25,7 @@ RDEPEND="sys-boot/grub:2[grub_platforms_pc,grub_platforms_efi-64]
          sys-apps/diffutils
          sys-apps/systemd
          app-arch/cpio
-         app-arch/xzutils
+         app-arch/xz-utils
          dev-python/lxml
          dev-python/pylkc
          dev-python/pyudev
