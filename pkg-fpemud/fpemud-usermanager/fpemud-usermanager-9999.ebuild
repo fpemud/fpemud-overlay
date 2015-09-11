@@ -16,7 +16,8 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="dev-python/strict_pgs
-         dev-python/passlib"
+         dev-python/passlib
+         sys-libs/tdb"
 DEPEND="${RDEPEND}"
 
 pkg_postrm() {
