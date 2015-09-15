@@ -21,6 +21,7 @@ RDEPEND="sys-boot/grub:2[grub_platforms_pc,grub_platforms_efi-64]
          sys-fs/lvm2
          sys-fs/reiserfsprogs
          sys-fs/xfsprogs
+         sys-fs/ntfs3g
          sys-apps/kmod[python]
          sys-apps/diffutils
          sys-apps/systemd
