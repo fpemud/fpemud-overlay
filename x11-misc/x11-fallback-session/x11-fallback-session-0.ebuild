@@ -14,6 +14,8 @@ IUSE=""
 RDEPEND="x11-apps/xsm"
 DEPEND=""
 
+S="${WORKDIR}"
+
 src_prepare() {
 	return
 }
