@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-inherit java-pkg-2 java-ant-2 versionator
+inherit java-pkg-2 java-mvn-src versionator
 
 MY_PV1=$(get_version_component_range '3')
 MY_PV2=$(get_version_component_range '4' | sed -r 's/([a-zA-Z]+)([0-9]+)/\2\1/g')
@@ -19,11 +19,12 @@ KEYWORDS="~amd64"
 IUSE="demo"
 SLOT="0"
 
-RDEPEND=">=virtual/jre-1.6"
+RDEPEND=">=virtual/jre-1.6
+         dev-java/testng"
 DEPEND=">=virtual/jdk-1.6"
 
 EANT_BUILD_TARGET="all"
-S="${WORKDIR}/${PN}-${MY_PV}"
+S="${WORKDIR}/${PN}-${MY_PV}-src"
 
 src_install() {
 	java-pkg_dojar "lib/${PN}.jar"
