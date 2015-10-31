@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-inherit java-pkg-2 java-mvn-src versionator
+inherit java-pkg-2 java-pkg-simple versionator
 
 MY_PV1=$(get_version_component_range '3')
 MY_PV2=$(get_version_component_range '4' | sed -r 's/([a-zA-Z]+)([0-9]+)/\2\1/g')
@@ -19,13 +19,19 @@ KEYWORDS="~amd64"
 IUSE="demo"
 SLOT="0"
 
+CDEPEND="dev-java/testng:0
+         dev-java/hamcrest-library:1.3
+         dev-java/commons-math:3"
 RDEPEND=">=virtual/jre-1.6
-         dev-java/testng"
-DEPEND=">=virtual/jdk-1.6"
+         ${CDEPEND}"
+DEPEND=">=virtual/jdk-1.6
+        ${CDEPEND}"
 
-EANT_BUILD_TARGET="all"
 S="${WORKDIR}/${PN}-${MY_PV}-src"
+JAVA_GENTOO_CLASSPATH="testng,hamcrest-library-1.3,commons-math-3"
+JAVA_SRC_DIR="sphinx4-core/src/main/java"
 
-src_install() {
-	java-pkg_dojar "lib/${PN}.jar"
+src_compile() {
+	java-pkg-simple_src_compile
+	java-pkg_addres ${PN}.jar sphinx4-core/src/main/resources
 }
