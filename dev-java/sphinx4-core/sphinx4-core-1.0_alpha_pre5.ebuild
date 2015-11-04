@@ -49,12 +49,12 @@ src_test() {
 	local tmp4=${JAVA_JAR_FILENAME}
 
 	JAVA_GENTOO_CLASSPATH="testng,hamcrest-core-1.3,hamcrest-library-1.3"
-	JAVA_CLASSPATH_EXTRA="${PN}-core.jar"
+	JAVA_CLASSPATH_EXTRA="${S}/${PN}.jar"
 	JAVA_SRC_DIR="${PN}/src/test/java"
 	JAVA_JAR_FILENAME="test.jar"
 
 	java-pkg-simple_src_compile
-	java-pkg_addres "${PN}-test.jar" "${PN}-core/src/test/resources"
+	java-pkg_addres "test.jar" "${PN}/src/test/resources"
 
 	JAVA_GENTOO_CLASSPATH=${tmp1}
 	JAVA_CLASSPATH_EXTRA=${tmp2}
