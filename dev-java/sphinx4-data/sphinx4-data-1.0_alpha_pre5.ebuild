@@ -26,7 +26,6 @@ RDEPEND=">=virtual/jre-1.6"
 DEPEND=">=virtual/jdk-1.6"
 
 S="${WORKDIR}/${MY_P}"
-JAVA_SRC_DIR="${PN}/src"
 
 src_compile() {
 	mkdir empty
