@@ -42,25 +42,26 @@ src_compile() {
 	java-pkg_addres ${PN}.jar ${PN}/src/main/resources
 }
 
-src_test() {
-	local tmp1=${JAVA_GENTOO_CLASSPATH}
-	local tmp2=${JAVA_CLASSPATH_EXTRA}
-	local tmp3=${JAVA_SRC_DIR}
-	local tmp4=${JAVA_JAR_FILENAME}
-
-	JAVA_GENTOO_CLASSPATH="testng,hamcrest-core-1.3,hamcrest-library-1.3"
-	JAVA_CLASSPATH_EXTRA="${S}/${PN}.jar"
-	JAVA_SRC_DIR="${PN}/src/test/java"
-	JAVA_JAR_FILENAME="test.jar"
-
-	java-pkg-simple_src_compile
-	java-pkg_addres "test.jar" "${PN}/src/test/resources"
-
-	JAVA_GENTOO_CLASSPATH=${tmp1}
-	JAVA_CLASSPATH_EXTRA=${tmp2}
-	JAVA_SRC_DIR=${tmp3}
-	JAVA_JAR_FILENAME=${tmp4}
-}
+#src_test() {
+#	local tmp1=${JAVA_GENTOO_CLASSPATH}
+#	local tmp2=${JAVA_CLASSPATH_EXTRA}
+#	local tmp3=${JAVA_SRC_DIR}
+#	local tmp4=${JAVA_JAR_FILENAME}
+#
+#	JAVA_GENTOO_CLASSPATH="testng,hamcrest-core-1.3,hamcrest-library-1.3"
+#	JAVA_CLASSPATH_EXTRA="${S}/${PN}.jar"
+#	JAVA_SRC_DIR="${PN}/src/test/java"
+#	JAVA_JAR_FILENAME="test.jar"
+#
+#	java-pkg-simple_src_compile
+#	java-pkg_addres "test.jar" "${PN}/src/test/resources"
+#	testng ???
+#
+#	JAVA_GENTOO_CLASSPATH=${tmp1}
+#	JAVA_CLASSPATH_EXTRA=${tmp2}
+#	JAVA_SRC_DIR=${tmp3}
+#	JAVA_JAR_FILENAME=${tmp4}
+#}
 
 src_install() {
 	java-pkg_dojar ${JAVA_JAR_FILENAME}
