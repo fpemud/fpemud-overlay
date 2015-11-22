@@ -16,5 +16,6 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="net-misc/openvpn
-         net-dns/dnsmasq"
+         net-dns/dnsmasq
+         dev-libs/openssl"
 DEPEND=""
