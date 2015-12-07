@@ -15,7 +15,8 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/openvpn
+RDEPEND=">=net-misc/openvpn-2.3.8
          net-dns/dnsmasq
-         dev-libs/openssl"
+         dev-libs/openssl
+         >=net-firewall/nftables-0.5"
 DEPEND=""
