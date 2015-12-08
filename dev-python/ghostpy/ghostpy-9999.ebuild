@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND=""
+RDEPEND="|| ( dev-python/PyQt4[X,webkit] dev-python/pyside[X,webkit] )"
 
 src_prepare() {
 	rm -rf tests
