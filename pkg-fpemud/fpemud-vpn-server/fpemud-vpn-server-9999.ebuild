@@ -18,6 +18,5 @@ IUSE=""
 RDEPEND=">=net-misc/openvpn-2.3.8
          net-dns/dnsmasq
          dev-libs/openssl
-         dev-python/ghostpy
          >=net-firewall/nftables-0.5"
 DEPEND=""
