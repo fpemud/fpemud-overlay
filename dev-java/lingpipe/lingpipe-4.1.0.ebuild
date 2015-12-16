@@ -18,5 +18,5 @@ RDEPEND=">=virtual/jre-1.6"
 DEPEND=">=virtual/jdk-1.6"
 
 src_install() {
-	java-pkg_dojar ${P}.jar
+	java-pkg_newjar ${P}.jar
 }
