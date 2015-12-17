@@ -16,6 +16,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND=">=net-misc/openvpn-2.3.8
+         net-misc/libreswan
          net-dns/dnsmasq
          dev-libs/openssl
          >=net-firewall/nftables-0.5"
