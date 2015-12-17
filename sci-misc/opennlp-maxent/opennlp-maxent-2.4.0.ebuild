@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI="5"
+
 JAVA_PKG_IUSE="source examples doc"
 inherit eutils java-pkg-2 java-ant-2
 
@@ -18,8 +20,8 @@ KEYWORDS="~x86"
 
 IUSE="${IUSE}"
 
-COMMON_DEP="dev-java/java-getopt
-	dev-java/trove"
+COMMON_DEP="dev-java/java-getopt:1
+	dev-java/trove:0"
 DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}"
 RDEPEND=">=virtual/jre-1.4
@@ -33,7 +35,7 @@ src_unpack() {
 	cd "${S}"/lib
 	rm -v *.jar || die "failed to rm jars"
 	java-pkg_jarfrom java-getopt-1 gnu.getopt.jar java-getopt.jar
-	java-pkg_jarfrom trove
+	java-pkg_jarfrom trove-0
 }
 
 src_install() {
