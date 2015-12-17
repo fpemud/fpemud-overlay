@@ -66,7 +66,7 @@ SLOT="0"
 KEYWORDS="~x86"
 
 IUSE="${IUSE} models"
-COMMON_DEP="dev-java/trove
+COMMON_DEP="~dev-java/trove-2.1.0
 	>=sci-misc/jwnl-1.3_rc3
 	>=app-dicts/wordnet-2.0
 	sci-misc/opennlp-maxent"

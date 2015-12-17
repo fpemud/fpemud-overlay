@@ -7,12 +7,9 @@ EAPI="5"
 JAVA_PKG_IUSE="source examples doc"
 inherit eutils java-pkg-2 java-ant-2
 
-MY_PN="maxent"
-MY_P="${MY_PN}-${PV}"
-
 DESCRIPTION="Maximum entropy model implementation for opennlp."
 HOMEPAGE="http://maxent.sf.net/"
-SRC_URI="mirror://sourceforge/maxent/${MY_P}.tgz"
+SRC_URI="http://sourceforge.net/projects/maxent/files/Maxent/${PV}/${P}-src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -20,32 +17,25 @@ KEYWORDS="~x86"
 
 IUSE="${IUSE}"
 
-COMMON_DEP="dev-java/java-getopt:1
-	dev-java/trove:0"
-DEPEND=">=virtual/jdk-1.4
-	${COMMON_DEP}"
-RDEPEND=">=virtual/jre-1.4
-	${COMMON_DEP}"
+DEPEND=">=virtual/jdk-1.5"
+RDEPEND=">=virtual/jre-1.5"
 
 EANT_BUILD_TARGET="compile package"
-S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"/lib
 	rm -v *.jar || die "failed to rm jars"
-	java-pkg_jarfrom java-getopt-1 gnu.getopt.jar java-getopt.jar
-	java-pkg_jarfrom trove-0
 }
 
 src_install() {
-	java-pkg_newjar output/${MY_P}.jar
+	java-pkg_newjar output/maxent-${PV}.jar
 	java-pkg_dohtml docs/*html docs/*css docs/*jpg
 	if use doc ; then
 		java-pkg_dojavadoc docs/api
 	fi
 	if use source ; then
-		java-pkg_dosrc src/java/opennlp
+		java-pkg_dosrc src/main/java
 	fi
 	if use examples ; then
 		java-pkg_doexamples samples
