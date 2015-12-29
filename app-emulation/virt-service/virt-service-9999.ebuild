@@ -23,7 +23,7 @@ RDEPEND="net-misc/bridge-utils
          net-dns/dnsmasq
          net-fs/samba
          >=sys-apps/iproute2-2.6.34
-         net-firewall/nftables"
+         >=net-firewall/nftables-0.5"
 DEPEND=""
 
 #pkg_postrm() {  
