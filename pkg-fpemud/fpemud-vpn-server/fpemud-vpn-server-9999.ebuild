@@ -17,6 +17,7 @@ IUSE=""
 
 RDEPEND=">=net-misc/openvpn-2.3.8
          net-misc/libreswan
+         net-dialup/pptpd
          net-dns/dnsmasq
          dev-libs/openssl
          >=net-firewall/nftables-0.5"
