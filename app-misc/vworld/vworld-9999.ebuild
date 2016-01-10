@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND=""
+RDEPEND=">=dev-python/pyro-4.0"
 
 src_prepare() {
 	mv ${S}/build/* ${S}
@@ -33,3 +33,4 @@ src_install() {
 	emake DESTDIR="${D}" install
 	distutils-r1_src_install
 }
+
