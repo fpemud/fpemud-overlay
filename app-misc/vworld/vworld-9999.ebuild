@@ -17,7 +17,8 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND=">=dev-python/pyro-4.0"
+RDEPEND="dev-python/pyro:4
+         net-libs/libsoup:2.4"
 
 src_prepare() {
 	mv ${S}/build/* ${S}
