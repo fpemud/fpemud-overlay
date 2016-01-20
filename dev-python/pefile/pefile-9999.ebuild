@@ -3,13 +3,13 @@
 # $Header: $
 
 EAPI=5
-PYTHON_COMPAT=( python{3_1,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit distutils-r1 git-2
 
 DESCRIPTION="Python PE parsing module"
 HOMEPAGE="http://github.com/erocarrera/pefile"
-EGIT_REPO_URI="http://github.com/erocarrera/pefile.git"
+EGIT_REPO_URI="http://github.com/fpemud/pefile.git"
 
 LICENSE="GPLv3"
 SLOT="0"
