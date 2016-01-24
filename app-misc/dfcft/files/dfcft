@@ -72,4 +72,4 @@ fi
 
 # run the program
 cd "$DATADIR/drive_c/swc8"
-WINEPREFIX="$DATADIR" wine mainfree.exe
+LC_ALL="zh_CN.utf8" WINEPREFIX="$DATADIR" wine mainfree.exe

@@ -29,6 +29,7 @@ src_unpack() {
 	# Restruct the directory.
 	rm -rf "${WORKDIR}/${P}/data/\$PLUGINSDIR"
 	rm "${WORKDIR}/${P}/data/uninst.exe.nsis"
+	find "${WORKDIR}/${P}/data" -type d | xargs chmod 0755
 
 	# Get simsun font
 	mkdir "${WORKDIR}/${P}/fonts"
@@ -51,7 +52,6 @@ src_prepare() {
 src_install() {
 	dodir "opt/${PN}/swc8"
 	cp -r data/* "${D}/opt/${PN}/swc8"
-	find "${D}/opt/${PN}/swc8" -type d | xargs chmod 755
 
 	dodir "opt/${PN}/fonts"
 	cp -r fonts/* "${D}/opt/${PN}/fonts"
