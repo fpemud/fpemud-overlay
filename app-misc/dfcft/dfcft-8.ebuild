@@ -14,27 +14,49 @@ KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="mirror"
 
-DEPEND="app-arch/p7zip"
+DEPEND="app-arch/p7zip
+        || ( app-admin/microsoft-windows-xp-setup-cd-x86
+             app-admin/microsoft-windows-7-setup-dvd-x86
+             app-admin/microsoft-windows-7-setup-dvd-amd64 )"
 RDEPEND="|| ( >=app-emulation/wine-1.4.1[win32]
               >=app-emulation/wine-1.6[abi_x86_32]
               >=app-emulation/wine-1.8[abi_x86_32] )"
 
 src_unpack() {
-	mkdir "${WORKDIR}/${P}"
-	7z x "${DISTDIR}/${A}" -o"${WORKDIR}/${P}"
+	mkdir "${WORKDIR}/${P}/data"
+	7z x "${DISTDIR}/${A}" -o"${WORKDIR}/${P}/data"
 
 	# Restruct the directory.
-	rm -rf "${WORKDIR}/${P}/\$PLUGINSDIR"
-	rm "${WORKDIR}/${P}/uninst.exe.nsis"
+	rm -rf "${WORKDIR}/${P}/data/\$PLUGINSDIR"
+	rm "${WORKDIR}/${P}/data/uninst.exe.nsis"
+
+	# Get simsun font
+	mkdir "${WORKDIR}/${P}/fonts"
+	if [ -e /usr/share/microsoft-windows-7-setup-dvd/windows-7-setup-x86.iso ] ; then
+		7z e /usr/share/microsoft-windows-7-setup-dvd/windows-7-setup-x86.iso sources/install.wim -o"${WORKDIR}/${P}/fonts"
+		7z e "${WORKDIR}/${P}/fonts/install.wim" 1/Windows/Fonts/simsun.ttc -o"${WORKDIR}/${P}/fonts"
+		7z e "${WORKDIR}/${P}/fonts/install.wim" 1/Windows/Fonts/simsunb.ttf -o"${WORKDIR}/${P}/fonts"
+		rm "${WORKDIR}/${P}/fonts/install.wim"
+	else
+		die "No Microsoft Windows setup ISO file found"
+	fi
 }
 
-#src_prepare() {
+src_prepare() {
 	# Prepare the wrapper script
-#	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/limbo/g" \
-#	    -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/limbo/g" "${FILESDIR}/limbo" > "${WORKDIR}/limbo"
-#}
+	sed -e "s/^OPTDIR=.*$/OPTDIR=\/opt\/${PN}/g" \
+	    -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/${PN}/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${P}/${PN}"
+}
 
 src_install() {
 	dodir "opt/${PN}/swc8"
-	cp -r * "${D}/opt/${PN}/swc8"
+	cp -r data/* "${D}/opt/${PN}/swc8"
+	find "${D}/opt/${PN}/swc8" -type d | xargs chmod 755
+
+	dodir "opt/${PN}/fonts"
+	cp -r fonts/* "${D}/opt/${PN}/fonts"
+
+	dobin "${PN}"
+	#doicon "${DISTDIR}/${PN}.png"
+	#domenu "${DISTDIR}/${PN}.desktop"
 }
