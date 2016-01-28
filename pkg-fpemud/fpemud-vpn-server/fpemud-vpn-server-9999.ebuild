@@ -20,5 +20,6 @@ RDEPEND=">=net-misc/openvpn-2.3.8
          net-dialup/pptpd
          net-dns/dnsmasq
          dev-libs/openssl
+         sys-apps/net-tools
          >=net-firewall/nftables-0.5"
 DEPEND=""
