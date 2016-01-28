@@ -18,7 +18,7 @@ IUSE=""
 #         net-misc/libreswan
 #         net-dialup/pptpd
 RDEPEND=">=net-misc/openvpn-2.3.8
-         net-dialup/pptp-client
+         net-dialup/pptpclient
          net-dns/dnsmasq
          dev-libs/openssl
          sys-apps/net-tools
