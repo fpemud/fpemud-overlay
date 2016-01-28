@@ -3,7 +3,6 @@
 # $Id$
 
 EAPI=5
-#inherit eutils
 
 DESCRIPTION="Peanut Hull dynamic DNS"
 HOMEPAGE="http://hsk.oray.com/"
@@ -13,11 +12,17 @@ LICENSE="unknown"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 
+RDEPEND="sys-apps/systemd"
+
 S=${WORKDIR}/${P}.i386
 
 src_install() {
-        exeinto /usr/bin
+	insinto /usr/lib/systemd/system
+	doins ${FILESDIR}/phddns.service
+
+        exeinto /usr/sbin
         doexe phddns
+
 	dodoc readme
 }
 

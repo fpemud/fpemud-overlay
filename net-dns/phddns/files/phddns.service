@@ -1,0 +1,11 @@
+[Unit]
+Description=Peanut Hull Dynamic DNS Update Client
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Type=forking
+ExecStart=/usr/sbin/phddns -d -c /etc/phlinux.conf
+
+[Install]
+WantedBy=multi-user.target
