@@ -6,19 +6,20 @@ EAPI="5"
 
 inherit git-2
 
-EGIT_REPO_URI="http://github.com/fpemud/fpemud-cloudvpn-server.git"
+EGIT_REPO_URI="http://github.com/fpemud/fpemud-vpn-server.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
-DESCRIPTION="--fixme"
+DESCRIPTION="Cloud VPN server for fpemud's systems"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
+#         net-misc/libreswan
+#         net-dialup/pptpd
 RDEPEND=">=net-misc/openvpn-2.3.8
-         net-misc/libreswan
-         net-dialup/pptpd
          net-dns/dnsmasq
          dev-libs/openssl
+         sys-apps/net-tools
          >=net-firewall/nftables-0.5"
 DEPEND=""
