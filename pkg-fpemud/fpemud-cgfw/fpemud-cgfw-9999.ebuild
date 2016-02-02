@@ -15,5 +15,6 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-dialup/pptpclient"
+RDEPEND="net-dialup/pptpclient
+         net-misc/whois"
 DEPEND=""
