@@ -15,10 +15,10 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
+#         >=net-misc/n2n-2.0.0
 #         net-misc/libreswan
 #         net-dialup/pptpd
 RDEPEND=">=net-misc/openvpn-2.3.8
-         >=net-misc/n2n-2.0.0
          net-dns/dnsmasq
          dev-libs/openssl
          sys-apps/net-tools
