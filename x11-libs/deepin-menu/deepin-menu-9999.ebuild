@@ -10,7 +10,7 @@ inherit git-2 distutils-r1 qmake-utils
 
 DESCRIPTION="Menu service for Linux Deepin"
 HOMEPAGE="https://github.com/linuxdeepin/deepin-menu"
-EGIT_REPO_URI="http://github.com/linuxdeepin/deepin-menu.git"
+EGIT_REPO_URI="https://github.com/linuxdeepin/deepin-menu.git"
 
 LICENSE="LGPL-3"
 SLOT="0"

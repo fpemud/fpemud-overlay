@@ -8,7 +8,7 @@ inherit fdo-mime versionator eutils python git-2
 
 DESCRIPTION="Deepin gsettings Python Bindings"
 HOMEPAGE="http://www.linuxdeepin.com"
-EGIT_REPO_URI="http://github.com/linuxdeepin/deepin-gsettings.git"
+EGIT_REPO_URI="https://github.com/linuxdeepin/deepin-gsettings.git"
 
 LICENSE="GPL-2+"
 SLOT="0"

@@ -9,7 +9,7 @@ inherit cmake-utils eutils git-2
 DESCRIPTION="This is Pluggable Authentication Module for Face based Authentication"
 HOMEPAGE="http://pam-face-authentication.org"
 SRC_URI=""
-EGIT_REPO_URI="http://github.com/fpemud/pam-face-authentication.git"
+EGIT_REPO_URI="https://github.com/fpemud/pam-face-authentication.git"
 
 LICENSE="GPL-2"
 SLOT="0"

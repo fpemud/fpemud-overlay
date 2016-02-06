@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-2
 
-EGIT_REPO_URI="http://github.com/fpemud/fpemud-vpn-server.git"
+EGIT_REPO_URI="https://github.com/fpemud/fpemud-vpn-server.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 

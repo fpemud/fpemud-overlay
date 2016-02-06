@@ -9,7 +9,7 @@ inherit git-2 python versionator
 
 DESCRIPTION="UI toolkit for Linux Deepin."
 HOMEPAGE="https://github.com/linuxdeepin/deepin-ui"
-EGIT_REPO_URI="http://github.com/linuxdeepin/deepin-ui.git"
+EGIT_REPO_URI="https://github.com/linuxdeepin/deepin-ui.git"
 
 LICENSE="LGPL-3"
 SLOT="0"

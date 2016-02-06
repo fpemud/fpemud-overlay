@@ -8,7 +8,7 @@ inherit git-2 fdo-mime versionator eutils python
 
 DESCRIPTION="Utils of DeepinUI Toolkit modules"
 HOMEPAGE="http://www.linuxdeepin.com"
-EGIT_REPO_URI="http://github.com/linuxdeepin/deepin-utils.git"
+EGIT_REPO_URI="https://github.com/linuxdeepin/deepin-utils.git"
 
 LICENSE="GPL-2+"
 SLOT="0"

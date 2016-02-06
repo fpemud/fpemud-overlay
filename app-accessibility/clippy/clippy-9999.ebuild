@@ -9,7 +9,7 @@ inherit gnome2-utils git-2
 DESCRIPTION=""
 HOMEPAGE="https://github.com/fpemud/clippy"
 SRC_URI=""
-EGIT_REPO_URI="http://github.com/fpemud/clippy.git"
+EGIT_REPO_URI="https://github.com/fpemud/clippy.git"
 
 LICENSE="GPLv3"
 SLOT="0"

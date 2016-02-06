@@ -9,7 +9,7 @@ inherit distutils-r1 git-2
 
 DESCRIPTION="Python wrapper for TA-Lib"
 HOMEPAGE="http://mrjbq7.github.io/ta-lib"
-EGIT_REPO_URI="http://github.com/mrjbq7/ta-lib"
+EGIT_REPO_URI="https://github.com/mrjbq7/ta-lib"
 
 LICENSE="BSD"
 SLOT="0"

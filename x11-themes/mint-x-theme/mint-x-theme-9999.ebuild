@@ -8,7 +8,7 @@ inherit git-2
 
 DESCRIPTION="GTK Theme for Linux Mint"
 HOMEPAGE="https://github.com/linuxmint/mint-x-theme"
-EGIT_REPO_URI="http://github.com/linuxmint/mint-x-theme.git"
+EGIT_REPO_URI="https://github.com/linuxmint/mint-x-theme.git"
 
 LICENSE="GPL"
 SLOT="0"

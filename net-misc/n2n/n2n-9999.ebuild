@@ -5,7 +5,7 @@
 EAPI=5
 
 inherit cmake-utils git-2
-EGIT_REPO_URI="http://github.com/meyerd/n2n"
+EGIT_REPO_URI="https://github.com/meyerd/n2n"
 
 DESCRIPTION="A Layer-2 P2P VPN"
 HOMEPAGE="http://www.ntop.org/products/n2n/"

@@ -8,7 +8,7 @@ inherit git-2 fdo-mime eutils
 
 DESCRIPTION="DMovie"
 HOMEPAGE="https://github.com/fpemud/dmovie"
-EGIT_REPO_URI="http://github.com/fpemud/dmovie.git"
+EGIT_REPO_URI="https://github.com/fpemud/dmovie.git"
 
 LICENSE="GPL-3"
 SLOT="0"

@@ -8,7 +8,7 @@ inherit gnome2-utils git-2
 
 DESCRIPTION="Icon theme for Linux Mint"
 HOMEPAGE="https://github.com/linuxmint/mint-x-icons"
-EGIT_REPO_URI="http://github.com/linuxmint/mint-x-icons.git"
+EGIT_REPO_URI="https://github.com/linuxmint/mint-x-icons.git"
 
 LICENSE="GPL"
 SLOT="0"

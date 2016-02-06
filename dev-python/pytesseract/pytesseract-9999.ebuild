@@ -8,8 +8,8 @@ PYTHON_COMPAT=( python{2_7,3_1,3_2,3_3,3_4} )
 inherit distutils-r1 git-2
 
 DESCRIPTION="A Python wrapper for Google Tesseract"
-HOMEPAGE="http://github.com/madmaze/pytesseract"
-EGIT_REPO_URI="http://github.com/madmaze/pytesseract"
+HOMEPAGE="https://github.com/madmaze/pytesseract"
+EGIT_REPO_URI="https://github.com/madmaze/pytesseract"
 
 LICENSE="GPLv3"
 SLOT="0"

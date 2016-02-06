@@ -8,7 +8,7 @@ inherit git-2 fdo-mime versionator eutils
 
 DESCRIPTION="Deepin Media Player."
 HOMEPAGE="https://github.com/linuxdeepin/deepin-media-player"
-EGIT_REPO_URI="http://github.com/linuxdeepin/deepin-media-player.git"
+EGIT_REPO_URI="https://github.com/linuxdeepin/deepin-media-player.git"
 
 LICENSE="LGPL-3"
 SLOT="0"

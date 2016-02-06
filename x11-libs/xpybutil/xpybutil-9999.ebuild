@@ -7,8 +7,8 @@ EAPI="4"
 inherit git-2 eutils python
 
 DESCRIPTION="An incomplete xcb-util port plus some extras"
-HOMEPAGE="http://github.com/BurntSushi/xpybutil"
-EGIT_REPO_URI="http://github.com/BurntSushi/xpybutil.git"
+HOMEPAGE="https://github.com/BurntSushi/xpybutil"
+EGIT_REPO_URI="https://github.com/BurntSushi/xpybutil.git"
 
 LICENSE="WTFPL"
 SLOT="0"

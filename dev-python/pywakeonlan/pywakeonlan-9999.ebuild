@@ -7,8 +7,8 @@ EAPI="4"
 inherit distutils eutils git-2
 
 DESCRIPTION="A small python module for wake on lan."
-HOMEPAGE="http://github.com/remcohaszing/pywakeonlan"
-EGIT_REPO_URI="http://github.com/remcohaszing/pywakeonlan.git"
+HOMEPAGE="https://github.com/remcohaszing/pywakeonlan"
+EGIT_REPO_URI="https://github.com/remcohaszing/pywakeonlan.git"
 
 LICENSE="WTFPL"
 KEYWORDS="~amd64 ~x86"

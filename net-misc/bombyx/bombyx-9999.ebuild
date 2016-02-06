@@ -8,7 +8,7 @@ inherit git-2
 
 DESCRIPTION="Manage networkmanager connections in a managed way"
 SRC_URI=""
-EGIT_REPO_URI="http://github.com/fpemud/bombyx.git"
+EGIT_REPO_URI="https://github.com/fpemud/bombyx.git"
 
 KEYWORDS="-* amd64 x86"
 LICENSE="GPL-3"

@@ -5,7 +5,7 @@
 EAPI="4"
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="http://github.com/fpemud/fpemud-syschecker.git"
+	EGIT_REPO_URI="https://github.com/fpemud/fpemud-syschecker.git"
 	inherit git-2
 	SRC_URI=""
 	KEYWORDS="-* amd64 x86"

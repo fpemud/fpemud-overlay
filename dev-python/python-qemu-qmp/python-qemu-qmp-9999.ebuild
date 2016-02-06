@@ -9,7 +9,7 @@ inherit distutils-r1 git-2
 
 DESCRIPTION="Python implementation of the Qemu Monitor Protocol (QMP)"
 HOMEPAGE=""
-EGIT_REPO_URI="http://github.com/fpemud/python-qemu-qmp.git"
+EGIT_REPO_URI="https://github.com/fpemud/python-qemu-qmp.git"
 
 LICENSE="LGPLv2"
 SLOT="0"

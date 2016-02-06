@@ -9,7 +9,7 @@ inherit distutils-r1 git-2
 
 DESCRIPTION="A virtualized world"
 HOMEPAGE=""
-EGIT_REPO_URI="http://github.com/fpemud/vworld.git"
+EGIT_REPO_URI="https://github.com/fpemud/vworld.git"
 
 LICENSE="GPLv3"
 SLOT="0"

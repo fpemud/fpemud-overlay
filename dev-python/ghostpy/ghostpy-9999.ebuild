@@ -9,7 +9,7 @@ inherit distutils-r1 git-2
 
 DESCRIPTION="Webkit based scriptable web browser for python."
 HOMEPAGE="http://ghost-py.readthedocs.org"
-EGIT_REPO_URI="http://github.com/jeanphix/Ghost.py"
+EGIT_REPO_URI="https://github.com/jeanphix/Ghost.py"
 
 LICENSE="GPLv3"
 SLOT="0"

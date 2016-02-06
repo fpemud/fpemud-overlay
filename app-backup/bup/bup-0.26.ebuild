@@ -15,7 +15,7 @@ DOC_COMMIT="72a22978da8ac06b65425d872dbe178354b03128"
 DESCRIPTION="Highly efficient file backup system based on the git packfile format"
 HOMEPAGE="https://github.com/bup/bup"
 SRC_URI="https://github.com/bup/${PN}/archive/${PV/_/-}.tar.gz -> ${P}.tar.gz
-         http://github.com/bup/${PN}/archive/${DOC_COMMIT}.tar.gz -> ${P}-man.tar.gz"
+         https://github.com/bup/${PN}/archive/${DOC_COMMIT}.tar.gz -> ${P}-man.tar.gz"
 KEYWORDS="~amd64 ~x86"
 
 LICENSE="LGPL-2"

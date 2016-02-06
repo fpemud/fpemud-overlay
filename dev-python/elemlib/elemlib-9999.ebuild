@@ -9,7 +9,7 @@ inherit distutils-r1 git-2
 
 DESCRIPTION="Library for element operation"
 HOMEPAGE=""
-EGIT_REPO_URI="http://github.com/fpemud/elemlib.git"
+EGIT_REPO_URI="https://github.com/fpemud/elemlib.git"
 
 LICENSE="GPLv3"
 SLOT="0"

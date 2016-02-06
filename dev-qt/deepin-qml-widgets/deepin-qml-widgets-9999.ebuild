@@ -8,7 +8,7 @@ inherit git-2 eutils qmake-utils
 
 DESCRIPTION="Deepin Qml Widgets"
 HOMEPAGE="https://github.com/linuxdeepin/deepin-qml-widgets"
-EGIT_REPO_URI="http://github.com/linuxdeepin/deepin-qml-widgets.git"
+EGIT_REPO_URI="https://github.com/linuxdeepin/deepin-qml-widgets.git"
 
 LICENSE="LGPL-3"
 SLOT="0"

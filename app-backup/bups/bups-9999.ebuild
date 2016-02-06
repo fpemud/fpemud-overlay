@@ -9,7 +9,7 @@ inherit distutils-r1 git-2
 
 DESCRIPTION="Simple GUI for Bup, a very efficient backup system"
 HOMEPAGE="https://github.com/emersion/bups"
-EGIT_REPO_URI="http://github.com/emersion/bups.git"
+EGIT_REPO_URI="https://github.com/emersion/bups.git"
 KEYWORDS="~x86 ~amd64"
 
 LICENSE="MIT"

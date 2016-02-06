@@ -8,7 +8,7 @@ inherit git-2 fdo-mime versionator eutils
 
 DESCRIPTION="Deepin Movie."
 HOMEPAGE="https://github.com/linuxdeepin/deepin-movie"
-EGIT_REPO_URI="http://github.com/linuxdeepin/deepin-movie.git"
+EGIT_REPO_URI="https://github.com/linuxdeepin/deepin-movie.git"
 
 LICENSE="LGPL-3"
 SLOT="0"

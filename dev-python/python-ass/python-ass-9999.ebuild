@@ -7,8 +7,8 @@ EAPI="4"
 inherit distutils eutils git-2
 
 DESCRIPTION="A library for parsing and manipulating Advanced SubStation Alpha subtitle files."
-HOMEPAGE="http://github.com/rfw/python-ass"
-EGIT_REPO_URI="http://github.com/rfw/python-ass.git"
+HOMEPAGE="https://github.com/rfw/python-ass"
+EGIT_REPO_URI="https://github.com/rfw/python-ass.git"
 
 LICENSE="unknown"
 KEYWORDS="~amd64 ~x86"

@@ -7,7 +7,7 @@ EAPI=5
 inherit git-2 distutils
 
 DESCRIPTION="Daemon that executes event-triggered actions"
-HOMEPAGE="http://github.com/fpemud/mplugd"
+HOMEPAGE="https://github.com/fpemud/mplugd"
 EGIT_REPO_URI="https://github.com/fpemud/mplugd.git"
 
 LICENSE="GPL-2"
