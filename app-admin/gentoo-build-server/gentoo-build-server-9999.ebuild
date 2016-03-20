@@ -15,5 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/openssh"
+RDEPEND="net-misc/openssh
+         www-servers/apache
+         www-apache/mod_wsgi"
 DEPEND=""
