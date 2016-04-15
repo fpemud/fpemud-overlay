@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit git-2
+inherit user git-2
 
 EGIT_REPO_URI="https://github.com/fpemud/git-http-daemon.git"
 SRC_URI=""
@@ -18,3 +18,8 @@ IUSE=""
 RDEPEND=">=www-servers/apache-2.4.9
          sys-apps/systemd"
 DEPEND=""
+
+pkg_setup() {
+	enewgroup git
+	enewuser git -1 /bin/sh /var/git git
+}

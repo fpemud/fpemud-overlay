@@ -4,18 +4,16 @@
 
 EAPI="5"
 
-EGIT_REPO_URI="https://github.com/fpemud/gentoo-build-server.git"
 inherit git-2
+
+EGIT_REPO_URI="https://github.com/fpemud/fpemud-vmake.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
-DESCRIPTION="Gentoo Build Server"
-
+DESCRIPTION="Make virt-machines in fpemud's way"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/openssh
-         www-servers/apache
-         www-apache/mod_wsgi"
+RDEPEND=""
 DEPEND=""
