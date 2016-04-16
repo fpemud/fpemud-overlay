@@ -8,10 +8,10 @@ GNOME_ORG_MODULE="NetworkManager-${PN##*-}"
 
 inherit eutils gnome2 user git-2
 
-DESCRIPTION="A simple NetworkManager OpenVPN plugin"
-HOMEPAGE="https://github.com/fpemud/networkmanager-openvpn-simple"
+DESCRIPTION="NetworkManager VPN integration for OpenVPN using ovpn file directly"
+HOMEPAGE="https://github.com/fpemud/networkmanager-ovpn"
 SRC_URI=""
-EGIT_REPO_URI="https://github.com/fpemud/networkmanager-openvpn-simple.git"
+EGIT_REPO_URI="https://github.com/fpemud/networkmanager-ovpn.git"
 EGIT_BRANCH="release"
 
 LICENSE="GPL-2+"
