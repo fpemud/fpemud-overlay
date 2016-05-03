@@ -4,16 +4,12 @@
 
 EAPI="4"
 
-if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="https://github.com/fpemud/virt-player.git"
-	inherit git-2
-	SRC_URI=""
-	KEYWORDS="-* amd64 x86"
-else
-	die "Invalid version"
-fi
+inherit git-2
 
 DESCRIPTION="A simple virtual machine player"
+EGIT_REPO_URI="https://github.com/fpemud/lightbox.git"
+SRC_URI=""
+KEYWORDS="-* amd64 x86"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -27,10 +23,10 @@ RDEPEND="app-emulation/qemu[spice]
 DEPEND=""
 
 pkg_postrm() {
-	find "${EROOT}/usr/bin/virt-player" -name "*.pyc" | xargs rm -f
+	find "${EROOT}/usr/bin/lightbox" -name "*.pyc" | xargs rm -f
 
 	# Delete empty parent directories.
-	local dir="${EROOT}/usr/bin/virt-player"
+	local dir="${EROOT}/usr/bin/lightbox"
 	while [[ "${dir}" != "${EROOT%/}" ]]; do
 		rmdir "${dir}" 2> /dev/null || break
 		dir="${dir%/*}"
