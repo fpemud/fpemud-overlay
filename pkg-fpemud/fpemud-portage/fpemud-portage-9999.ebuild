@@ -4,43 +4,43 @@
 
 EAPI="4"
 
-if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="https://github.com/fpemud/fpemud-portage.git"
-	inherit git-2
-	SRC_URI=""
-	KEYWORDS="-* amd64 x86"
-else
-	die "Invalid version"
-fi
+inherit git-2
 
-DESCRIPTION="Portage scripts for fpemud system"
+DESCRIPTION="Reference System for Fpemud"
+SRC_URI=""
+EGIT_REPO_URI="https://github.com/fpemud/fpemud-portage.git"
 
+KEYWORDS="-* amd64 x86"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="app-admin/gentoo-bashrc
-         dev-python/pyudev
-         dev-python/dbus-python
+RDEPEND="sys-apps/systemd
+         app-admin/gentoo-bashrc
          app-portage/mirrorselect
          net-misc/wget
-         sys-fs/squashfs-tools
          sys-apps/portage
-         sys-apps/systemd
          dev-vcs/git
          dev-vcs/subversion
          dev-vcs/mercurial
          dev-vcs/bzr
-         dev-vcs/cvs"
-DEPEND="${RDEPEND}"
-
-pkg_postrm() {
-	find "${EROOT}/usr/bin/fpemud-portage" -name "*.pyc" | xargs rm -f
-
-	# Delete empty parent directories.
-	local dir="${EROOT}/usr/bin/fpemud-portage"
-	while [[ "${dir}" != "${EROOT%/}" ]]; do
-		rmdir "${dir}" 2> /dev/null || break
-		dir="${dir%/*}"
-	done
-}
+         dev-vcs/cvs
+         sys-boot/grub:2[grub_platforms_pc,grub_platforms_efi-64]
+         sys-boot/efibootmgr
+         sys-boot/os-prober
+         sys-fs/lvm2
+         sys-fs/squashfs-tools
+         sys-fs/reiserfsprogs
+         sys-fs/xfsprogs
+         sys-fs/ntfs3g
+         sys-apps/kmod[python]
+         sys-apps/diffutils
+         app-arch/cpio
+         app-arch/xz-utils
+         dev-python/dbus-python
+         dev-python/lxml
+         dev-python/pylkc
+         dev-python/pyudev
+         dev-python/libebuild2"
+DEPEND="${RDEPEND}
+        virtual/pkgconfig"
