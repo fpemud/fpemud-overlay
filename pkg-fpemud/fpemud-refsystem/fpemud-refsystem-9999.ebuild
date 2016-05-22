@@ -6,9 +6,9 @@ EAPI="4"
 
 inherit git-2
 
-DESCRIPTION="Reference System for Fpemud"
+DESCRIPTION="Fpemud Reference System"
 SRC_URI=""
-EGIT_REPO_URI="https://github.com/fpemud/fpemud-portage.git"
+EGIT_REPO_URI="https://github.com/fpemud/fpemud-refsystem.git"
 
 KEYWORDS="-* amd64 x86"
 LICENSE="GPL-3"
