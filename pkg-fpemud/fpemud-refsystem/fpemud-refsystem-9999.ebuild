@@ -40,7 +40,6 @@ RDEPEND="sys-apps/systemd
          dev-python/dbus-python
          dev-python/lxml
          dev-python/pylkc
-         dev-python/pyudev
-         dev-python/libebuild2"
+         dev-python/pyudev"
 DEPEND="${RDEPEND}
         virtual/pkgconfig"
