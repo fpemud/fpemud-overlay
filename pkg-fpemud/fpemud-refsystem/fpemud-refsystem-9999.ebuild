@@ -38,6 +38,7 @@ RDEPEND="sys-apps/systemd
          app-arch/cpio
          app-arch/xz-utils
          app-arch/zip
+         sys-devel/bc
          dev-python/dbus-python
          dev-python/lxml
          dev-python/pylkc
