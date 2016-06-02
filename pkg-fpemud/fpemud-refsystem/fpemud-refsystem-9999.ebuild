@@ -17,6 +17,7 @@ IUSE=""
 
 RDEPEND="sys-apps/systemd
          app-admin/gentoo-bashrc
+         app-portage/gentoolkit
          app-portage/mirrorselect
          net-misc/wget
          sys-apps/portage
