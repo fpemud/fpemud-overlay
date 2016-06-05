@@ -16,5 +16,6 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="virtual/cdrtools
-         dev-python/pyftpdlib"
+         dev-python/pyftpdlib
+         sys-boot/syslinux"
 DEPEND=""
