@@ -34,6 +34,7 @@ RDEPEND="sys-apps/systemd
          sys-fs/reiserfsprogs
          sys-fs/xfsprogs
          sys-fs/ntfs3g
+         >=sys-fs/dosfstools-4.0-r1
          sys-apps/kmod[python]
          sys-apps/diffutils
          app-arch/cpio
