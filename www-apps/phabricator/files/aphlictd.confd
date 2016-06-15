@@ -1,0 +1,7 @@
+# Config file for /etc/init.d/aphlictd
+
+# Where to serve the files from
+PHABRICATOR_ROOT="/var/www/localhost"
+
+# Environnement to enable
+PHABRICATOR_ENV="default"

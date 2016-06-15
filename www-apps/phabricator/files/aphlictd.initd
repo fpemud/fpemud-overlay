@@ -1,0 +1,53 @@
+#!/sbin/runscript
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+: ${PHABRICATOR_ROOT:=/var/www/localhost}
+: ${PHABRICATOR_ENV:=default}
+
+export PHABRICATOR_ENV
+
+depend() {
+	need phd
+}
+
+get_config() {
+	local key="$1"
+
+	"${PHABRICATOR_ROOT}/bin/config" get "$@" \
+		| jq -M --raw-output '.config[0].value'
+}
+
+checkconfig() {
+	pid_file="$(get_config notification.pidfile)" \
+		|| return 1
+
+	if [[ -z "${pid_file/null}" ]] ; then
+		pid_file="/run/${RC_SVCNAME}.pid"
+		"${PHABRICATOR_ROOT}/bin/config" \
+			set notification.pidfile "${pid_file}"
+	fi
+}
+
+start() {
+	checkconfig || return 1
+
+	ebegin "Starting ${RC_SVCNAME} (${PHABRICATOR_ROOT})"
+	start-stop-daemon --start \
+		-e PHABRICATOR_ENV="${PHABRICATOR_ENV}" \
+		--quiet \
+		--exec "${PHABRICATOR_ROOT}/bin/aphlict" \
+		--pidfile "${pid_file}"
+	eend $?
+}
+
+stop() {
+	checkconfig || return 1
+
+	ebegin "Stopping ${RC_SVCNAME} (${PHABRICATOR_ROOT})"
+	start-stop-daemon --stop \
+		--quiet \
+		--pidfile "${pid_file}"
+	eend $?
+}

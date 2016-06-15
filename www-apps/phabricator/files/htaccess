@@ -1,0 +1,17 @@
+# Environnement to enable
+SetEnv PHABRICATOR_ENV default
+
+# Needed for RewriteEngine
+Options FollowSymLinks
+
+RewriteEngine On
+
+# Server local file directly expect index.php
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} !^/index.php
+RewriteRule .* - [L,QSA]
+
+# Append REQUEST_URI as a __path__ QUERY_STRING to all other requests
+# if not already existing
+RewriteCond %{QUERY_STRING} !^__path__=
+RewriteRule ^(.*)$          /index.php?__path__=/$1 [NS,B,L,QSA]

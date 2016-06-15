@@ -1,0 +1,88 @@
+#!/sbin/runscript
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+: ${PHABRICATOR_ROOT:=/var/www/localhost}
+: ${PHABRICATOR_ENV:=default}
+: ${PHABRICATOR_USER:=apache}
+
+export PHABRICATOR_ENV
+
+depend() {
+	need apache2 git-daemon
+}
+
+get_config() {
+	local key="$1"
+
+	"${PHABRICATOR_ROOT}/bin/config" get "$@" \
+		| jq -M --raw-output '.config[0].value'
+}
+
+checkconfig() {
+	pid_dir="$(get_config phd.pid-directory)" \
+		|| return 1
+
+	if [[ -z "${pid_dir/null}" ]] ; then
+		pid_dir="/run/${RC_SVCNAME}"
+		"${PHABRICATOR_ROOT}/bin/config" \
+			set phd.pid-directory "${pid_dir}"
+	fi
+}
+
+status() {
+	"${PHABRICATOR_ROOT}/bin/phd" status
+}
+
+start() {
+	checkconfig || return 1
+	checkpath -d \
+		-o "${PHABRICATOR_USER}" \
+		"${pid_dir}"
+
+	ebegin "Starting ${RC_SVCNAME} (${PHABRICATOR_ROOT})"
+	start-stop-daemon --start \
+		-e PHABRICATOR_ENV="${PHABRICATOR_ENV}" \
+		--quiet \
+		--user "${PHABRICATOR_USER}" \
+		--exec "${PHABRICATOR_ROOT}/bin/phd" \
+		--pidfile "${pid_dir}.pid" \
+		-- start
+	eend $?
+
+	# This is a terrible hack
+	# bin/phd launch many phd-daemon, and then exit
+	# phd-daemon handle their own pidfiles, all concentrated in the same directory
+	# formatted as JSON file
+	#
+	# This mean that start-stop-daemon
+	#   can't match on a pidfile created by phd or phd-daemon
+	#   can't match on --exec as their is not 'phd' process
+	#   can't match on --name as arguments are not fixed
+	#   and then always make phd as crashed
+	#
+	# So solution here is to wait a bit, and then create a pidfile that contain pid
+	# enumerated in JSON files
+	einfo "Populating ${pid_dir}.pid"
+	sleep 5
+	find "${pid_dir}" \
+		-type f \
+		| grep -E '/daemon.([0-9]+)' \
+		| xargs --no-run-if-empty -- \
+			jq .pid \
+		> "${pid_dir}.pid"
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ${RC_SVCNAME} (${PHABRICATOR_ROOT})"
+	# Yep, a start, phd play with many pid files as explain above
+	start-stop-daemon --start \
+		-e PHABRICATOR_ENV="${PHABRICATOR_ENV}" \
+		--quiet \
+		--user "${PHABRICATOR_USER}" \
+		--exec "${PHABRICATOR_ROOT}/bin/phd" \
+		-- stop
+	eend $?
+}

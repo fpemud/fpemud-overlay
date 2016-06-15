@@ -1,0 +1,10 @@
+# Config file for /etc/init.d/phd
+
+# Where to serve the files from
+PHABRICATOR_ROOT="/var/www/localhost"
+
+# Environnement to enable
+PHABRICATOR_ENV="default"
+
+# User/Group of this instance
+PHABRICATOR_USER="apache"

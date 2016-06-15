@@ -1,0 +1,27 @@
+From 8f7c3736b99b5497620df020381373525b9531bf Mon Sep 17 00:00:00 2001
+From: Enlightenment <no-reply@enlightenment.org>
+Date: Tue, 26 Mar 2013 06:11:16 -0700
+Subject: [PATCH] Make wiki visible to all.
+
+---
+ src/applications/phriction/controller/PhrictionDocumentController.php | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/applications/phriction/controller/PhrictionDocumentController.php b/src/applications/phriction/controller/PhrictionDocumentController.php
+index 3cb431d..1431256 100644
+--- a/src/applications/phriction/controller/PhrictionDocumentController.php
++++ b/src/applications/phriction/controller/PhrictionDocumentController.php
+@@ -8,6 +8,10 @@ final class PhrictionDocumentController
+ 
+   private $slug;
+ 
++  public function shouldAllowPublic() {
++    return true;
++  }
++
+   public function willProcessRequest(array $data) {
+     $this->slug = $data['slug'];
+   }
+-- 
+1.8.1.5
+

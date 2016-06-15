@@ -1,0 +1,146 @@
+#!/bin/bash
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+export PATH="$PATH:/usr/lib/portage/bin/ebuild-helpers"
+source /usr/lib/portage/bin/isolated-functions.sh
+
+function rc_status () {
+	[[ $# -ne 1 ]] && return 1
+
+	local _svc="$1"
+
+	"/etc/init.d/${_svc}" -sCq status > /dev/null 2>&1
+}
+
+function chk-htdocs () {
+	local _root="$(realpath ${VHOST_ROOT})"
+	local _htdocs="$(realpath ${VHOST_HTDOCSDIR})"
+
+	_root="${_root//[^\/]}"
+	_htdocs="${_htdocs//[^\/]}"
+
+	if (( ${#_htdocs} - ${#_root} != 1 )) ; then
+		eerror "VHOST_HTDOCSDIR MUST be one level subdirectory of VHOST_ROOT"
+		eerror
+		eerror "What you have is"
+		eerror "	VHOST_ROOT=${VHOST_ROOT}"
+		eerror "	VHOST_HTDOCSDIR=${VHOST_HTDOCSDIR}"
+		eerror
+		eerror "Example of what you should have"
+		eerror "	VHOST_ROOT=/var/www/localhost"
+		eerror "	VHOST_HTDOCSDIR=/var/www/localhost/public_html"
+		eerror
+		die "You must fix your webapp-config configuration"
+	fi
+
+	return 0
+}
+
+function fix-perms () {
+	einfo "Make executable all shebanged files"
+	find "${VHOST_ROOT}" -type f \
+		| xargs -n 1 --no-run-if-empty -- \
+			awk 'NR == 1 && /^#!/ {print FILENAME}' \
+		| xargs --no-run-if-empty -- \
+			fperms 755
+	eend $?
+
+	return 0
+}
+
+function fix-webroot () {
+	# Abort if vhost_htdocs is already webroot
+	[[ "${VHOST_HTDOCSDIR/#${VHOST_ROOT}\/}" == "webroot" ]] \
+		&& return 0
+
+	# Make sur VHOST_ROOT/webroot is a symlink
+	# Otherwise backup it
+	if [[ -e "${VHOST_ROOT}/webroot" && ! -L "${VHOST_ROOT}/webroot" ]] ; then
+		einfo "Backing up ${VHOST_ROOT}/webroot to ${VHOST_ROOT}/webroot.orig"
+		mv "${VHOST_ROOT}/webroot" "${VHOST_ROOT}/webroot.orig"
+		eend $?
+	else
+		rm -f "${VHOST_ROOT}/webroot"
+	fi
+
+	einfo "Create symlink ${VHOST_ROOT}/webroot"
+	ln -s "${VHOST_HTDOCSDIR}" "${VHOST_ROOT}/webroot"
+	eend $?
+
+	einfo "Change ${VHOST_ROOT}/webroot owner to ${VHOST_SERVER_UID}:${VHOST_SERVER_GID}"
+	chown -h "${VHOST_SERVER_UID}:${VHOST_SERVER_GID}" "${VHOST_ROOT}/webroot"
+	eend $?
+
+	return 0
+}
+
+function storage-upgrade () {
+	local _date="$(date +'%F-%T')"
+
+	local _has_aphlictd=no
+	local _has_phd=no
+	local _has_server=no
+
+	# Do not upgrade anything if we can't connect to databases
+	if ! "${VHOST_ROOT}/bin/storage" databases > /dev/null ; then
+		ewarn "Aborting, connection to database unsuccessfull"
+		ewarn "You need to manually run"
+		ewarn "	${VHOST_ROOT}/bin/storage upgrade"
+		ewarn
+
+		return 1
+	fi
+
+	case "${VHOST_SERVER}" in
+		apache)	VHOST_SERVER="apache2" ;;
+	esac
+
+	# Save service status
+	rc_status aphlictd          && _has_aphlictd=yes
+	rc_status phd               && _has_phd=yes
+	rc_status "${VHOST_SERVER}" && _has_server=yes
+
+	# Only stop started services
+	[[ "${_has_aphlictd:-no}" == "yes" ]] && /etc/init.d/aphlictd          stop
+	[[ "${_has_phd:-no}"      == "yes" ]] && /etc/init.d/phd               stop
+	[[ "${_has_server:-no}"   == "yes" ]] && /etc/init.d/"${VHOST_SERVER}" stop
+
+	einfo "Backing up database to ${VHOST_ROOT}/backup/dump-${_date}.sql.xz"
+	[[ ! -d "${VHOST_ROOT}/backup" ]] \
+		&& mkdir -m 0750 "${VHOST_ROOT}/backup"
+
+	einfo "  ${VHOST_ROOT}/bin/storage dump"
+	"${VHOST_ROOT}/bin/storage" dump \
+		| xz -v > "${VHOST_ROOT}/backup/dump-${_date}.sql.xz"
+	eend $?
+
+	einfo "Upgrading storage"
+	einfo "  ${VHOST_ROOT}/bin/storage upgrade"
+	"${VHOST_ROOT}/bin/storage" upgrade \
+		|| eerror "failed, you should analyze it and rerun manually"
+	eend $?
+
+	# Only start services that was previously started
+	[[ "${_has_server:-no}"   == "yes" ]] && /etc/init.d/"${VHOST_SERVER}" start
+	[[ "${_has_phd:-no}"      == "yes" ]] && /etc/init.d/phd               start
+	[[ "${_has_aphlictd:-no}" == "yes" ]] && /etc/init.d/aphlictd          start
+
+	return 0
+}
+
+[[ $# -ne 1 ]] && exit 1
+
+einfo
+einfo "$0 $@"
+einfo
+
+case "$1" in
+	install)
+		chk-htdocs
+		fix-perms
+		fix-webroot
+		storage-upgrade
+		;;
+esac
