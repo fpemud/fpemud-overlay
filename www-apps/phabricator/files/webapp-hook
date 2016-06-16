@@ -3,9 +3,6 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-export PATH="$PATH:/usr/lib/portage/bin/ebuild-helpers"
-source /usr/lib/portage/bin/isolated-functions.sh
-
 function rc_status () {
 	[[ $# -ne 1 ]] && return 1
 
@@ -22,30 +19,30 @@ function chk-htdocs () {
 	_htdocs="${_htdocs//[^\/]}"
 
 	if (( ${#_htdocs} - ${#_root} != 1 )) ; then
-		eerror "VHOST_HTDOCSDIR MUST be one level subdirectory of VHOST_ROOT"
-		eerror
-		eerror "What you have is"
-		eerror "	VHOST_ROOT=${VHOST_ROOT}"
-		eerror "	VHOST_HTDOCSDIR=${VHOST_HTDOCSDIR}"
-		eerror
-		eerror "Example of what you should have"
-		eerror "	VHOST_ROOT=/var/www/localhost"
-		eerror "	VHOST_HTDOCSDIR=/var/www/localhost/public_html"
-		eerror
-		die "You must fix your webapp-config configuration"
+		echo "VHOST_HTDOCSDIR MUST be one level subdirectory of VHOST_ROOT"
+		echo ""
+		echo "What you have is"
+		echo "	VHOST_ROOT=${VHOST_ROOT}"
+		echo "	VHOST_HTDOCSDIR=${VHOST_HTDOCSDIR}"
+		echo ""
+		echo "Example of what you should have"
+		echo "	VHOST_ROOT=/var/www/localhost"
+		echo "	VHOST_HTDOCSDIR=/var/www/localhost/public_html"
+		echo ""
+		echo "You must fix your webapp-config configuration"
+		exit 1
 	fi
 
 	return 0
 }
 
 function fix-perms () {
-	einfo "Make executable all shebanged files"
+	echo "Making executable all shebanged files"
 	find "${VHOST_ROOT}" -type f \
 		| xargs -n 1 --no-run-if-empty -- \
 			awk 'NR == 1 && /^#!/ {print FILENAME}' \
 		| xargs --no-run-if-empty -- \
-			fperms 755
-	eend $?
+			chmod 755
 
 	return 0
 }
@@ -58,20 +55,17 @@ function fix-webroot () {
 	# Make sur VHOST_ROOT/webroot is a symlink
 	# Otherwise backup it
 	if [[ -e "${VHOST_ROOT}/webroot" && ! -L "${VHOST_ROOT}/webroot" ]] ; then
-		einfo "Backing up ${VHOST_ROOT}/webroot to ${VHOST_ROOT}/webroot.orig"
+		echo "Backing up ${VHOST_ROOT}/webroot to ${VHOST_ROOT}/webroot.orig"
 		mv "${VHOST_ROOT}/webroot" "${VHOST_ROOT}/webroot.orig"
-		eend $?
 	else
 		rm -f "${VHOST_ROOT}/webroot"
 	fi
 
-	einfo "Create symlink ${VHOST_ROOT}/webroot"
+	echo "Creating symlink ${VHOST_ROOT}/webroot"
 	ln -s "${VHOST_HTDOCSDIR}" "${VHOST_ROOT}/webroot"
-	eend $?
 
-	einfo "Change ${VHOST_ROOT}/webroot owner to ${VHOST_SERVER_UID}:${VHOST_SERVER_GID}"
+	echo "Changing ${VHOST_ROOT}/webroot owner to ${VHOST_SERVER_UID}:${VHOST_SERVER_GID}"
 	chown -h "${VHOST_SERVER_UID}:${VHOST_SERVER_GID}" "${VHOST_ROOT}/webroot"
-	eend $?
 
 	return 0
 }
@@ -85,11 +79,9 @@ function storage-upgrade () {
 
 	# Do not upgrade anything if we can't connect to databases
 	if ! "${VHOST_ROOT}/bin/storage" databases > /dev/null ; then
-		ewarn "Aborting, connection to database unsuccessfull"
-		ewarn "You need to manually run"
-		ewarn "	${VHOST_ROOT}/bin/storage upgrade"
-		ewarn
-
+		echo "Aborting, connection to database unsuccessfull"
+		echo "You need to manually run"
+		echo "	${VHOST_ROOT}/bin/storage upgrade"
 		return 1
 	fi
 
@@ -107,20 +99,18 @@ function storage-upgrade () {
 	[[ "${_has_phd:-no}"      == "yes" ]] && /etc/init.d/phd               stop
 	[[ "${_has_server:-no}"   == "yes" ]] && /etc/init.d/"${VHOST_SERVER}" stop
 
-	einfo "Backing up database to ${VHOST_ROOT}/backup/dump-${_date}.sql.xz"
+	echo "Backing up database to ${VHOST_ROOT}/backup/dump-${_date}.sql.xz"
 	[[ ! -d "${VHOST_ROOT}/backup" ]] \
 		&& mkdir -m 0750 "${VHOST_ROOT}/backup"
 
-	einfo "  ${VHOST_ROOT}/bin/storage dump"
+	echo "  ${VHOST_ROOT}/bin/storage dump"
 	"${VHOST_ROOT}/bin/storage" dump \
 		| xz -v > "${VHOST_ROOT}/backup/dump-${_date}.sql.xz"
-	eend $?
 
-	einfo "Upgrading storage"
-	einfo "  ${VHOST_ROOT}/bin/storage upgrade"
+	echo "Upgrading storage"
+	echo "  ${VHOST_ROOT}/bin/storage upgrade"
 	"${VHOST_ROOT}/bin/storage" upgrade \
-		|| eerror "failed, you should analyze it and rerun manually"
-	eend $?
+		|| echo "failed, you should analyze it and rerun manually" ; exit 1
 
 	# Only start services that was previously started
 	[[ "${_has_server:-no}"   == "yes" ]] && /etc/init.d/"${VHOST_SERVER}" start
@@ -132,15 +122,13 @@ function storage-upgrade () {
 
 [[ $# -ne 1 ]] && exit 1
 
-einfo
-einfo "$0 $@"
-einfo
-
 case "$1" in
 	install)
+		echo ""
 		chk-htdocs
 		fix-perms
 		fix-webroot
 		storage-upgrade
+		echo ""
 		;;
 esac
