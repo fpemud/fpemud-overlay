@@ -210,6 +210,9 @@ each_ruby_install() {
 	# see https://github.com/brianmario/charlock_holmes/issues/32
 	${BUNDLE} config build.charlock_holmes --with-ldflags='-L. -Wl,-O1 -Wl,--as-needed -rdynamic -Wl,-export-dynamic -Wl,--no-undefined -lz -licuuc'
 
+	# ugly trick, I can't download from rubygems.org
+	${BUNDLE} config 'mirror.https://rubygems.org' 'https://ruby.taobao.org'
+
 	einfo "Running bundle install ${bundle_args} ..."
 	${BUNDLE} install ${bundle_args} || die "bundler failed"
 
