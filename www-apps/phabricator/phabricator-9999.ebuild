@@ -136,7 +136,6 @@ src_install() {
 		| xargs --no-run-if-empty -- \
 			fperms 755
 
-	webapp_configfile "${MY_HOSTROOTDIR}"/conf/{default,development,production}.conf.php
 	webapp_configfile "${MY_HTDOCSDIR}/.htaccess"
 	webapp_hook_script "${FILESDIR}/webapp-hook"
 
@@ -148,7 +147,7 @@ src_install() {
 	newinitd "${FILESDIR}/aphlictd.initd" aphlictd
 	newconfd "${FILESDIR}/aphlictd.confd" aphlictd
 
-	dodoc NOTICE README
+	dodoc NOTICE README.md
 }
 
 pkg_postinst() {
