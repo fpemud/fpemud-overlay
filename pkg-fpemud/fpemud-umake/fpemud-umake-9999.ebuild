@@ -17,5 +17,6 @@ IUSE=""
 
 RDEPEND="virtual/cdrtools
          dev-python/pyftpdlib
+         dev-python/pytz
          sys-libs/ncurses:5/5[tinfo]"    # needed for CyanongenMod13 compiling
 DEPEND=""
