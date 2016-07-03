@@ -16,7 +16,9 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="virtual/cdrtools
+         dev-util/android-tools
          dev-python/pyftpdlib
          dev-python/pytz
+         dev-java/maven-bin
          sys-libs/ncurses:5/5[tinfo]"    # needed for CyanongenMod13 compiling
 DEPEND=""

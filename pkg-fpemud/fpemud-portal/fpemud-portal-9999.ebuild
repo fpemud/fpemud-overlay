@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND=">=www-servers/apache-2.4.9
          dev-python/pyopenssl
-         www-apps/gitlab-ce
+         www-apps/gitlabhq
          www-apache/passenger"
 DEPEND=""
 
