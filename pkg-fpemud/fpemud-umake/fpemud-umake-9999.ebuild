@@ -15,10 +15,14 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="virtual/cdrtools
-         dev-util/android-tools
+RDEPEND="virtual/cdrtools"
+RDEPEND="${RDEPEND}
          dev-python/pyftpdlib
-         dev-python/pytz
+         dev-python/pytz"                # needed for Gentoo
+RDEPEND="${RDEPEND}
+         sys-process/schedtool
+         dev-util/android-tools
          dev-java/maven-bin
-         sys-libs/ncurses:5/5[tinfo]"    # needed for CyanongenMod13 compiling
+         sys-libs/ncurses:5/5[tinfo]"    # needed for CyanongenMod 13
+
 DEPEND=""
