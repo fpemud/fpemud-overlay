@@ -22,5 +22,6 @@ RDEPEND=">=net-misc/openvpn-2.3.8
          net-dns/dnsmasq
          dev-libs/openssl
          sys-apps/net-tools
-         >=net-firewall/nftables-0.5"
+         >=net-firewall/nftables-0.5
+         dev-python/netifaces"
 DEPEND=""
