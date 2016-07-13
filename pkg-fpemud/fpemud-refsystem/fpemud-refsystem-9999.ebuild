@@ -37,6 +37,7 @@ RDEPEND="sys-apps/systemd
          >=sys-fs/dosfstools-4.0-r1
          sys-apps/kmod[python]
          sys-apps/diffutils
+         sys-apps/smartmontools
          app-arch/cpio
          app-arch/xz-utils
          app-arch/zip
