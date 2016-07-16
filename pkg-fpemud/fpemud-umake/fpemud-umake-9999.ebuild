@@ -15,7 +15,8 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="virtual/cdrtools"
+RDEPEND="virtual/cdrtools
+         dev-python/pyspaces"
 RDEPEND="${RDEPEND}
          dev-python/pyftpdlib
          dev-python/pytz"                # needed for Gentoo
