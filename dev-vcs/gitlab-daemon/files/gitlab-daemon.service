@@ -1,9 +1,0 @@
-[Unit]
-Description=GitLab Daemon
-After=network.target
-
-[Service]
-ExecStart=/usr/sbin/gitlab-daemon
-
-[Install]
-WantedBy=multi-user.target

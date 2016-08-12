@@ -6,16 +6,17 @@ EAPI="4"
 
 inherit user git-2
 
-EGIT_REPO_URI="https://github.com/fpemud/git-http-daemon.git"
+EGIT_REPO_URI="https://github.com/fpemud/gitlab-daemon.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
-DESCRIPTION="git http daemon --fixme"
+DESCRIPTION="gitlab daemon --fixme"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
 RDEPEND=">=www-servers/apache-2.4.9
+         www-apps/gitlabhq
          sys-apps/systemd"
 DEPEND=""
 
