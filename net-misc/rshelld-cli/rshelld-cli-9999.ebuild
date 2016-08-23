@@ -6,14 +6,14 @@ EAPI="5"
 
 inherit git-2
 
-EGIT_REPO_URI="https://github.com/fpemud/fpemud-rshelld.git"
+EGIT_REPO_URI="https://github.com/fpemud/rshelld-cli.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
-DESCRIPTION="Fpemud's Remote CLI Shell"
+DESCRIPTION="Remote Shell Server - CLI"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/openssh"
+RDEPEND="dev-python/paramiko"
 DEPEND=""
