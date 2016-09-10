@@ -1,0 +1,8 @@
+[Unit]
+Description=Tune swappiness when boot
+DefaultDependencies=no
+Before=sysinit.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/echo 1 > /proc/sys/vm/swappiness
