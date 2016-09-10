@@ -23,9 +23,6 @@ RDEPEND="sys-apps/systemd
          sys-apps/portage
          dev-vcs/git
          dev-vcs/subversion
-         dev-vcs/mercurial
-         dev-vcs/bzr
-         dev-vcs/cvs
          sys-boot/grub:2[grub_platforms_pc,grub_platforms_efi-64]
          sys-boot/efibootmgr
          sys-boot/os-prober
