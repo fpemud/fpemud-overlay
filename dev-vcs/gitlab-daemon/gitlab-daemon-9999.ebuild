@@ -16,7 +16,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND=">=www-servers/apache-2.4.9
-         www-apps/gitlabhq
+         www-apps/gitlabhq[mysql,-postgres]
          sys-apps/systemd"
 DEPEND=""
 

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI="6"
 
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
@@ -18,8 +18,6 @@ DEPEND=""
 S=$WORKDIR
 
 src_install() {
-	mkdir -p "${D}/usr/lib/systemd/system"
-	mkdir -p "${D}/usr/lib/systemd/system/sysinit.target.wants"
-	cp "${FILESDIR}/tune-swappiness.service" "${D}/usr/lib/systemd/system"
-	ln -s "../tune-swappiness.service" "${D}/usr/lib/systemd/system/sysinit.target.wants"
+	mkdir -p "${D}/usr/lib/sysctl.d"
+	cp "${FILESDIR}/60-swappiness.conf" "${D}/usr/lib/sysctl.d"
 }

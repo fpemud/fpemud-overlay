@@ -143,45 +143,24 @@ each_ruby_prepare() {
 
 each_ruby_install() {
 	local dest="${DEST_DIR}"
-	local conf="/etc/${PN}-${SLOT}"
-	local temp="/var/tmp/${PN}-${SLOT}"
-	local logs="/var/log/${PN}-${SLOT}"
+	local conf="${DEST_DIR}/config"
 	local uploads="${DEST_DIR}/public/uploads"
 
 	## Prepare directories ##
-
-	diropts -m750
-	keepdir "${logs}"
-	dodir "${temp}"
-
-	diropts -m755
-	keepdir "${conf}"
 	dodir "${dest}"
+	dodir "${conf}"
 	dodir "${uploads}"
-
-	dosym "${temp}" "${dest}/tmp"
-	dosym "${logs}" "${dest}/log"
 
 	## Link gitlab-shell into git home
 	dosym "${GITLAB_SHELL}" "${GIT_HOME}/gitlab-shell"
 
 	## Install configs ##
-
-	# Note that we cannot install the config to /etc and symlink
-	# it to ${dest} since require_relative in config/application.rb
-	# seems to get confused by symlinks. So let's install the config
-	# to ${dest} and create a smylink to /etc/gitlabhq-<VERSION>
-	dosym "${dest}/config" "${conf}"
-
 	insinto "${dest}/.ssh"
 	newins "${FILESDIR}/config.ssh" config
 
 	echo "export RAILS_ENV=production" > "${D}/${dest}/.profile"
 
 	## Install all others ##
-
-	# remove needless dirs
-	rm -Rf tmp log
 
 	insinto "${dest}"
 	doins -r ./
