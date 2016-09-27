@@ -16,7 +16,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="virtual/cdrtools
-         dev-python/pyspaces"
+         dev-python/dirchecksum"
 RDEPEND="${RDEPEND}
          dev-python/pyftpdlib
          dev-python/pytz"                # needed for Gentoo

@@ -40,6 +40,7 @@ RDEPEND="sys-apps/systemd
          app-arch/zip
          sys-devel/bc
          dev-python/dbus-python
+         dev-python/dirchecksum
          dev-python/lxml
          dev-python/pylkc
          dev-python/pyudev"
