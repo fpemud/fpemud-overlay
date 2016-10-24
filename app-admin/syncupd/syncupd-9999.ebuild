@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-EGIT_REPO_URI="https://github.com/fpemud/gentoo-build-server.git"
+EGIT_REPO_URI="https://github.com/fpemud/syncupd.git"
 inherit git-2
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
@@ -15,7 +15,5 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/openssh
-         www-servers/apache
-         www-apache/mod_wsgi"
+RDEPEND=""
 DEPEND=""
