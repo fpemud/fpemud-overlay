@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit user
+inherit systemd user
 
 DESCRIPTION="Container Cluster Manager"
 HOMEPAGE="https://github.com/kubernetes/kubernetes"
@@ -41,11 +41,19 @@ src_install() {
 		dobin kubectl kubernetes
 		dobin ${kube_components}
 
-		newconfd "${FILESDIR}/kubernetes.conf.d" kubernetes
+		newconfd "${FILESDIR}/openrc/kubernetes.conf.d" kubernetes
 
 		for x in ${kube_components}; do
-			newconfd "${FILESDIR}/${x}.conf.d" ${x}
-			newinitd "${FILESDIR}/${x}.init.d" ${x}
+			newconfd "${FILESDIR}/openrc/${x}.conf.d" ${x}
+			newinitd "${FILESDIR}/openrc/${x}.init.d" ${x}
+			systemd_dounit ${FILESDIR}/systemd/${x}.service
+		done
+
+		systemd_dotmpfilesd "${FILESDIR}/systemd/tmpfiles.d/kubernetes.conf"
+
+		insinto /etc/kubernetes
+		for f in ${FILESDIR}/environ/*; do
+			doins $f
 		done
 	else
 		cd platforms/linux/amd64
