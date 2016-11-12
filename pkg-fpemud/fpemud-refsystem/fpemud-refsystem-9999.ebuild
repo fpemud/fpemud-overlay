@@ -39,10 +39,13 @@ RDEPEND="sys-apps/systemd
          app-arch/xz-utils
          app-arch/zip
          sys-devel/bc
+         sys-libs/tdb
          dev-python/dbus-python
          dev-python/dirchecksum
          dev-python/lxml
+         dev-python/passlib
          dev-python/pylkc
-         dev-python/pyudev"
+         dev-python/pyudev
+         dev-python/strict_pgs"
 DEPEND="${RDEPEND}
         virtual/pkgconfig"
