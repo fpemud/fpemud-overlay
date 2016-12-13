@@ -16,6 +16,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="net-misc/bridge-utils
+         net-wireless/wireless-tools
          net-dns/dnsmasq
          net-fs/samba
          >=sys-apps/iproute2-2.6.34

@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-2
 
-EGIT_REPO_URI="https://github.com/fpemud/fpemud-cgfw.git"
+EGIT_REPO_URI="https://github.com/fpemud/cgfw.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
@@ -15,6 +15,5 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-dialup/pptpclient
-         net-misc/whois"
+RDEPEND="net-dialup/pptpclient"
 DEPEND=""
