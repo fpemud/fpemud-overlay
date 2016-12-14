@@ -15,11 +15,12 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/bridge-utils
+RDEPEND="dev-python/pygobject
+         dev-python/netifaces
+         net-misc/bridge-utils
          net-wireless/wireless-tools
          net-dns/dnsmasq
          net-fs/samba
          >=sys-apps/iproute2-2.6.34
-         >=net-firewall/nftables-0.5
-         dev-python/netifaces"
+         >=net-firewall/nftables-0.5"
 DEPEND=""

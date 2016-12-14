@@ -41,6 +41,7 @@ RDEPEND="sys-apps/systemd
          app-arch/zip
          sys-devel/bc
          sys-libs/tdb
+         dev-python/pygobject
          dev-python/dbus-python
          dev-python/dirchecksum
          dev-python/lxml
