@@ -18,10 +18,11 @@ IUSE=""
 #         >=net-misc/n2n-2.0.0
 #         net-misc/libreswan
 #         net-dialup/pptpd
-RDEPEND=">=net-misc/openvpn-2.3.8
+RDEPEND="dev-python/pygobject
+         dev-python/netifaces
+         >=net-misc/openvpn-2.3.8
          net-dns/dnsmasq
          dev-libs/openssl
          sys-apps/net-tools
-         >=net-firewall/nftables-0.5
-         dev-python/netifaces"
+         >=net-firewall/nftables-0.5"
 DEPEND=""

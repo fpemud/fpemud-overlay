@@ -16,6 +16,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="virtual/cdrtools
+         dev-python/pygobject
          dev-python/dirchecksum"
 RDEPEND="${RDEPEND}
          dev-python/pyftpdlib

@@ -15,5 +15,6 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-dialup/pptpclient"
+RDEPEND="dev-python/pygobject
+         net-dialup/pptpclient"
 DEPEND=""
