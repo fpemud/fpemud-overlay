@@ -16,5 +16,6 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="dev-python/pygobject
+         dev-python/netifaces
          net-dialup/pptpclient"
 DEPEND=""
