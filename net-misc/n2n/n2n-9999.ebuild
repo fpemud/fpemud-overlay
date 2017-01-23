@@ -26,5 +26,5 @@ src_unpack() {
 }
 
 src_prepare() {
-        epatch "${FILESDIR}"/n2n_v2-ifconfig.patch
+        epatch "${FILESDIR}"/*.patch
 }

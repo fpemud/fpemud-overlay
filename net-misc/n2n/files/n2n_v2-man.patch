@@ -1,0 +1,17 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5911e6e..6b795da 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -137,9 +137,9 @@ set_source_files_properties(${PROJECT_BINARY_DIR}/doc/edge.8.gz
+                             PROPERTIES GENERATED 1)
+ 
+ install(FILES ${PROJECT_BINARY_DIR}/doc/edge.8.gz
+-        DESTINATION /usr/share/man8)
++        DESTINATION /usr/share/man/man8)
+ install(FILES ${PROJECT_BINARY_DIR}/doc/supernode.1.gz
+-        DESTINATION /usr/share/man1)
++        DESTINATION /usr/share/man/man1)
+ install(FILES ${PROJECT_BINARY_DIR}/doc/n2n_v2.7.gz
+-        DESTINATION /usr/share/man7)
++        DESTINATION /usr/share/man/man7)
+ endif(DEFINED UNIX)
