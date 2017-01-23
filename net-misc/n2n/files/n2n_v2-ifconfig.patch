@@ -1,0 +1,37 @@
+diff --git a/tuntap_linux.c b/tuntap_linux.c
+index be3cbb9..360d3bf 100644
+--- a/tuntap_linux.c
++++ b/tuntap_linux.c
+@@ -94,7 +94,7 @@ int tuntap_open(tuntap_dev *device,
+   if ( device_mac && device_mac[0] != '\0' )
+   {
+       /* Set the hw address before bringing the if up. */
+-      snprintf(buf, sizeof(buf), "/sbin/ifconfig %s hw ether %s",
++      snprintf(buf, sizeof(buf), "/bin/ifconfig %s hw ether %s",
+                ifr.ifr_name, device_mac );
+       system(buf);
+       traceEvent(TRACE_INFO, "Setting MAC: %s", buf);
+@@ -102,12 +102,12 @@ int tuntap_open(tuntap_dev *device,
+ 
+   if ( 0 == strncmp( "dhcp", address_mode, 5 ) )
+   {
+-      snprintf(buf, sizeof(buf), "/sbin/ifconfig %s %s mtu %d up",
++      snprintf(buf, sizeof(buf), "/bin/ifconfig %s %s mtu %d up",
+                ifr.ifr_name, device_ip, mtu);
+   }
+   else
+   {
+-      snprintf(buf, sizeof(buf), "/sbin/ifconfig %s %s netmask %s mtu %d up",
++      snprintf(buf, sizeof(buf), "/bin/ifconfig %s %s netmask %s mtu %d up",
+                ifr.ifr_name, device_ip, device_mask, mtu);
+   }
+ 
+@@ -144,7 +144,7 @@ void tuntap_get_address(struct tuntap_dev *tuntap)
+ 
+     /* If the interface has no address (0.0.0.0) there will be no inet addr
+      * line and the returned string will be empty. */
+-    snprintf( buf, sizeof(buf), "/sbin/ifconfig %s | /bin/sed -e '/inet addr:/!d' -e 's/^.*inet addr://' -e 's/ .*$//'",
++    snprintf( buf, sizeof(buf), "/bin/ifconfig %s | /bin/sed -e '/inet addr:/!d' -e 's/^.*inet addr://' -e 's/ .*$//'",
+               tuntap->dev_name );
+     fp=popen(buf, "r");
+     if (fp )

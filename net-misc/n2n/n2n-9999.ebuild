@@ -24,3 +24,7 @@ src_unpack() {
 	mv "${P}/n2n_v2"/* "${P}"
 	rmdir "${P}/n2n_v2"
 }
+
+src_prepare() {
+        epatch "${FILESDIR}"/n2n_v2-ifconfig.patch
+}
