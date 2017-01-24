@@ -19,6 +19,7 @@ RDEPEND="dev-python/pygobject
          dev-python/netifaces
          net-misc/bridge-utils
          net-wireless/wireless-tools
+         net-wireless/hostapd
          net-dns/dnsmasq
          net-fs/samba
          >=sys-apps/iproute2-2.6.34
