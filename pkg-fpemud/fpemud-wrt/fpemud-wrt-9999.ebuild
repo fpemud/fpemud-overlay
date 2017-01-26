@@ -18,6 +18,7 @@ IUSE=""
 RDEPEND="dev-python/pygobject
          dev-python/netifaces
          net-misc/bridge-utils
+         net-misc/n2n
          net-wireless/wireless-tools
          net-wireless/hostapd
          net-dns/dnsmasq
