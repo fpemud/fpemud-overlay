@@ -18,7 +18,6 @@ IUSE=""
 RDEPEND="sys-apps/systemd
          app-admin/gentoo-bashrc
          app-portage/gentoolkit
-         app-portage/mirrorselect
          net-misc/stunnel
          net-misc/wget
          sys-apps/portage
@@ -39,6 +38,7 @@ RDEPEND="sys-apps/systemd
          app-arch/cpio
          app-arch/xz-utils
          app-arch/zip
+         app-misc/geoclue
          sys-devel/bc
          sys-libs/tdb
          dev-python/dbus-python
