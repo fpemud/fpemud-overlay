@@ -15,14 +15,14 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-#         >=net-misc/n2n-2.0.0
 #         net-misc/libreswan
 #         net-dialup/pptpd
 RDEPEND="dev-python/pygobject
          dev-python/netifaces
          >=net-misc/openvpn-2.4.0
+         >=net-misc/n2n-2.0.0
          net-misc/dhcp
-         net-dns/dnsmasq
+         net-dns/dnsmasq[script]
          dev-libs/openssl
          sys-apps/net-tools
          >=net-firewall/nftables-0.5"
