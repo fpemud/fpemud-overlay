@@ -48,6 +48,6 @@ RDEPEND="sys-apps/systemd
          dev-python/pylkc
          dev-python/pyudev
          dev-python/strict_pgs
-         sci-geosciences/geocode-glib"
+         dev-python/geopy"
 DEPEND="${RDEPEND}
         virtual/pkgconfig"
