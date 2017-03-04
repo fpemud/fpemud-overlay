@@ -5,11 +5,11 @@ import sys
 import pefile
 
 import os
-print(os.getcwd())
 
 pe = pefile.PE(sys.argv[1])
-for section in pe.secions:
-    if section.Name.decode("ascii") != ".rsrc":
+for section in pe.sections:
+    name = section.Name.rstrip(b'\0').decode("ascii")
+    if name != ".rsrc":
         continue
     with open(sys.argv[2], "wb") as f:
         f.write(section.get_data())

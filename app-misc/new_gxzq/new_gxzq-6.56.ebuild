@@ -19,12 +19,14 @@ RDEPEND="|| ( >=app-emulation/wine-1.4.1[win32]
               >=app-emulation/wine-1.6[abi_x86_32]
               >=app-emulation/wine-1.8[abi_x86_32] )"
 
+S=${WORKDIR}
+
 src_unpack() {
-        python2 ${FILESDIR}/extract-rsrc.py ${A} tmp.dat
+        python2 "${FILESDIR}/extract-rsrc.py" "${DISTDIR}/${A}" tmp.dat
 }
 
 src_prepare() {
-        return
+        exit 1
 }
 
 src_install() {
