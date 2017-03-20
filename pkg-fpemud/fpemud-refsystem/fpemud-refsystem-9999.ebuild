@@ -21,6 +21,7 @@ RDEPEND="sys-apps/systemd
          net-misc/stunnel
          net-misc/wget
          sys-apps/portage
+         dev-util/patchutils
          dev-vcs/git
          dev-vcs/subversion
          sys-boot/grub:2[grub_platforms_pc,grub_platforms_efi-64]
