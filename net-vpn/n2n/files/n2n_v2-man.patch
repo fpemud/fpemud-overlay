@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index c9ad81c..458c0ee 100644
+index 938f38a..8d0211b 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -123,9 +123,9 @@ set_source_files_properties(${PROJECT_BINARY_DIR}/doc/edge.8.gz
+@@ -137,11 +137,11 @@ set_source_files_properties(${PROJECT_BINARY_DIR}/doc/edge.8.gz
                              PROPERTIES GENERATED 1)
  
  install(FILES ${PROJECT_BINARY_DIR}/doc/edge.8.gz
@@ -14,4 +14,6 @@ index c9ad81c..458c0ee 100644
  install(FILES ${PROJECT_BINARY_DIR}/doc/n2n_v2.7.gz
 -        DESTINATION /usr/share/man7)
 +        DESTINATION /usr/share/man/man7)
- endif(DEFINED UNIX)
+ 
+ install(PROGRAMS ${PROJECT_SOURCE_DIR}/munin/n2n-supernode
+         DESTINATION /usr/share/munin/plugins)
