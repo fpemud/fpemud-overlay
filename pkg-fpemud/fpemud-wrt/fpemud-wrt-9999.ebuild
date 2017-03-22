@@ -17,13 +17,13 @@ IUSE=""
 
 RDEPEND="dev-python/pygobject
          dev-python/netifaces
-         net-misc/bridge-utils
-         net-misc/wakeonlan
-         net-misc/n2n
-         net-wireless/wireless-tools
-         net-wireless/hostapd
          net-dns/dnsmasq
          net-fs/samba
+         net-misc/bridge-utils
+         net-misc/wakeonlan
+         net-vpn/n2n
+         net-wireless/wireless-tools
+         net-wireless/hostapd
          >=sys-apps/iproute2-2.6.34
          >=net-firewall/nftables-0.5"
 DEPEND=""

@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 5911e6e..6b795da 100644
+index c9ad81c..458c0ee 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -137,9 +137,9 @@ set_source_files_properties(${PROJECT_BINARY_DIR}/doc/edge.8.gz
+@@ -123,9 +123,9 @@ set_source_files_properties(${PROJECT_BINARY_DIR}/doc/edge.8.gz
                              PROPERTIES GENERATED 1)
  
  install(FILES ${PROJECT_BINARY_DIR}/doc/edge.8.gz
