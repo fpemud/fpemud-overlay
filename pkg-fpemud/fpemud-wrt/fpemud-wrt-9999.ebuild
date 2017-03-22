@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-2
 
-EGIT_REPO_URI="https://github.com/fpemud/fpemud-wrt.git"
+EGIT_REPO_URI="https://coding.net/fpemud/fpemud-wrt"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
