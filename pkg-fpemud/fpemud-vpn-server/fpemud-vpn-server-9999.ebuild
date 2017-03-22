@@ -19,8 +19,8 @@ IUSE=""
 #         net-dialup/pptpd
 RDEPEND="dev-python/pygobject
          dev-python/netifaces
-         >=net-misc/openvpn-2.4.0
-         >=net-misc/n2n-2.0.0
+         >=net-vpn/openvpn-2.4.0
+         >=net-vpn/n2n-2.0.0
          net-misc/dhcp
          net-dns/dnsmasq[script]
          dev-libs/openssl

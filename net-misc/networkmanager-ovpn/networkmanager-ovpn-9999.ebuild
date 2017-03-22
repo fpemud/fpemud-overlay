@@ -23,7 +23,7 @@ RDEPEND="
 	>=dev-libs/dbus-glib-0.74
 	>=dev-libs/glib-2.32:2
 	>=net-misc/networkmanager-0.9.10:=
-	>=net-misc/openvpn-2.1_rc9
+	>=net-vpn/openvpn-2.1_rc9
 "
 DEPEND="${RDEPEND}
 	sys-devel/gettext
