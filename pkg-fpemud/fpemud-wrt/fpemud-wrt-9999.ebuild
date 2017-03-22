@@ -17,6 +17,7 @@ IUSE=""
 
 RDEPEND="dev-python/pygobject
          dev-python/netifaces
+         dev-python/pywakeonlan
          net-misc/bridge-utils
          net-misc/n2n
          net-wireless/wireless-tools
