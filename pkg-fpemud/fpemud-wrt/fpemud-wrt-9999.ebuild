@@ -17,6 +17,7 @@ IUSE=""
 
 RDEPEND="dev-python/pygobject
          dev-python/netifaces
+         net-dialup/rp-pppoe
          net-dns/dnsmasq
          net-fs/samba
          net-misc/dhcp[client]
