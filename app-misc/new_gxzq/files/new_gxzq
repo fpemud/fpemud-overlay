@@ -69,7 +69,9 @@ WINEPREFIX="$DATADIR" winetricks mfc42
 # Make links of "$PROGDIR/*" to "$DATADIR"
 if [ ! -e "$DATADIR/drive_c/$(basename $PROGDIR)" ] ; then
     create_link "$PROGDIR" "$DATADIR/drive_c"
-    cp "$INSTDIR/fonts"/* "$DATADIR/drive_c/windows/Fonts"
+    for fn in "$INSTDIR/fonts"/* ; do
+        ln -s "${fn}" "$DATADIR/drive_c/windows/Fonts/$(basename $fn)"
+    done
 fi
 
 # run the application
