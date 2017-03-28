@@ -28,13 +28,17 @@ src_unpack() {
 
 src_prepare() {
         # Prepare the wrapper script
-        sed -e "s/^INSTDIR=.*$/INSTDIR=\/opt\/${PN}_v${PV}/g" \
+        sed -e "s/^INSTDIR=.*$/INSTDIR=\/opt\/${PN}/g" \
+            -e "s/^PROGDIR=.*$/PROGDIR=\/opt\/${PN}\/${PN}_v${PV}/g" \
             -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/${PN}/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${PN}"
 }
 
 src_install() {
-        dodir "opt"
-        cp -r "${PN}_v${PV}" "${D}/opt"
+	dodir "opt/${PN}"
+        cp -r "${PN}_v${PV}" "${D}/opt/${PN}"
+
+        dodir "opt/${PN}/fonts"
+	touch "${D}/opt/${PN}/fonts/.keep"
 
         dobin "${PN}"
         #doicon "${DISTDIR}/${PN}.png"

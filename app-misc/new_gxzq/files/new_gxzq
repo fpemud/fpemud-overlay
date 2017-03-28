@@ -59,24 +59,23 @@ create_link ()
 
 # Variables
 INSTDIR=                # fill by ebuild
+PROGDIR=                # fill by ebuild
 DATADIR=                # fill by ebuild
 
 # Create wine directory
 create_wine_dir "$DATADIR"
 WINEPREFIX="$DATADIR" winetricks mfc42
-WINEPREFIX="$DATADIR" winetricks fakechinese
 
-# Make links of "$INSTDIR/*" to "$DATADIR"
-if [ ! -e "$DATADIR/drive_c/$(basename $INSTDIR)" ] ; then
-    create_link "$INSTDIR" "$DATADIR/drive_c"
+# Make links of "$PROGDIR/*" to "$DATADIR"
+if [ ! -e "$DATADIR/drive_c/$(basename $PROGDIR)" ] ; then
+    create_link "$PROGDIR" "$DATADIR/drive_c"
+    cp "$INSTDIR/fonts"/* "$DATADIR/drive_c/windows/Fonts"
 fi
 
 # run the application
-cd "$DATADIR/drive_c/$(basename $INSTDIR)"
+cd "$DATADIR/drive_c/$(basename $PROGDIR)"
 if [ "$1" == "trade" ] ; then
     WINEPREFIX="$DATADIR" LANG="zh_CN.utf8" wine WinWT.exe
 else
     WINEPREFIX="$DATADIR" LANG="zh_CN.utf8" wine tdxw.exe
 fi
-
-
