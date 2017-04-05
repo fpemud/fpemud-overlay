@@ -41,6 +41,9 @@ src_install() {
 	touch "${D}/opt/${PN}/fonts/.keep"
 
         dobin "${PN}"
-        #doicon "${DISTDIR}/${PN}.png"
-        #domenu "${DISTDIR}/${PN}.desktop"
+
+        doicon "${FILESDIR}/tdxw.png"
+        domenu "${FILESDIR}/tdxw.desktop"
+        doicon "${FILESDIR}/WinWT.png"
+        domenu "${FILESDIR}/WinWT.desktop"
 }

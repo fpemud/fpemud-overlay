@@ -4,9 +4,6 @@
 
 EAPI="5"
 
-inherit git-2
-
-EGIT_REPO_URI="https://github.com/fpemud/mycdn-controller.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
@@ -15,5 +12,12 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND=""
+RDEPEND="net-misc/mycdn-controller"
 DEPEND=""
+
+S=${WORKDIR}
+
+src_install() {
+	dodir /usr/lib/mycdn-controller/helpers
+	cp "${FILESDIR}"/* "${D}/usr/lib/mycdn-controller/helpers"
+}
