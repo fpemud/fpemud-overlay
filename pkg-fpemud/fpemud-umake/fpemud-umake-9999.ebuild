@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-2
 
-EGIT_REPO_URI="https://github.com/fpemud/fpemud-umake.git"
+EGIT_REPO_URI="https://coding.net/fpemud/fpemud-umake.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
