@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=国信金太阳独立交易
+Type=Application
+Exec=new_gxzq trade
+TryExec=new_gxzq
+Icon=WinWT
