@@ -8,14 +8,14 @@ import threading
 from datetime import datetime
 from github3 import GitHub
 from mc_util import McUtil
-from helpers.git_storage_sync_flow import GitStorageSyncFlow
+from helpers.git_sync_flow import GitStorageSyncFlow
 
 
 class SourceObject:
 
     def __init__(self):
         self.name = "github.com"
-        self.helpers_needed = ["git_storage_sync_flow"]
+        self.helpers_needed = ["git_sync_flow"]
         self.githubApiInterval = 30         # in seconds, so that github won't ban us
 
         # self.lastRun = None

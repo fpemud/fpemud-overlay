@@ -12,7 +12,9 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/mycdn-controller"
+RDEPEND="net-misc/mycdn-controller
+         dev-vcs/git
+		 www-servers/apache"
 DEPEND=""
 
 S=${WORKDIR}

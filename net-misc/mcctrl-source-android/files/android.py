@@ -5,14 +5,14 @@ import threading
 import lxml.html
 import urllib.request
 from datetime import datetime
-from helpers.git_storage_sync_flow import GitStorageSyncFlow
+from helpers.git_sync_flow import GitStorageSyncFlow
 
 
 class SourceObject:
 
     def __init__(self):
         self.name = "android.googlesource.com"
-        self.helpers_needed = ["git_storage_sync_flow"]
+        self.helpers_needed = ["git_sync_flow"]
 
         self.url = "https://android.googlesource.com"
 
