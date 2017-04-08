@@ -19,6 +19,6 @@ DEPEND=""
 S=${WORKDIR}
 
 src_install() {
-	dodir /usr/lib/mycdn-controller/mirrors/android
-	cp "${FILESDIR}"/* "${D}/usr/lib/mycdn-controller/mirrors/android"
+	dodir /usr/lib/mycdn-controller/mirrors/kernel_dot_org
+	cp "${FILESDIR}"/* "${D}/usr/lib/mycdn-controller/mirrors/kernel_dot_org"
 }

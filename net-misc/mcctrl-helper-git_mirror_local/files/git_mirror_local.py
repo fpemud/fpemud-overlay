@@ -56,11 +56,7 @@ class Local:
         return os.path.join(self.gitServer.getDataDir(), self.subpath)
 
     def get_repo_list(self):
-        ret = []
-        for basename in McUtil.getFileList(self.data_dir, 2, "d"):
-            t = basename.split("/")
-            ret.append((t[0], t[1], None))
-        return ret
+        return McUtil.getFileList(self.data_dir, 2, "d"):
 
     def has_repo(self, repo_path):
         return os.path.exists(os.path.join(self.data_dir, repo_path))
@@ -231,7 +227,7 @@ class _GitServer:
         buf += "\n"
         buf += "  <LocationMatch \"^/.*/git-receive-pack$\">\n"
         buf += "    AuthType Basic\n"
-        buf += "userDict    AuthName \"Git Repositories\"\n"
+        buf += "    AuthName \"Git Repositories\"\n"
         buf += "    AuthBasicProvider file\n"
         buf += "    AuthUserFile \"%s\"\n" % (passwdFile)
         buf += "    Require valid-user\n"
