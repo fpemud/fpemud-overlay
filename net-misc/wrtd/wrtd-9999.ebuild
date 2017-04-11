@@ -21,7 +21,6 @@ RDEPEND="dev-python/pygobject
          net-dns/dnsmasq
          net-fs/samba
          net-misc/dhcp[client]
-         net-misc/bridge-utils
          net-misc/wakeonlan
          net-vpn/n2n
          net-wireless/wireless-tools
