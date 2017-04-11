@@ -17,12 +17,9 @@ IUSE=""
 
 RDEPEND="dev-python/pygobject
          dev-python/netifaces
-         net-dialup/rp-pppoe
          net-dns/dnsmasq
          net-fs/samba
-         net-misc/dhcp[client]
          net-misc/wakeonlan
-         net-vpn/n2n
          net-wireless/wireless-tools
          net-wireless/hostapd
          >=sys-apps/iproute2-2.6.34
