@@ -15,5 +15,6 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-dialup/rp-pppoe"
+RDEPEND="net-misc/wrtd
+         net-dialup/rp-pppoe"
 DEPEND=""

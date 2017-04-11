@@ -15,6 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/dhcp[client]
+RDEPEND="net-misc/wrtd
+         net-misc/dhcp[client]
          net-vpn/n2n"
 DEPEND=""
