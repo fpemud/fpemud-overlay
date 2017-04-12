@@ -20,8 +20,6 @@ RDEPEND="dev-python/pygobject
          net-dns/dnsmasq
          net-fs/samba
          net-misc/wakeonlan
-         net-wireless/wireless-tools
-         net-wireless/hostapd
          >=sys-apps/iproute2-2.6.34
          >=net-firewall/nftables-0.5"
 DEPEND=""
