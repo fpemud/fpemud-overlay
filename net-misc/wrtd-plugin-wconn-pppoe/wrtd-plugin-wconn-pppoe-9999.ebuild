@@ -16,5 +16,6 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="net-misc/wrtd
-         net-dialup/rp-pppoe"
+         net-dialup/rp-pppoe
+         dev-python/pyroute2"
 DEPEND=""
