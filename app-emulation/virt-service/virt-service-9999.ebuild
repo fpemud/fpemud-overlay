@@ -4,36 +4,22 @@
 
 EAPI="4"
 
-if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="https://github.com/fpemud/virt-service.git"
-	inherit git-2
-	SRC_URI=""
-	KEYWORDS="-* amd64 x86"
-else
-	die "Invalid version"
-fi
+inherit git-2
 
 DESCRIPTION="A simple virtual machine dbus service provider"
+EGIT_REPO_URI="https://github.com/fpemud/virt-service.git"
+SRC_URI=""
+KEYWORDS="-* amd64 x86"
 
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/bridge-utils
+RDEPEND="dev-python/ipaddress
+         dev-python/netifaces
+         dev-python/pyroute2
          net-dns/dnsmasq
          net-fs/samba
          >=sys-apps/iproute2-2.6.34
          >=net-firewall/nftables-0.5"
 DEPEND=""
-
-#pkg_postrm() {  
-#	find "${EROOT}/usr/share/virt-player" -name "*.pyc" | xargs rm -f
-#
-#	# Delete empty parent directories.
-#	local dir="${EROOT}/usr/share/virt-player"
-#	while [[ "${dir}" != "${EROOT%/}" ]]; do
-#		rmdir "${dir}" 2> /dev/null || break
-#		dir="${dir%/*}"
-#	done
-#}
-
