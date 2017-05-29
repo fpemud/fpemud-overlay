@@ -7,9 +7,9 @@ PYTHON_COMPAT=( python{3_3,3_4} )
 
 inherit distutils-r1 git-2
 
-DESCRIPTION="fixme"
+DESCRIPTION="Python DHCP client library based on pyroute2"
 HOMEPAGE=""
-EGIT_REPO_URI="https://github.com/fpemud/pyroute2-dhcpc.git"
+EGIT_REPO_URI="https://github.com/fpemud/pydhcpc.git"
 
 LICENSE="GPLv3"
 SLOT="0"
