@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-2
 
-EGIT_REPO_URI="https://github.com/fpemud/wrtd-plugin-lif-openvpn"
+EGIT_REPO_URI="https://github.com/fpemud/wrtd-plugin-vpns-openvpn"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 

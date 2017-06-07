@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-2
 
-EGIT_REPO_URI="https://github.com/fpemud/wrtd-plugin-lif-n2n"
+EGIT_REPO_URI="https://github.com/fpemud/wrtd-plugin-vpns-n2n"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
