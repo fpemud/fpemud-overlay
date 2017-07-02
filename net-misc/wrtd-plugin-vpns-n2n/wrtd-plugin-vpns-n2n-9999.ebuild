@@ -16,5 +16,6 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="net-misc/wrtd
-         net-vpn/n2n"
+         net-vpn/n2n
+         net-dns/dnsmasq[script]"
 DEPEND=""
