@@ -6,7 +6,7 @@ EAPI=5
 inherit eutils
 
 DESCRIPTION=""
-SRC_URI="http://www.guosen.com.cn/guosen/nettrade/soft/new_gxzq_v6_56.exe"
+SRC_URI="http://www.guosen.com.cn/guosen/nettrade/soft/new_gxzq_v6_58.exe"
 HOMEPAGE="http://www.guosen.com.cn"
 LICENSE="unknown"
 SLOT="0"
