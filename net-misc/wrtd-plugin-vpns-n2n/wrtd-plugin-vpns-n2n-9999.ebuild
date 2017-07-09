@@ -17,5 +17,5 @@ IUSE=""
 
 RDEPEND="net-misc/wrtd
          net-vpn/n2n
-         net-dns/dnsmasq[script]"
+         net-dns/dnsmasq"
 DEPEND=""
