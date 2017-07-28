@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-2
 
-EGIT_REPO_URI="https://github.com/fpemud/wrtd-plugin-wvpn-n2n"
+EGIT_REPO_URI="https://github.com/fpemud/wrtd-plugin-manager-cascade"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
@@ -15,8 +15,5 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/wrtd
-         net-misc/wrtd-plugin-manager-cascade
-         net-misc/dhcp[client]
-         net-vpn/n2n"
+RDEPEND="net-misc/wrtd"
 DEPEND=""
