@@ -15,5 +15,6 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/wrtd"
+RDEPEND="net-misc/wrtd
+         dev-python/msghole"
 DEPEND=""
