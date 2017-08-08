@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-2
 
-EGIT_REPO_URI="https://github.com/fpemud/wrtd-plugin-manager-cascade"
+EGIT_REPO_URI="https://github.com/fpemud/wrtd-plugin-manager-apiserver"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
@@ -15,7 +15,6 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-python/msghole
-         net-misc/wrtd
-         net-misc/wrtd-plugin-manager-apiserver"
+RDEPEND="net-misc/wrtd
+         dev-python/msghole"
 DEPEND=""
