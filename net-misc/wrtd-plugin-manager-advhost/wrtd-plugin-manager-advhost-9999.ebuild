@@ -16,6 +16,5 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="dev-python/msghole
-         net-misc/wrtd
-         net-misc/wrtd-plugin-manager-apiserver"
+         net-misc/wrtd"
 DEPEND=""
