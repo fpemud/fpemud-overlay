@@ -18,6 +18,7 @@ IUSE=""
 RDEPEND="dev-python/pygobject
          dev-python/netifaces
          dev-python/pyroute2
+         dev-python/toposort
          net-dns/dnsmasq
          net-fs/samba
          net-misc/wakeonlan
