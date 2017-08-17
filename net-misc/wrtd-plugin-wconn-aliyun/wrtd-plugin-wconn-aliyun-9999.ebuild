@@ -16,5 +16,6 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="net-misc/wrtd
-         dev-python/pyroute2"
+         dev-python/pyroute2
+         dev-python/aliyun-python-sdk-ecs"
 DEPEND=""
