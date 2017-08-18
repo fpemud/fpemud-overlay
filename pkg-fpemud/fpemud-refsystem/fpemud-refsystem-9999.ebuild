@@ -46,6 +46,7 @@ RDEPEND="sys-apps/systemd
          dev-python/dirchecksum
          dev-python/lxml
          dev-python/passlib
+         dev-python/ntplib
          dev-python/pylkc
          dev-python/pyudev
          dev-python/strict_pgs
