@@ -2,9 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI="5"
+PYTHON_COMPAT=( python{3_3,3_4,3_5} )
 
-inherit distutils eutils git-2
+inherit distutils-r1 eutils git-2
 
 DESCRIPTION="A library for parsing and manipulating Advanced SubStation Alpha subtitle files."
 HOMEPAGE="https://github.com/rfw/python-ass"
