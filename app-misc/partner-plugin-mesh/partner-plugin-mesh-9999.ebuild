@@ -15,5 +15,6 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-python/pygobject"
+RDEPEND="dev-python/pygobject
+         dev-python/msghole"
 DEPEND=""
