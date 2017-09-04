@@ -16,5 +16,6 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="dev-python/pygobject
-         dev-python/msghole"
+         dev-python/msghole
+         app-misc/partner"
 DEPEND=""
