@@ -7,12 +7,8 @@ inherit eutils gnome2-utils games
 
 DESCRIPTION="Call of Duty"
 HOMEPAGE=""
-SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}
-         ftp://fpemud-workstation/distfiles-private/${PN}.zip
-         ftp://fpemud-workstation/distfiles-private/CoD_1.5_Patch.exe
-         ftp://fpemud-workstation/distfiles-private/${PN}.desktop
-         ftp://fpemud-workstation/distfiles-private/${PN}_16x16x8.png
-         ftp://fpemud-workstation/distfiles-private/${PN}_32x32x8.png"
+SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}.zip
+         ftp://fpemud-workstation/distfiles-private/CoD_1.5_Patch.exe"
 LICENSE=""
 SLOT="0"
 KEYWORDS="-* amd64 x86"
@@ -34,14 +30,14 @@ src_install() {
 	mkdir -p "${D}/opt/${PN}/CallofDuty"
 	unzip "${DISTDIR}/${PN}.zip" -d "${D}/opt/${PN}/CallofDuty"
 
-	dogamesbin "${DISTDIR}/${PN}"
+	dogamesbin "${FILESDIR}/${PN}"
 
 	local res
 	for res in 16 32; do
-		newicon -s ${res} "${DISTDIR}/${PN}_${res}x${res}x8.png" "${PN}.png"
+		newicon -s ${res} "${FILESDIR}/${PN}_${res}x${res}x8.png" "${PN}.png"
 	done
 
-	domenu "${DISTDIR}/${PN}.desktop"
+	domenu "${FILESDIR}/${PN}.desktop"
 
 	prepgamesdirs
 }

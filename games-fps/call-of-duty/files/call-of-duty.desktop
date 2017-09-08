@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Call of Duty
+Type=Application
+Comment=Call of Duty
+Exec=call-of-duty
+TryExec=call-of-duty
+Icon=call-of-duty
+Categories=Game;
