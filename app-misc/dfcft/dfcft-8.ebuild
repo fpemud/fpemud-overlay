@@ -46,7 +46,7 @@ src_unpack() {
 src_prepare() {
 	# Prepare the wrapper script
 	sed -e "s/^OPTDIR=.*$/OPTDIR=\/opt\/${PN}/g" \
-	    -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/${PN}/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${P}/${PN}"
+	    -e "s/^DATADIR=.*$/DATADIR=~\/.cache\/${PN}/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${P}/${PN}"
 }
 
 src_install() {

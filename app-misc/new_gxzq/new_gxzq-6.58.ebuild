@@ -30,7 +30,7 @@ src_prepare() {
         # Prepare the wrapper script
         sed -e "s/^INSTDIR=.*$/INSTDIR=\/opt\/${PN}/g" \
             -e "s/^PROGDIR=.*$/PROGDIR=\/opt\/${PN}\/${PN}_v${PV}/g" \
-            -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/${PN}/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${PN}"
+            -e "s/^DATADIR=.*$/DATADIR=~\/.cache\/${PN}/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${PN}"
 }
 
 src_install() {

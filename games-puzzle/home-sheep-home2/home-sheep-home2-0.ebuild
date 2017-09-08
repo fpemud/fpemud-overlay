@@ -39,7 +39,7 @@ src_unpack() {
 src_prepare() {
 	# Prepare the wrapper script
 	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/${PN}/g" \
-	    -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/${PN}/g" "${DISTDIR}/${PN}" > "${WORKDIR}/${PN}"
+	    -e "s/^DATADIR=.*$/DATADIR=~\/.cache\/${PN}/g" "${DISTDIR}/${PN}" > "${WORKDIR}/${PN}"
 }
 
 

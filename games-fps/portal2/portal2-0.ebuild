@@ -38,7 +38,7 @@ src_unpack() {
 src_prepare() {
 	# Prepare the wrapper script
 	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/Portal2/g" \
-	    -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/Portal2/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${PN}"
+	    -e "s/^DATADIR=.*$/DATADIR=~\/.cache\/Portal2/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${PN}"
 }
 
 src_install() {

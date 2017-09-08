@@ -31,7 +31,7 @@ src_prepare() {
 
 	# Prepare the wrapper script
 	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/${PN}/g" \
-	    -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/${PN}/g" \
+	    -e "s/^DATADIR=.*$/DATADIR=~\/.cache\/${PN}/g" \
 	    -e "s/^CFGDIR=.*$/CFGDIR=~\/.config\/${PN}/g" "${DISTDIR}/${PN}" > "${WORKDIR}/${PN}"
 }
 

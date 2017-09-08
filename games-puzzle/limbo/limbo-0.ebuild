@@ -14,7 +14,7 @@ KEYWORDS="-* amd64 x86"
 IUSE=""
 
 DEPEND="app-arch/p7zip"
-RDEPEND="|| ( >=app-emulation/wine-1.4.1[win32] 
+RDEPEND="|| ( >=app-emulation/wine-1.4.1[win32]
               >=app-emulation/wine-1.6[abi_x86_32] )
          >=app-emulation/winetricks-744"
 
@@ -22,7 +22,7 @@ src_unpack() {
 	# Multiple settings.txt exist in LIMBOInstaller.exe, we must select the skip option by echoing "s\n"
 	echo "s\n" | 7z x "${DISTDIR}/${A}" -o"${WORKDIR}"
 
-	# Restruct the directory. 
+	# Restruct the directory.
         rm -rf "${WORKDIR}"/$'\x01\x19'
         rm -rf "${WORKDIR}"/$'\x01\x15'/$'\x01\x1A'
         mkdir "${WORKDIR}/default-config"
@@ -35,7 +35,7 @@ src_unpack() {
 src_prepare() {
 	# Prepare the wrapper script
 	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/limbo/g" \
-	    -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/limbo/g" "${FILESDIR}/limbo" > "${WORKDIR}/limbo"
+	    -e "s/^DATADIR=.*$/DATADIR=~\/.cache\/limbo/g" "${FILESDIR}/limbo" > "${WORKDIR}/limbo"
 }
 
 src_install() {

@@ -28,7 +28,7 @@ src_unpack() {
 src_prepare() {
 	# Prepare the wrapper script
 	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/KSP_linux/g" \
-	    -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/KSP_linux/g" "${DISTDIR}/${PN}" > "${WORKDIR}/${PN}"
+	    -e "s/^DATADIR=.*$/DATADIR=~\/.cache\/KSP_linux/g" "${DISTDIR}/${PN}" > "${WORKDIR}/${PN}"
 }
 
 src_install() {

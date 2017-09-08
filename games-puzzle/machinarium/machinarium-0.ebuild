@@ -38,7 +38,7 @@ src_unpack() {
 src_prepare() {
 	# Prepare the wrapper script
 	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/machinarium/g" \
-	    -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/machinarium/g" "${DISTDIR}/machinarium" > "${WORKDIR}/machinarium"
+	    -e "s/^DATADIR=.*$/DATADIR=~\/.cache\/machinarium/g" "${DISTDIR}/machinarium" > "${WORKDIR}/machinarium"
 }
 
 src_install() {

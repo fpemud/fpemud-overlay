@@ -38,7 +38,7 @@ src_prepare() {
 
 	# Prepare the wrapper script
 	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/HL2/g" \
-	    -e "s/^DATADIR=.*$/DATADIR=~\/.local\/share\/HL2/g" "${FILESDIR}/launcher.sh" > "${WORKDIR}/launcher.sh"
+	    -e "s/^DATADIR=.*$/DATADIR=~\/.cache\/HL2/g" "${FILESDIR}/launcher.sh" > "${WORKDIR}/launcher.sh"
 
 	sed -e "s/^EXEC=.*$/EXEC=hl1.sh/g" "${WORKDIR}/launcher.sh" > "${WORKDIR}/half-life"
 	sed -e "s/^EXEC=.*$/EXEC=hl2.sh/g" "${WORKDIR}/launcher.sh" > "${WORKDIR}/half-life2"

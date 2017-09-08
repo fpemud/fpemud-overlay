@@ -59,7 +59,7 @@ create_link ()
 
 # Variables
 GAMEDIR=/opt/beholder
-DATADIR=~/.local/share/beholder
+DATADIR=~/.cache/beholder
 
 # Create wine directory
 create_wine_dir "$DATADIR"
