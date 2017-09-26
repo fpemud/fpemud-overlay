@@ -7,10 +7,7 @@ inherit eutils games
 
 DESCRIPTION="Plants vs Zombies the game"
 HOMEPAGE=""
-SRC_URI="ftp://fpemud-workstation/distfiles-private/${P}
-         ftp://fpemud-workstation/distfiles-private/${P}.desktop
-         ftp://fpemud-workstation/distfiles-private/${P}.png
-         ftp://fpemud-workstation/distfiles-private/${P}.zip"
+SRC_URI="ftp://fpemud-workstation/distfiles-private/${P}.zip"
 LICENSE="unknown"
 SLOT="2010"
 KEYWORDS="-* amd64 x86"
@@ -31,9 +28,9 @@ src_unpack() {
 src_install() {
 	unzip -q "${DISTDIR}/${P}.zip" -d "${D}"
 
-	dogamesbin "${DISTDIR}/${P}"
-	doicon "${DISTDIR}/${P}.png"
-	domenu "${DISTDIR}/${P}.desktop"
+	dogamesbin "${FILESDIR}/${P}"
+	doicon "${FILESDIR}/${P}.png"
+	domenu "${FILESDIR}/${P}.desktop"
 
 	prepgamesdirs
 }

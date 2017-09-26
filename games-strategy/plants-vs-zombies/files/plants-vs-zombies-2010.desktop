@@ -1,0 +1,9 @@
+
+[Desktop Entry]
+Name=Plants vs Zombies GOTY
+Type=Application
+Comment=The game Plants vs Zombies
+Exec=plants-vs-zombies-2010
+TryExec=plants-vs-zombies-2010
+Icon=plants-vs-zombies-2010
+Categories=Game;
