@@ -77,5 +77,5 @@ DEPEND=">=dev-libs/libusbx-1.0.9 \
 # libraries, likely Wine is no longer needed.
 # If USE wine (for firmware extracting), then require runtime wine.
 RDEPEND="${DEPEND} \
-	>=app-emulation/wine-1.6"
+	>=virtual/wine-1.6"
 

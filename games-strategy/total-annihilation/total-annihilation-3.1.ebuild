@@ -33,8 +33,7 @@ RESTRICT="mirror"
 
 DEPEND="app-arch/unzip
         app-arch/p7zip"
-RDEPEND="|| ( >=app-emulation/wine-1.4.1[win32]
-              >=app-emulation/wine-1.6[abi_x86_32] )"
+RDEPEND="virtual/wine[abi_x86_32]"
 
 src_unpack() {
 

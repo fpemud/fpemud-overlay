@@ -18,9 +18,7 @@ DEPEND="app-arch/p7zip
         || ( app-admin/microsoft-windows-xp-setup-cd-x86
              app-admin/microsoft-windows-7-setup-dvd-x86
              app-admin/microsoft-windows-7-setup-dvd-amd64 )"
-RDEPEND="|| ( >=app-emulation/wine-1.4.1[win32]
-              >=app-emulation/wine-1.6[abi_x86_32]
-              >=app-emulation/wine-1.8[abi_x86_32] )"
+RDEPEND="virtual/wine[abi_x86_32]"
 
 src_unpack() {
 	mkdir "${WORKDIR}/${P}/data"

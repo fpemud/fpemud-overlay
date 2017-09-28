@@ -22,7 +22,7 @@ IUSE=""
 RESTRICT="mirror"
 
 DEPEND="app-arch/unzip"
-RDEPEND=">=app-emulation/wine-1.6[abi_x86_32]
+RDEPEND="virtual/wine[abi_x86_32]
          media-libs/libtxc_dxtn[abi_x86_32]"
 
 src_unpack() {

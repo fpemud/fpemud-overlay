@@ -18,12 +18,12 @@ IUSE=""
 RESTRICT="mirror"
 
 DEPEND="app-arch/p7zip"
-RDEPEND=">=app-emulation/wine-1.6[abi_x86_32]"
+RDEPEND="virtual/wine[abi_x86_32]"
 
 #src_unpack() {
 #	7z x "${FILESDIR}/Home Sheep Home 2 A Little Epic Setup.exe" -o"${WORKDIR}"
 #
-#	# Restruct the directory. 
+#	# Restruct the directory.
 #	rm -rf "${WORKDIR}/Home Sheep Home 2 A Little Epic Setup/src"
 #	rm -rf "${WORKDIR}/Home Sheep Home 2 A Little Epic Setup/GDFShell.dll"
 #	mkdir "${WORKDIR}/default-config"

@@ -19,7 +19,7 @@ IUSE=""
 RESTRICT="mirror"
 
 DEPEND="app-arch/unzip"
-RDEPEND=">=app-emulation/wine-1.6[abi_x86_32]"
+RDEPEND="virutal/wine[abi_x86_32]"
 
 LANGS="zh_TW"
 for X in ${LANGS};

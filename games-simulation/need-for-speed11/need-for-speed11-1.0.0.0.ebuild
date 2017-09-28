@@ -24,7 +24,7 @@ RESTRICT="mirror"
 DEPEND="app-arch/unzip
 	app-arch/cabextract
 	app-arch/p7zip"
-RDEPEND=">=app-emulation/wine-1.6[abi_x86_32]"
+RDEPEND="virutal/wine[abi_x86_32]"
 
 CHECKREQS_DISK_BUILD=16G
 
