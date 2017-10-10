@@ -51,6 +51,7 @@ RDEPEND="sys-apps/systemd
          dev-python/pyudev
          dev-python/strict_pgs
          dev-python/geopy
+         dev-python/pyparted
          dev-perl/Digest-SHA1
          dev-perl/Proc-ProcessTable"
 DEPEND="${RDEPEND}
