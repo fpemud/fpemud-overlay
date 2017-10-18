@@ -42,6 +42,7 @@ RDEPEND="sys-apps/systemd
          app-misc/geoclue
          sys-devel/bc
          sys-libs/tdb
+         dev-python/crcmod
          dev-python/dbus-python
          dev-python/dirchecksum
          dev-python/lxml
