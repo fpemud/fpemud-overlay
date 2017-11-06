@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Variables
+GAMEDIR=                # fill by ebuild
+DATADIR=                # fill by ebuild
+
+# Make data directory
+if [ ! -e "${DATADIR}" ] ; then
+    mkdir -p "${DATADIR}"
+    cp "${GAMEDIR}"/* "${DATADIR}"
+fi
+
+# run the game
+cd "${DATADIR}"
+dosbox -conf dosbox.conf -exit DOT.EXE

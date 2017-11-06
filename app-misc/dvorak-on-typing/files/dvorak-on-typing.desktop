@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Dvorak On Typing
+Type=Application
+Comment=Dvorak On Typing
+Exec=dvorak-on-typing
+TryExec=dvorak-on-typing
+Icon=/usr/share/pixmaps/dosbox.ico
+Categories=Education;
