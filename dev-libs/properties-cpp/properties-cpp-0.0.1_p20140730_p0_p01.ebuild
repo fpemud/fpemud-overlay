@@ -29,11 +29,12 @@ S="${WORKDIR}/${PN}-${PV}${UVER_PREFIX}"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 src_prepare() {
-        eapply_user
-	if ! use doc; then
-                sed -i -e "s/add_subdirectory(doc)//g" "${S}/CMakeLists.txt"
-        fi
-	if ! use test; then
-                sed -i -e "s/add_subdirectory(tests)//g" "${S}/CMakeLists.txt"
-        fi
+	ubuntu-versionator_src_prepare
+	use doc || \
+		sed -i 's:add_subdirectory(doc)::g' \
+			-i "${S}/CMakeLists.txt"
+	use test || \
+		sed -i 's:add_subdirectory(tests)::g' \
+			-i "${S}/CMakeLists.txt"
+	cmake-utils_src_prepare
 }
