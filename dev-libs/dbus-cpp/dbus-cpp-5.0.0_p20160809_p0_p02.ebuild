@@ -21,6 +21,7 @@ IUSE="doc examples test"
 RESTRICT="mirror"
 
 DEPEND="doc? ( app-doc/doxygen )
+        test? ( dev-cpp/gmock )
         dev-cpp/gtest
 	dev-libs/boost:=
 	dev-libs/process-cpp
