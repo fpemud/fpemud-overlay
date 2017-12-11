@@ -2,14 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI="5"
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils eutils git-2
+inherit distutils-r1 eutils git-2
 
-EGIT_REPO_URI="https://github.com/gma/python-netsyslog.git"
-PYTHON_DEPEND="2:2.6"
-DISTUTILS_SRC_TEST="setup.py"
-
+xEGIT_REPO_URI="https://github.com/gma/python-netsyslog.git"
 DESCRIPTION="WebSocket support for Python"
 HOMEPAGE="https://github.com/gma/python-netsyslog"
 LICENSE="unknown"
