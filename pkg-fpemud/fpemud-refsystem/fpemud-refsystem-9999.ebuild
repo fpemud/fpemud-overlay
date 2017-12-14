@@ -49,6 +49,7 @@ RDEPEND="sys-apps/systemd
          dev-python/passlib
          dev-python/ntplib
          dev-python/pylkc
+         dev-python/pyopenssl
          dev-python/pyudev
          dev-python/strict_pgs
          dev-python/geopy
