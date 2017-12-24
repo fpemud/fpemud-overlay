@@ -4,9 +4,13 @@
 
 EAPI=5
 
+inherit versionator
+
+MAJORV=$(get_major_version)
+LASTV=$(get_version_component_range 3)
 DESCRIPTION="The .iso image of CentOS 7 setup DVD (x86_64)"
 HOMEPAGE="https://www.centos.org"
-SRC_URI="http://buildlogs.centos.org/rolling/7/isos/x86_64/CentOS-7-x86_64-DVD-1511.iso"
+SRC_URI="mirror://centos/${PV}/isos/x86_64/CentOS-${MAJORV}-x86_64-DVD-${LASTV}.iso"
 
 LICENSE="unknown"
 SLOT="0"
@@ -14,7 +18,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RESTRICT="mirror"
-
 S=${WORKDIR}
 
 src_unpack() {
@@ -23,6 +26,6 @@ src_unpack() {
 
 src_install() {
 	insinto "/usr/share/${PN%-*}"
-	doins "${DISTDIR}/CentOS-7-x86_64-DVD-1511.iso"
-	ln -f -s "CentOS-7-x86_64-DVD-1511.iso" "${D}/usr/share/${PN%-*}/centos-7-dvd-amd64.iso"
+	doins "${DISTDIR}/CentOS-${MAJORV}-x86_64-DVD-${LASTV}.iso"
+	ln -f -s "CentOS-${MAJORV}-x86_64-DVD-${LASTV}.iso" "${D}/usr/share/${PN%-*}/centos-${MAJORV}-dvd-amd64.iso"
 }
