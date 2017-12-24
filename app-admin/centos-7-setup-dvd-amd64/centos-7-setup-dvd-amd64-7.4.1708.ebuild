@@ -13,7 +13,7 @@ HOMEPAGE="https://www.centos.org"
 SRC_URI="mirror://centos/${PV}/isos/x86_64/CentOS-${MAJORV}-x86_64-DVD-${LASTV}.iso"
 
 LICENSE="unknown"
-SLOT="0"
+SLOT="7.4"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 

@@ -14,7 +14,7 @@ SRC_URI="mirror://centos/${PV}/isos/x86_64/CentOS-${PV}-x86_64-LiveDVD.iso
          mirror://centos/${PV}/isos/x86_64/CentOS-${PV}-x86_64-bin-DVD2.iso"
 
 LICENSE="unknown"
-SLOT="0"
+SLOT="6.9"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
