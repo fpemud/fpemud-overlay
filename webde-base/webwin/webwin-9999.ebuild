@@ -15,4 +15,5 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="www-servers/nginx"
+RDEPEND="www-servers/nginx[nginx_modules_http_auth_pam]
+         dev-python/cherrypy"
