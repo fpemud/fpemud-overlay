@@ -36,6 +36,7 @@ RDEPEND="sys-apps/systemd
          sys-apps/kmod[python]
          sys-apps/diffutils
          sys-apps/smartmontools
+         sys-apps/dmidecode
          app-arch/cpio
          app-arch/xz-utils
          app-arch/zip
