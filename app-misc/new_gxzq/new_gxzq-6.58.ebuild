@@ -16,11 +16,7 @@ RESTRICT="mirror"
 
 DEPEND="dev-python/pefile
         sys-apps/file[python]"
-RDEPEND="|| ( app-emulation/wine-vanilla[linguas_zh_CN]
-              app-emulation/wine-d3d9[linguas_zh_CN]
-              app-emulation/wine-staging[linguas_zh_CN]
-              app-emulation/wine-any[linguas_zh_CN] )
-         virtual/wine[abi_x86_32]
+RDEPEND="virtual/wine[abi_x86_32]
          app-emulation/winetricks"
 
 S=${WORKDIR}
