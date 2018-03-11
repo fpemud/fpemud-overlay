@@ -19,9 +19,9 @@ RDEPEND="dev-python/pygobject
          dev-python/netifaces
          dev-python/pyroute2
          dev-python/toposort
+         dev-python/python-iptables
          net-dns/dnsmasq
          net-fs/samba
          net-misc/wakeonlan
-         >=sys-apps/iproute2-2.6.34
-         >=net-firewall/nftables-0.5"
+         >=sys-apps/iproute2-2.6.34"
 DEPEND=""
