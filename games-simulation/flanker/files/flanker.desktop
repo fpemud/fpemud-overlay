@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Flanker
+Type=Application
+Comment=The game Flanker
+Exec=flanker
+TryExec=flanker
+Icon=flanker
+Categories=Game;
