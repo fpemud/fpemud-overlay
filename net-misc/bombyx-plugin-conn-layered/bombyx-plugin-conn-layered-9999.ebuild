@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-2
 
-EGIT_REPO_URI="https://github.com/fpemud/bombyx-plugin-layered-connection"
+EGIT_REPO_URI="https://github.com/fpemud/bombyx-plugin-conn-layered"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
