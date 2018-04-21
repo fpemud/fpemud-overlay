@@ -6,6 +6,7 @@ inherit gnome2 multilib-minimal meson
 
 DESCRIPTION="DHCP client library with GLib integration"
 HOMEPAGE="https://github.com/fpemud/gdhcp"
+SRC_URI="https://github.com/fpemud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPLv2"
 SLOT="0"
