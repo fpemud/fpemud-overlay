@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=StarCraft
+Type=Application
+Comment=StarCraft
+Exec=starcraft
+TryExec=starcraft
+Icon=starcraft
+Categories=Game;
