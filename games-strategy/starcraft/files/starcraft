@@ -58,18 +58,18 @@ create_link ()
 }
 
 # Variables
-GAMEDIR=/opt/starcraft
-DATADIR=~/.local/share/starcraft
+GAMEDIR=		# fill by ebuild
+DATADIR=		# fill by ebuild
+CFGDIR=			# fill by ebuild
 
 # Create wine directory
 create_wine_dir "$DATADIR"
 
 # Make links of "$GAMEDIR/*" to "$DATADIR"
-if [ ! -e "$DATADIR/drive_c/StarCraft" ] ; then
-    create_link "$GAMEDIR/StarCraft" "$DATADIR/drive_c"
+if [ ! -e "$DATADIR/drive_c/Starcraft" ] ; then
+    create_link "$GAMEDIR/Starcraft" "$DATADIR/drive_c"
 fi
 
 # run the game
-cd "$DATADIR/drive_c/StarCraft"
+cd "$DATADIR/drive_c/Starcraft"
 WINEPREFIX="$DATADIR" wine StarCraft.exe
-

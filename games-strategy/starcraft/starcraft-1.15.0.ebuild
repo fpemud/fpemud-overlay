@@ -15,17 +15,35 @@ KEYWORDS="-* amd64 x86"
 IUSE="broodwar"
 RESTRICT="mirror"
 
-DEPEND="app-arch/unzip"
+DEPEND="app-arch/p7zip
+        app-arch/mpq-tools"
 RDEPEND="virtual/wine[abi_x86_32]"
 
-S=${WORKDIR}
+src_unpack() {
+	7z x "${DISTDIR}/Starcraft.iso" -o"${WORKDIR}/cd1"
+
+	mkdir "${WORKDIR}/mpq1"
+	cd "${WORKDIR}/mpq1"
+	mpq-extract -e "${WORKDIR}/cd1/INSTALL.EXE"
+
+	mkdir "${WORKDIR}/Starcraft"
+	"${FILESDIR}/newfiles.py" "${FILESDIR}/filelist.txt" "${WORKDIR}/mpq1" "${WORKDIR}/Starcraft"
+}
+
+src_prepare() {
+	# Prepare the wrapper script
+	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/${PN}/g" \
+	    -e "s/^DATADIR=.*$/DATADIR=~\/.cache\/${PN}/g" \
+	    -e "s/^CFGDIR=.*$/CFGDIR=~\/.config\/${PN}/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${PN}"
+}
 
 src_install() {
-	unzip "${DISTDIR}/starcraft.zip" -d "${D}"
+	dodir "${GAMES_PREFIX_OPT}/${PN}"
+	cp -r "Starcraft" "${D}/${GAMES_PREFIX_OPT}/${PN}"
 
-	dogamesbin "${FILESDIR}/starcraft"
-#	doicon "${FILESDIR}/starcraft.png"
-	domenu "${FILESDIR}/starcraft.desktop"
+	dogamesbin "${PN}"
+#	doicon "${FILESDIR}/${PN}.png"
+	domenu "${FILESDIR}/${PN}.desktop"
 
 	prepgamesdirs
 }
