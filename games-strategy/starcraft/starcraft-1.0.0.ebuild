@@ -7,12 +7,11 @@ inherit eutils games
 
 DESCRIPTION="StarCraft"
 HOMEPAGE=""
-SRC_URI="ftp://fpemud-workstation/distfiles-private/Starcraft.iso
-         ftp://fpemud-workstation/distfiles-private/Starcraft.Broodwar.iso"
+SRC_URI="ftp://fpemud-workstation/distfiles-private/Starcraft.iso"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
-IUSE="broodwar"
+IUSE=""
 RESTRICT="mirror"
 
 DEPEND="app-arch/p7zip
@@ -20,14 +19,17 @@ DEPEND="app-arch/p7zip
 RDEPEND="virtual/wine[abi_x86_32]"
 
 src_unpack() {
-	7z x "${DISTDIR}/Starcraft.iso" -o"${WORKDIR}/cd1"
+	7z x "${DISTDIR}/Starcraft.iso" -o"${WORKDIR}/cd"
 
-	mkdir "${WORKDIR}/mpq1"
-	cd "${WORKDIR}/mpq1"
-	mpq-extract -e "${WORKDIR}/cd1/INSTALL.EXE"
+	mkdir "${WORKDIR}/mpq"
+	cd "${WORKDIR}/mpq"
+	mpq-extract -e "${WORKDIR}/cd/INSTALL.EXE"
 
 	mkdir "${WORKDIR}/Starcraft"
-	"${FILESDIR}/newfiles.py" "${FILESDIR}/filelist.txt" "${WORKDIR}/mpq1" "${WORKDIR}/Starcraft"
+	"${FILESDIR}/newfiles.py" "${FILESDIR}/starcraft.filelist" "${WORKDIR}/mpq" "${WORKDIR}/Starcraft"
+
+	rm -rf "${WORKDIR}/mpq"
+	rm -rf "${WORKDIR}/cd"
 }
 
 src_prepare() {
