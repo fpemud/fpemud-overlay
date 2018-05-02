@@ -6,12 +6,14 @@ EAPI=3
 inherit eutils games
 
 DESCRIPTION="StarCraft"
-SRC_URI="ftp://fpemud-workstation/distfiles-private/starcraft.zip"
-
-LICENSE=""
+HOMEPAGE=""
+SRC_URI="ftp://fpemud-workstation/distfiles-private/Starcraft.iso
+         ftp://fpemud-workstation/distfiles-private/Starcraft.Broodwar.iso"
+LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
-IUSE=""
+IUSE="broodwar"
+RESTRICT="mirror"
 
 DEPEND="app-arch/unzip"
 RDEPEND="virtual/wine[abi_x86_32]"
