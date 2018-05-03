@@ -5,7 +5,7 @@
 EAPI=3
 inherit eutils games
 
-DESCRIPTION="StarCraft"
+DESCRIPTION="StarCraft with BroodWar"
 HOMEPAGE=""
 SRC_URI="ftp://fpemud-workstation/distfiles-private/Starcraft.iso
          ftp://fpemud-workstation/distfiles-private/Starcraft.Broodwar.iso"
@@ -27,7 +27,7 @@ src_unpack() {
 	mpq-extract -e "${WORKDIR}/cd1/INSTALL.EXE"
 
 	mkdir "${WORKDIR}/Starcraft"
-	"${FILESDIR}/newfiles.py" "${FILESDIR}/filelist.txt" "${WORKDIR}/mpq1" "${WORKDIR}/Starcraft"
+	"${FILESDIR}/newfiles.py" "${FILESDIR}/starcraft.filelist" "${WORKDIR}/mpq1" "${WORKDIR}/Starcraft"
 }
 
 src_prepare() {
