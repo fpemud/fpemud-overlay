@@ -7,9 +7,7 @@ inherit eutils games check-reqs
 
 DESCRIPTION="Need For Speed 9 - Most Wanted Black Edition"
 HOMEPAGE="http://www.ea.com/need-for-speed-most-wanted"
-SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}
-         ftp://fpemud-workstation/distfiles-private/${PN}.desktop
-         ftp://fpemud-workstation/distfiles-private/${PN}.png
+SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}.png
          ftp://fpemud-workstation/distfiles-private/Need.for.Speed.Most.Wanted.Black.Edition.zh_TW.CD1.iso
          ftp://fpemud-workstation/distfiles-private/Need.for.Speed.Most.Wanted.Black.Edition.zh_TW.CD2.iso
          ftp://fpemud-workstation/distfiles-private/Need.for.Speed.Most.Wanted.Black.Edition.zh_TW.CD3.iso
@@ -27,7 +25,6 @@ RESTRICT="mirror"
 DEPEND="app-arch/unzip
         app-arch/p7zip"
 RDEPEND="virtual/wine[abi_x86_32]
-         >=app-emulation/winetricks-744
          media-libs/libtxc_dxtn[abi_x86_32]"
 
 CHECKREQS_DISK_BUILD=5G
@@ -81,7 +78,7 @@ src_prepare() {
 	# Prepare the wrapper script
 	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/${PN}/g" \
 	    -e "s/^DATADIR=.*$/DATADIR=~\/.cache\/${PN}/g" \
-	    -e "s/^CFGDIR=.*$/CFGDIR=~\/.config\/${PN}/g" "${DISTDIR}/${PN}" > "${WORKDIR}/${PN}"
+	    -e "s/^CFGDIR=.*$/CFGDIR=~\/.config\/${PN}/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${PN}"
 }
 
 src_install() {
@@ -102,7 +99,7 @@ src_install() {
 
 	dogamesbin "${PN}"
 	doicon "${DISTDIR}/${PN}.png"
-	domenu "${DISTDIR}/${PN}.desktop"
+	domenu "${FILESDIR}/${PN}.desktop"
 
 	prepgamesdirs
 }
