@@ -26,7 +26,7 @@ src_unpack() {
 	mpq-extract -e "${WORKDIR}/cd/INSTALL.EXE"
 
 	mkdir "${WORKDIR}/Starcraft"
-	"${FILESDIR}/newfiles.py" "${FILESDIR}/starcraft.filelist" "${WORKDIR}/mpq" "${WORKDIR}/Starcraft"
+	"${FILESDIR}/newfiles.py" "${FILESDIR}/filelist.starcraft" "${WORKDIR}/mpq" "${WORKDIR}/Starcraft"
 
 	rm -rf "${WORKDIR}/mpq"
 	rm -rf "${WORKDIR}/cd"
