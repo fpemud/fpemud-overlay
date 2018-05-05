@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Loco Mania
+Type=Application
+Comment=Loco Mania
+Exec=loco-mania
+TryExec=loco-mania
+Icon=loco-mania
+Categories=Game;

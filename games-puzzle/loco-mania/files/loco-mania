@@ -51,21 +51,22 @@ create_link ()
             mkdir -p "$dstdir_in/$f"
         else
             # create softlink
-            ln -s -f -t `dirname "$dstdir_in/$f"` $srcf
+            ln -s -t `dirname "$dstdir_in/$f"` $srcf
         fi
     done
     IFS=$SAVEIFS
 }
 
-get_cur_lang ()
-{
-    if [ ${LC_ALL:-x} != "x" ] ; then echo "$LC_ALL"
-    elif [ ${LANG:-x} != "x" ] ; then echo "$LANG"
-    elif [ ${LC_LANG:-x} != "x" ] ; then echo "$LC_LANG"
-    else echo ""
-    fi
+file_to_symlink () {
+    # get params
+    fn=${1:?} ; shift
+    linkto=${1:?} ; shift
 
-    return 0
+    # do the job
+    if [[ -e "$fn" && ! -L "$fn" ]] ; then
+        cp "$fn" "$linkto"
+        ln -sf "$linkto" "$fn"
+    fi
 }
 
 # Variables
@@ -77,36 +78,23 @@ CFGDIR=			# fill by ebuild
 create_wine_dir "$DATADIR"
 
 # Make links of "$GAMEDIR/*" to "$DATADIR"
-if [ ! -e "$DATADIR/drive_c/Need For Speed Most Wanted" ] ; then
-    create_link "$GAMEDIR/Need For Speed Most Wanted" "$DATADIR/drive_c"
+if [ ! -e "$DATADIR/drive_c/Loco Mania" ] ; then
+    create_link "$GAMEDIR/Loco Mania" "$DATADIR/drive_c"
 fi
 
-# Make configuration directory
-mkdir -p "$CFGDIR"
-rm -rf "$DATADIR/drive_c/users/$(id -un)/My Documents"
-ln -sf "$CFGDIR" "$DATADIR/drive_c/users/$(id -un)/My Documents"
-
-# Make default language link
-rm -rf "$DATADIR/drive_c/Need For Speed Most Wanted/Support/en-us"
-rm -rf "$DATADIR/drive_c/Need For Speed Most Wanted/Support/zh-tw"
-for f in "$GAMEDIR/language-pack/en_US"/* ; do
-    create_link "$f" "$DATADIR/drive_c/Need For Speed Most Wanted"
-done
-
-# Use the correct language link to overwrite
-langu=$(get_cur_lang)
-langu=${langu%%.*}
-for f in `find "$GAMEDIR/language-pack" -print`
-do
-    if [ "$langu" == "$(basename "$f")" ] ; then
-        rm -rf "$DATADIR/drive_c/Need For Speed Most Wanted/Support/en-us"
-        for f in "$GAMEDIR/language-pack/$langu"/* ; do
-            create_link "$f" "$DATADIR/drive_c/Need For Speed Most Wanted"
-        done
-        WINEPREFIX="$DATADIR" regedit "$GAMEDIR/registry-patch/${langu}.reg"
-    fi
-done
+# create or flush user settings file
+if [ ! -e "$CFGDIR/Save" ] ; then
+    mkdir -p "$CFGDIR/Save"
+fi
+"${GAMEDIR}/cfg2settings" "$(id -un)" "$CFGDIR"
+ln -sf "$CFGDIR/Save/settings.dat" "$DATADIR/drive_c/Loco Mania/lm/data/$(id -un)_settings.dat"
 
 # run the game
-cd "$DATADIR/drive_c/Need For Speed Most Wanted"
-WINEPREFIX="$DATADIR" wine nfsMW.exe
+cd "$DATADIR/drive_c/Loco Mania"
+WINEPREFIX="$DATADIR" wine GO.EXE -module lm -lang en
+
+# modify user settings file
+file_to_symlink "$DATADIR/drive_c/Loco Mania/lm/data/$(id -un)_settings.dat" "$CFGDIR/Save/settings.dat"
+file_to_symlink "$DATADIR/drive_c/Loco Mania/lm/data/$(id -un)_scores.dat" "$CFGDIR/Save/scores.dat"
+file_to_symlink "$DATADIR/drive_c/Loco Mania/lm/data/config.sc" "$CFGDIR/Save/config.sc"
+file_to_symlink "$DATADIR/drive_c/Loco Mania/lm/data/tutorial.save" "$CFGDIR/Save/tutorial.save"

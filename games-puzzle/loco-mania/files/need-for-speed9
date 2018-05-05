@@ -75,6 +75,7 @@ CFGDIR=			# fill by ebuild
 
 # Create wine directory
 create_wine_dir "$DATADIR"
+WINEPREFIX="$DATADIR" winetricks d3dx9
 
 # Make links of "$GAMEDIR/*" to "$DATADIR"
 if [ ! -e "$DATADIR/drive_c/Need For Speed Most Wanted" ] ; then
@@ -110,3 +111,4 @@ done
 # run the game
 cd "$DATADIR/drive_c/Need For Speed Most Wanted"
 WINEPREFIX="$DATADIR" wine nfsMW.exe
+xrandr -s 0
