@@ -20,11 +20,15 @@ RDEPEND="virtual/wine[abi_x86_32]
 
 src_unpack() {
 	unzip "${DISTDIR}/Loco.Mania.zip" -d "${WORKDIR}"
+	mv "${WORKDIR}/Loco Mania" "${WORKDIR}/install"
 
+	mkdir "${WORKDIR}/Loco Mania"
 	cd "${WORKDIR}/Loco Mania"
+	mv "${WORKDIR}/install/TNT.UHA" .
 	uharc x -y+ TNT.UHA
-	rm -f TNT*
-	rm -f SETUP.BAT
+	rm -f TNT.UHA
+
+	rm -rf "${WORKDIR}/install"
 }
 
 src_prepare() {
