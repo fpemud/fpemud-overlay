@@ -15,5 +15,6 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-python/pyroute2"
+RDEPEND="dev-libs/libpeas
+         dev-python/pyroute2"
 DEPEND="${RDEPEND}"
