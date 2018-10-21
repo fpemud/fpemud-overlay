@@ -1,0 +1,1 @@
+dosbox -conf /opt/spacewar/dosbox.conf -exit /opt/spacewar/SPACEWAR.EXE

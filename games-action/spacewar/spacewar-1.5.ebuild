@@ -7,10 +7,7 @@ inherit eutils games
 
 DESCRIPTION="DOS game SPACEWAR"
 HOMEPAGE=""
-SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}
-         ftp://fpemud-workstation/distfiles-private/${PN}.desktop
-         ftp://fpemud-workstation/distfiles-private/${PN}-dosbox.conf
-         ftp://fpemud-workstation/distfiles-private/SPACEWAR.EXE"
+SRC_URI="ftp://fpemud-workstation/distfiles-private/SPACEWAR.EXE"
 LICENSE=""
 SLOT="0"
 KEYWORDS="-* amd64 x86"
@@ -31,10 +28,10 @@ src_unpack() {
 src_install() {
 	dodir "/opt/${PN}"
 	cp "${DISTDIR}/SPACEWAR.EXE" "${D}/opt/${PN}"
-	cp "${DISTDIR}/${PN}-dosbox.conf"  "${D}/opt/${PN}/dosbox.conf"
+	cp "${FILESDIR}/${PN}-dosbox.conf"  "${D}/opt/${PN}/dosbox.conf"
 
-	dogamesbin "${DISTDIR}/${PN}"
-	domenu "${DISTDIR}/${PN}.desktop"
+	dogamesbin "${FILESDIR}/${PN}"
+	domenu "${FILESDIR}/${PN}.desktop"
 
 	prepgamesdirs
 }

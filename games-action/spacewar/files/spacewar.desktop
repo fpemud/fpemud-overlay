@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Space War
+Type=Application
+Comment=DOS game spacewar
+Exec=spacewar
+TryExec=spacewar
+Icon=/usr/share/pixmaps/dosbox.ico
+Categories=Game;
