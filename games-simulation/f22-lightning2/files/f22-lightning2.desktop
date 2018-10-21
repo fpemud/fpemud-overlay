@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=F-22 Lightning 2
+Type=Application
+Comment=F-22 Lightning 2
+Exec=f22-lightning2
+TryExec=f22-lightning2
+Icon=/usr/share/pixmaps/dosbox.ico
+Categories=Game;
