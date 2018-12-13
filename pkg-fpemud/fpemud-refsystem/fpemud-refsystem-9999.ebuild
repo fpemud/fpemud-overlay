@@ -21,6 +21,7 @@ RDEPEND="sys-apps/systemd
          net-misc/stunnel
          net-misc/wget
          sys-apps/portage
+         dev-libs/c-dynbuf
          dev-util/patchutils
          dev-vcs/git
          dev-vcs/subversion
