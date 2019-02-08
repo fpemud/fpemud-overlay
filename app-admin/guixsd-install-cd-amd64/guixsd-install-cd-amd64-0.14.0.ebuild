@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 DESCRIPTION="The .iso image of GuixSD install CD (x86_64)"
 HOMEPAGE="https://www.gnu.org/software/guix"
