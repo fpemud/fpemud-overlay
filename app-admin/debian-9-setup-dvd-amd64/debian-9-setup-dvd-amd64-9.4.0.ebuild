@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 DESCRIPTION="Debian 9.4 setup DVD (amd64)"
 HOMEPAGE="https://www.debian.org"
