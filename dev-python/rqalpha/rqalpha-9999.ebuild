@@ -18,6 +18,7 @@ IUSE=""
 
 #        =dev-python/jsonpickle-0.9.4
 #        >=dev-python/xlsxwriter-0.9.6
+#        =dev-python/logbook-1.0.0
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
         dev-python/requests
         >=dev-python/numpy-1.11.1
@@ -26,7 +27,6 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
         >=dev-python/pytz-2016.4
         >=dev-python/six-1.10.0
         >=dev-python/pytest-2.9.2
-        =dev-python/logbook-1.0.0
         >=dev-python/click-6.6
         >=dev-python/bcolz-1.1.0
         >=dev-python/matplotlib-1.5.1
