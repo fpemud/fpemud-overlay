@@ -9,14 +9,14 @@ inherit distutils-r1 git-r3
 
 DESCRIPTION="Ricequant Algorithm Trading System"
 HOMEPAGE="http://rqalpha.io"
-EGIT_REPO_URI="https://github.com/ricequant/rqalpha"
+#EGIT_REPO_URI="https://github.com/ricequant/rqalpha"
+EGIT_REPO_URI="https://github.com/fpemud/rqalpha"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-#        =dev-python/jsonpickle-0.9.4
 #        >=dev-python/xlsxwriter-0.9.6
 #        =dev-python/logbook-1.0.0
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
@@ -35,5 +35,13 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
         =dev-python/dill-0.2.5
         >=dev-python/xlsxwriter-0.9.2
         >=dev-python/line_profiler-2.0
-        >=dev-python/pyyaml-3.12"
+        >=dev-python/pyyaml-3.12
+        =dev-python/jsonpickle-0.9.4
+        dev-python/tabulate
+        dev-python/rqrisk"
 RDEPEND=""
+
+src_prepare() {
+	rm -rf tests
+	eapply_user
+}
