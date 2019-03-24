@@ -30,13 +30,12 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
         >=dev-python/click-6.6
         >=dev-python/bcolz-1.1.0
         >=dev-python/matplotlib-1.5.1
-        >=dev-python/jsonpickle-0.9.3
         >=dev-python/simplejson-3.10.0
         =dev-python/dill-0.2.5
         >=dev-python/xlsxwriter-0.9.2
         >=dev-python/line_profiler-2.0
         >=dev-python/pyyaml-3.12
-        =dev-python/jsonpickle-0.9.4
+        dev-python/jsonpickle
         dev-python/tabulate
         dev-python/rqrisk"
 RDEPEND=""
