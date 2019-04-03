@@ -19,6 +19,8 @@ RDEPEND="virtual/cdrtools
          dev-python/pygobject
          dev-python/dirchecksum"
 RDEPEND="${RDEPEND}
+         sys-fs/squashfs-tools"          # needed for System Rescue CD
+RDEPEND="${RDEPEND}
          dev-python/pyftpdlib
          dev-python/pytz"                # needed for Gentoo
 RDEPEND="${RDEPEND}
