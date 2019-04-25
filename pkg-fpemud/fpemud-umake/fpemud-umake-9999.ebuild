@@ -16,6 +16,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="virtual/cdrtools
+         app-arch/p7zip
          dev-python/pygobject
          dev-python/dirchecksum"
 RDEPEND="${RDEPEND}
