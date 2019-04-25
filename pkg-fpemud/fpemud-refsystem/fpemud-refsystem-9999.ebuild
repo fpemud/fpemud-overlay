@@ -24,6 +24,7 @@ RDEPEND="sys-apps/systemd
          dev-libs/c-list
          dev-libs/c-dynbuf
          dev-util/patchutils
+         dev-util/ccache
          dev-vcs/git
          dev-vcs/subversion
          sys-boot/grub:2[grub_platforms_pc,grub_platforms_efi-64]
