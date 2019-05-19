@@ -94,7 +94,7 @@ src_install() {
 
 	dodir "${GAMES_PREFIX_OPT}/${PN}/registry-patch"
 	for f in en_US ${LINGUAS}; do
-		cp -r "${DISTDIR}/${PN}_${f}.reg" "${D}/${GAMES_PREFIX_OPT}/${PN}/registry-patch"
+		cp -r "${DISTDIR}/${PN}_${f}.reg" "${D}/${GAMES_PREFIX_OPT}/${PN}/registry-patch/${f}.reg"
 	done
 
 	dogamesbin "${PN}"
