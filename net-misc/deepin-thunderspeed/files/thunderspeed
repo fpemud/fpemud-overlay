@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Variables
+APPDIR=			# fill by ebuild
+DATADIR=		# fill by ebuild
+
+# Create wine directory
+if ! [ -e $DATADIR ] ; then
+	mkdir -p "$DATADIR"
+	7z x "$APPDIR/files.7z" -o"$DATADIR"
+	mv "$DATADIR/drive_c/users/@current_user@" "$DATADIR/drive_c/users/$(id -un)"
+	sed -i "s#@current_user@#$(id -un)#" $DATADIR/*.reg
+fi
+
+# run the application
+WINEPREFIX="$DATADIR" wine "$DATADIR/drive_c/Program Files/Thunder Network/Thunder/Program/Thunder.exe"
