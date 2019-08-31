@@ -25,7 +25,8 @@ RDEPEND="${RDEPEND}
          dev-python/pyftpdlib
          dev-python/pytz"                # needed for Gentoo
 RDEPEND="${RDEPEND}
-         sys-block/ms-sys"               # needed for Microsoft Windows
+         sys-block/ms-sys
+         app-misc/hivex[python]"         # needed for Microsoft Windows
 RDEPEND="${RDEPEND}
          sys-process/schedtool
          dev-util/android-tools
