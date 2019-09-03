@@ -30,8 +30,8 @@ RDEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
          sys-process/schedtool
          dev-util/android-tools
-         dev-util/repo
          dev-java/maven-bin
          sys-libs/ncurses:5/5[tinfo]"    # needed for CyanongenMod 13
+#         dev-util/repo
 
 DEPEND=""
