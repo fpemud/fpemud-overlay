@@ -2,14 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 inherit eutils games check-reqs
 
 DESCRIPTION="Need For Speed 11 - Hot Pursuit Reloaded"
 HOMEPAGE=""
-SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}
-	 ftp://fpemud-workstation/distfiles-private/${PN}.desktop
-         ftp://fpemud-workstation/distfiles-private/${PN}_16x16x32.png
+SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}_16x16x32.png
          ftp://fpemud-workstation/distfiles-private/${PN}_32x32x32.png
          ftp://fpemud-workstation/distfiles-private/${PN}_48x48x32.png
          ftp://fpemud-workstation/distfiles-private/${PN}_256x256x32.png
@@ -126,7 +124,7 @@ src_prepare() {
 	# Prepare the wrapper script
 	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/${PN}/g" \
 	    -e "s/^DATADIR=.*$/DATADIR=~\/.cache\/${PN}/g" \
-	    -e "s/^CFGDIR=.*$/CFGDIR=~\/.config\/${PN}/g" "${DISTDIR}/${PN}" > "${WORKDIR}/${PN}"
+	    -e "s/^CFGDIR=.*$/CFGDIR=~\/.config\/${PN}/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${PN}"
 }
 
 src_install() {
@@ -147,7 +145,7 @@ src_install() {
 		newicon -s ${res} "${DISTDIR}/${PN}_${res}x${res}x32.png" "${PN}.png"
 	done
 
-	domenu "${DISTDIR}/${PN}.desktop"
+	domenu "${FILESDIR}/${PN}.desktop"
 
 	prepgamesdirs
 }
