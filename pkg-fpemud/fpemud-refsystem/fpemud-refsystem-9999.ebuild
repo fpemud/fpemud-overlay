@@ -42,12 +42,10 @@ RDEPEND="sys-apps/systemd
          app-arch/cpio
          app-arch/xz-utils
          app-arch/zip
-         app-misc/geoclue
          sys-devel/bc
          sys-libs/tdb
          dev-python/crcmod
          dev-python/dbus-python
-         dev-python/dirchecksum
          dev-python/lxml
          dev-python/passlib
          dev-python/ntplib
@@ -55,7 +53,6 @@ RDEPEND="sys-apps/systemd
          dev-python/pyopenssl
          dev-python/pyudev
          dev-python/strict_pgs
-         dev-python/geopy
          dev-python/pyparted
          dev-perl/Digest-SHA1
          dev-perl/Proc-ProcessTable"
