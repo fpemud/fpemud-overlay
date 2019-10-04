@@ -1,15 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=6
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit distutils-r1
+inherit distutils-r1 git-r3
 
 DESCRIPTION="A torrent searching application"
 HOMEPAGE="http://torrent-search.sourceforge.net/"
-SRC_URI="mirror://sourceforge/torrent-search/${PN}_${PV}.tar.gz"
+EGIT_REPO_URI="https://github.com/fpemud/torrent-search.git"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -22,7 +22,7 @@ RDEPEND=">=dev-python/httplib2-0.6.0
 	>=dev-python/dbus-python-0.83
 	>=dev-libs/libxml2-2.7.6[python]
 	gnome? ( dev-python/gnome-applets-python )"
-S="${WORKDIR}/${PN}"
+#S="${WORKDIR}/${P}"
 
 src_install() {
 	distutils-r1_src_install
