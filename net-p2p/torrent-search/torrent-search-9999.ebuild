@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=6
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python{3_6,3_7} )
 
 inherit distutils-r1 git-r3
 
@@ -22,12 +22,11 @@ RDEPEND=">=dev-python/httplib2-0.6.0
 	>=dev-python/dbus-python-0.83
 	>=dev-libs/libxml2-2.7.6[python]
 	gnome? ( dev-python/gnome-applets-python )"
-#S="${WORKDIR}/${P}"
 
-src_install() {
-	distutils-r1_src_install
-	if ! use gnome; then
-		rm "${ED}"usr/bin/torrent-search-gnomeapplet* || die
-		rm "${ED}"usr/lib/bonobo/servers/TorrentSearch_Applet.server || die
-	fi
-}
+#src_install() {
+#	distutils-r1_src_install
+	# if ! use gnome; then
+		# rm "${ED}"usr/bin/torrent-search-gnomeapplet* || die
+		# rm "${ED}"usr/lib/bonobo/servers/TorrentSearch_Applet.server || die
+	# fi
+#}
