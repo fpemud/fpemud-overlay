@@ -3,9 +3,8 @@
 # $Header: $
 
 EAPI=6
-PYTHON_COMPAT=( python{3_6,3_7} )
 
-inherit distutils-r1 git-r3
+inherit git-r3
 
 DESCRIPTION="A torrent searching application"
 HOMEPAGE="http://torrent-search.sourceforge.net/"
