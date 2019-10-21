@@ -17,7 +17,6 @@ IUSE="gnome"
 
 DEPEND=""
 RDEPEND=">=dev-python/httplib2-0.6.0
-	dev-python/pygtk:2
 	>=dev-python/dbus-python-0.83
 	>=dev-libs/libxml2-2.7.6[python]
 	gnome? ( dev-python/gnome-applets-python )
