@@ -28,15 +28,15 @@ src_prepare() {
 src_install() {
 	unzip "${DISTDIR}/${PN}.zip" -d "${D}"
 
-	dogamesbin "${DISTDIR}/${PN}"
+	dogamesbin "${FILESDIR}/${PN}"
 
 	local res
 
 	for res in 16 32 48 256; do
-		newicon -s ${res} "${DISTDIR}/${PN}_${res}x${res}x32.png" "${PN}.png"
+		newicon -s ${res} "${FILESDIR}/${PN}_${res}x${res}x32.png" "${PN}.png"
 	done
 
-	domenu "${DISTDIR}/${PN}.desktop"
+	domenu "${FILESDIR}/${PN}.desktop"
 
 	prepgamesdirs
 }
