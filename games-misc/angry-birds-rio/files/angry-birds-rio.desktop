@@ -1,0 +1,9 @@
+
+[Desktop Entry]
+Name=Angry Birds Rio
+Type=Application
+Comment=Angry Birds Rio
+Exec=angry-birds-rio
+TryExec=angry-birds-rio
+Icon=angry-birds-rio
+Categories=Game;
