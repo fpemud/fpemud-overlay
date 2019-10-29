@@ -1,0 +1,9 @@
+
+[Desktop Entry]
+Name=Angry Birds
+Type=Application
+Comment=Angry Birds
+Exec=angry-birds
+TryExec=angry-birds
+Icon=angry-birds
+Categories=Game;

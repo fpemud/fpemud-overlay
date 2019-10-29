@@ -1,0 +1,9 @@
+
+[Desktop Entry]
+Name=Angry Birds Space
+Type=Application
+Comment=Angry Birds Space
+Exec=angry-birds-space
+TryExec=angry-birds-space
+Icon=angry-birds-space
+Categories=Game;

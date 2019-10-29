@@ -7,14 +7,7 @@ inherit eutils gnome2-utils games
 
 DESCRIPTION="Angry Birds"
 HOMEPAGE="http://www.angrybirds.com"
-SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}
-         ftp://fpemud-workstation/distfiles-private/${PN}.desktop
-         ftp://fpemud-workstation/distfiles-private/${PN}_16x16x32.png
-         ftp://fpemud-workstation/distfiles-private/${PN}_24x24x32.png
-         ftp://fpemud-workstation/distfiles-private/${PN}_32x32x32.png
-         ftp://fpemud-workstation/distfiles-private/${PN}_48x48x32.png
-         ftp://fpemud-workstation/distfiles-private/${PN}_256x256x32.png
-         ftp://fpemud-workstation/distfiles-private/${PN}.zip
+SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}.zip
          ftp://fpemud-workstation/distfiles-private/${PN}-default-config-user.zip"
 LICENSE=""
 SLOT="0"
@@ -37,14 +30,14 @@ src_install() {
 	unzip "${DISTDIR}/${PN}.zip" -d "${D}"
 	unzip "${DISTDIR}/${PN}-default-config-user.zip" -d "${D}"
 
-	dogamesbin "${DISTDIR}/${PN}"
+	dogamesbin "${FILESDIR}/${PN}"
 
 	local res
 	for res in 16 32 48 256; do
-		newicon -s ${res} "${DISTDIR}/${PN}_${res}x${res}x32.png" "${PN}.png"
+		newicon -s ${res} "${FILESDIR}/${PN}_${res}x${res}x32.png" "${PN}.png"
 	done
 
-	domenu "${DISTDIR}/${PN}.desktop"
+	domenu "${FILESDIR}/${PN}.desktop"
 
 	prepgamesdirs
 }
