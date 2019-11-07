@@ -59,3 +59,10 @@ RDEPEND="sys-apps/systemd
          zeroconf? ( >=net-dns/avahi-0.6[dbus] )"
 DEPEND="${RDEPEND}
         virtual/pkgconfig"
+
+src_prepare() {
+	eapply_user
+	if ! use zeroconf ; then
+		sed -i -e "s/buildServerAutoDiscoverSupport = .*/buildServerAutoDiscoverSupport = False/g" "${WORKDIR}/${P}/lib/fm_param.py"
+	fi
+}
