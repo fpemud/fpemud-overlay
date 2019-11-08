@@ -9,12 +9,19 @@ inherit git-r3
 EGIT_REPO_URI="https://github.com/fpemud/syncupd.git"
 SRC_URI=""
 
-DESCRIPTION="Gentoo Build Server"
+DESCRIPTION="Offload workload to another server by synchronizing the entire system up there."
 KEYWORDS="-* amd64 x86"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
+IUSE="zeroconf"
 
 RDEPEND="dev-python/pyopenssl"
 DEPEND=""
+
+src_prepare() {
+	eapply_user
+	if ! use zeroconf ; then
+		sed -i -e "s/self.avahiSupport = .*/self.avahiSupport = False/g" "${WORKDIR}/${P}/lib/gbs_param.py"
+	fi
+}
