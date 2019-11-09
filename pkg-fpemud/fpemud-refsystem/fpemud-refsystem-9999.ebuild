@@ -13,7 +13,7 @@ EGIT_REPO_URI="https://coding.net/fpemud/fpemud-refsystem"
 KEYWORDS="x86 amd64"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="zeroconf"
+IUSE=""
 
 RDEPEND="sys-apps/systemd
          app-admin/gentoo-bashrc
@@ -55,8 +55,7 @@ RDEPEND="sys-apps/systemd
          dev-python/strict_pgs
          dev-python/pyparted
          dev-perl/Digest-SHA1
-         dev-perl/Proc-ProcessTable
-         zeroconf? ( >=net-dns/avahi-0.6[dbus] )"
+         dev-perl/Proc-ProcessTable"
 DEPEND="${RDEPEND}
         virtual/pkgconfig"
 
