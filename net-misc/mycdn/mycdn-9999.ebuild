@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-2
 
-EGIT_REPO_URI="https://github.com/fpemud/mycdn-controller.git"
+EGIT_REPO_URI="https://github.com/fpemud/mycdn.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
