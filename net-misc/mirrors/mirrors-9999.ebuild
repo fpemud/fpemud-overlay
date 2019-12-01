@@ -17,4 +17,5 @@ IUSE=""
 
 RDEPEND="dev-python/croniter"
 RDEPEND="$RDEPEND app-arch/p7zip"		# driveoff-drivepack
+RDEPEND="$RDEPEND dev-vcs/repo"			# aosp
 DEPEND=""
