@@ -16,6 +16,6 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="dev-python/croniter"
-RDEPEND="$RDEPEND app-arch/p7zip"		# driveoff-drivepack
+RDEPEND="$RDEPEND app-arch/p7zip sys-apps/file[python]"		# driveoff-drivepack
 RDEPEND="$RDEPEND dev-vcs/repo"			# aosp
 DEPEND=""
