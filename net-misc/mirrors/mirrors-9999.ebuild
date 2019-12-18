@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-2
 
-EGIT_REPO_URI="https://github.com/fpemud/mycdn-controller.git"
+EGIT_REPO_URI="https://github.com/fpemud/mirrors.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
@@ -15,5 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND=""
+RDEPEND="dev-python/croniter"
+RDEPEND="$RDEPEND app-arch/p7zip sys-apps/file[python]"		# driveoff-drivepack
+RDEPEND="$RDEPEND dev-vcs/repo"			# aosp
 DEPEND=""
