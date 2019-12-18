@@ -15,7 +15,8 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-python/croniter"
+RDEPEND="dev-python/croniter
+         dev-python/asyncio-glib"
 RDEPEND="$RDEPEND app-arch/p7zip sys-apps/file[python]"		# driveoff-drivepack
-RDEPEND="$RDEPEND dev-vcs/repo"			# aosp
+RDEPEND="$RDEPEND dev-vcs/repo"					# aosp
 DEPEND=""
