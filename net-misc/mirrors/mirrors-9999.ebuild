@@ -16,7 +16,9 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="dev-python/croniter
-         dev-python/asyncio-glib"
+         dev-python/asyncio-glib
+         dev-python/aiohttp
+         dev-python/aioftp"
 RDEPEND="$RDEPEND app-arch/p7zip sys-apps/file[python]"		# driveoff-drivepack
 RDEPEND="$RDEPEND dev-vcs/repo"					# aosp
 DEPEND=""
