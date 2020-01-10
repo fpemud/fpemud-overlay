@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-2
 
-EGIT_REPO_URI="https://github.com/fpemud/mirrors.git"
+EGIT_REPO_URI="https://github.com/fpemud/mirrors-plugin-aosp.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
@@ -15,8 +15,6 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-python/croniter
-         dev-python/asyncio-glib
-         dev-python/aiohttp
-         dev-python/aioftp"
+RDEPEND="net-misc/mirrors
+         dev-vcs/repo"
 DEPEND=""
