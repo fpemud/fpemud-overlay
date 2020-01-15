@@ -18,6 +18,7 @@ IUSE=""
 RDEPEND="dev-python/croniter
          dev-python/asyncio-glib
          dev-python/aiohttp
+         dev-python/aiohttp-jinja2
          dev-python/aioftp
          dev-python/jinja"
 DEPEND=""
