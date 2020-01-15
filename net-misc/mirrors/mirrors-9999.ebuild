@@ -2,23 +2,31 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="5"
+EAPI=6
 
-inherit git-2
+inherit git-r3
 
 EGIT_REPO_URI="https://github.com/fpemud/mirrors.git"
 SRC_URI=""
-KEYWORDS="-* amd64 x86"
 
 DESCRIPTION="--fixme"
+KEYWORDS="-* amd64 x86"
+
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
+IUSE="zeroconf"
 
 RDEPEND="dev-python/croniter
          dev-python/asyncio-glib
          dev-python/aiohttp
+         dev-python/jinja
          dev-python/aiohttp-jinja2
-         dev-python/aioftp
-         dev-python/jinja"
+         dev-python/aioftp"
 DEPEND=""
+
+src_prepare() {
+	eapply_user
+	if ! use zeroconf ; then
+		sed -i -e "s/self.avahiSupport = .*/self.avahiSupport = False/g" "${WORKDIR}/${P}/lib/mc_param.py"
+	fi
+}
