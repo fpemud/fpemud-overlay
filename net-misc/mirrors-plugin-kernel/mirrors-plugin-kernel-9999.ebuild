@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-2
 
-EGIT_REPO_URI="https://github.com/fpemud/mirrors-plugin-kernel.git"
+EGIT_REPO_URI="https://github.com/mirrorshq/mirrors-plugin-kernel.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
