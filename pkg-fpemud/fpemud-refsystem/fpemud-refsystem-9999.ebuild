@@ -45,7 +45,6 @@ RDEPEND="sys-apps/systemd
          sys-devel/bc
          sys-libs/tdb
          dev-python/crcmod
-         dev-python/dbus-python
          dev-python/lxml
          dev-python/passlib
          dev-python/ntplib
