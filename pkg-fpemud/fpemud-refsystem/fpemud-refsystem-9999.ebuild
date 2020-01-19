@@ -8,7 +8,7 @@ inherit git-r3
 
 DESCRIPTION="Fpemud Reference System"
 SRC_URI=""
-EGIT_REPO_URI="https://coding.net/fpemud/fpemud-refsystem"
+EGIT_REPO_URI="https://github.com/fpemud/fpemud-refsystem"
 
 KEYWORDS="x86 amd64"
 LICENSE="GPL-3"
