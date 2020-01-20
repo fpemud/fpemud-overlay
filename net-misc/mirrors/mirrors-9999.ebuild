@@ -21,7 +21,8 @@ RDEPEND="dev-python/croniter
          dev-python/aiohttp
          dev-python/jinja
          dev-python/aiohttp-jinja2
-         dev-python/aioftp"
+         dev-python/aioftp
+         dev-python/dbus-python"
 DEPEND=""
 
 src_prepare() {
