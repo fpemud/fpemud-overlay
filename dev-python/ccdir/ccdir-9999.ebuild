@@ -3,13 +3,13 @@
 # $Header: $
 
 EAPI=6
-PYTHON_COMPAT=( python{3_4,3_5,3_6,3_7} )
+PYTHON_COMPAT=( python{3_6,3_7,3_8} )
 
 inherit distutils-r1 git-r3
 
-DESCRIPTION="Checksum operation for a whole directory"
+DESCRIPTION="Checksum & compare directories"
 HOMEPAGE=""
-EGIT_REPO_URI="https://github.com/fpemud/dirchecksum.git"
+EGIT_REPO_URI="https://github.com/fpemud/ccdir.git"
 
 LICENSE="GPLv3"
 SLOT="0"
