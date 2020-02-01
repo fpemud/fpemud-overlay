@@ -36,13 +36,11 @@ RDEPEND="sys-apps/systemd
          sys-fs/ntfs3g
          >=sys-fs/dosfstools-4.0-r1
          sys-apps/kmod[python]
-         sys-apps/diffutils
          sys-apps/smartmontools
          sys-apps/dmidecode
          app-arch/cpio
          app-arch/xz-utils
          app-arch/zip
-         sys-devel/bc
          sys-libs/tdb
          dev-python/crcmod
          dev-python/lxml
@@ -59,4 +57,3 @@ RDEPEND="sys-apps/systemd
          dev-perl/Proc-ProcessTable"
 DEPEND="${RDEPEND}
         virtual/pkgconfig"
-

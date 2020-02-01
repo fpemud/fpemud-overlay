@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND="virtual/cdrtools
          app-arch/p7zip
          dev-python/pygobject
-         dev-python/dirchecksum"
+         dev-python/ccdir"
 RDEPEND="${RDEPEND}
          sys-fs/squashfs-tools"          # needed for System Rescue CD
 RDEPEND="${RDEPEND}
