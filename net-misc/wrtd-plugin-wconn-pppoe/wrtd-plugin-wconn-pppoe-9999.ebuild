@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="5"
+EAPI="6"
 
-inherit git-2
+inherit git-r3
 
 EGIT_REPO_URI="https://github.com/fpemud/wrtd-plugin-wconn-pppoe"
 SRC_URI=""
