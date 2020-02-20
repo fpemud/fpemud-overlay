@@ -20,6 +20,7 @@ RDEPEND="dev-python/pygobject
          dev-python/pyroute2
          dev-python/toposort
          dev-python/python-iptables
+         dev-python/jsoncomment
          net-dns/dnsmasq
          net-fs/samba
          net-misc/wakeonlan
