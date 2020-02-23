@@ -6,7 +6,7 @@ EAPI="6"
 
 inherit git-r3
 
-EGIT_REPO_URI="https://github.com/fpemud/wrtctl"
+EGIT_REPO_URI="https://github.com/flexWRT/wrtctl"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
