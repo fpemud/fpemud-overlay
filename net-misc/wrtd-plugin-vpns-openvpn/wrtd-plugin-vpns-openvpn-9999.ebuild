@@ -6,7 +6,7 @@ EAPI="6"
 
 inherit git-r3
 
-EGIT_REPO_URI="https://github.com/fpemud/wrtd-plugin-vpns-openvpn"
+EGIT_REPO_URI="https://github.com/flexWRT/wrtd-plugin-vpns-openvpn"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 

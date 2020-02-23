@@ -6,7 +6,7 @@ EAPI="6"
 
 inherit git-r3
 
-EGIT_REPO_URI="https://github.com/fpemud/wrtd-plugin-lif-wifi"
+EGIT_REPO_URI="https://github.com/flexWRT/wrtd-plugin-lif-wifi"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
