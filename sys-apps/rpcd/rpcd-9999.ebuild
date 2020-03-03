@@ -13,19 +13,21 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND=""
-#DEPEND="
-#	dev-libs/libubox
-#"
+DEPEND="
+	dev-libs/libubox
+	sys-apps/ubus
+	sys-apps/uci
+"
 
 src_prepare() {
-	default
+	cmake-utils_src_prepare
+	sed -i 's/LIBRARY DESTINATION lib/LIBRARY DESTINATION lib64/' CMakeLists.txt
 	sed -i 's/-Werror //' CMakeLists.txt
 }
 
 src_configure() {
 	local mycmakeargs=(
-		-DBUILD_LUA=OFF
+		-DIWINFO_SUPPORT=OFF
 	)
 
 	cmake-utils_src_configure

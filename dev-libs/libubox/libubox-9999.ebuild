@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit git-r3 cmake-multilib
+inherit git-r3 cmake-utils
 
 DESCRIPTION="A general purpose library for the OpenWRT project."
 HOMEPAGE="http://wiki.openwrt.org/"
@@ -15,7 +15,9 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 src_prepare() {
-	default
+	cmake-utils_src_prepare
+	sed -i 's/ARCHIVE DESTINATION lib//' CMakeLists.txt
+	sed -i 's/LIBRARY DESTINATION lib//' CMakeLists.txt
 	sed -i 's/-Werror //' CMakeLists.txt
 }
 
@@ -24,5 +26,5 @@ src_configure() {
 		-DBUILD_LUA=OFF
 	)
 
-	cmake-multilib_src_configure
+	cmake-utils_src_configure
 }
