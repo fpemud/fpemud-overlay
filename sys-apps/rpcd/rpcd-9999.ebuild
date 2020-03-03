@@ -26,6 +26,7 @@ src_prepare() {
 }
 
 src_configure() {
+	# FIXME: which depends on sys-apps/iwinfo
 	local mycmakeargs=(
 		-DIWINFO_SUPPORT=OFF
 	)
