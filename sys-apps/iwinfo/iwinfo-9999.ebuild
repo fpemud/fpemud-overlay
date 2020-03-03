@@ -13,10 +13,17 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-#DEPEND="
-#	dev-libs/libubox
-#"
+DEPEND="
+	dev-libs/libubox
+	sys-apps/uci
+	sys-apps/ubus
+"
 
-#src_compile() {
-#	emake LDFLAGS="${LDFLAGS} -L/usr/lib64"
-#}
+src_compile() {
+	FPIC=-fPIC LDFLAGS="" make
+}
+
+src_install() {
+	dobin iwinfo
+	dolib.so *.so
+}
