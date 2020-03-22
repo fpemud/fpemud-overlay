@@ -4,16 +4,17 @@
 
 EAPI=6
 
-inherit git-r3 meson
+inherit git-r3
 
-DESCRIPTION="Manage networkmanager connections in a managed way"
+EGIT_REPO_URI="https://github.com/flexWRT/bombyx.git"
 SRC_URI=""
-EGIT_REPO_URI="https://github.com/fpemud/cbombyx.git"
 
+DESCRIPTION="--fixme"
 KEYWORDS="-* amd64 x86"
+
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-libs/libpeas"
-DEPEND="${RDEPEND}"
+RDEPEND=""
+DEPEND=""
