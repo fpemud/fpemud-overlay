@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romsmania.cc"
-EROM_ID="${PN}-242484"
+EROM_ID="super-mario-world-242484"
 EROM_NAME='Super Mario World'
 inherit nes-rom
 

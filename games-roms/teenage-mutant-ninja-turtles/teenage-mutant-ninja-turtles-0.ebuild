@@ -4,8 +4,8 @@
 
 EAPI=6
 
-EROM_SITE="romhustler.org"
-EROM_ID="${PN}-1"
+EROM_SITE='romhustler.org'
+EROM_ID='teenage-mutant-ninja-turtles-1'
 EROM_NAME='Teenage Mutant Ninja Turtles'
 EROM_MAIN_FILE='Teenage Mutant Ninja Turtles (U) [!].nes'
 inherit nes-rom

@@ -4,8 +4,8 @@
 
 EAPI=6
 
-EROM_SITE="romsmania.cc"
-EROM_ID="${PN}-241116"
+EROM_SITE='romsmania.cc'
+EROM_ID='ice-climber-241116'
 EROM_NAME='Ice Climber'
 inherit nes-rom
 

@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romsmania.cc"
-EROM_ID="${PN}-242404"
+EROM_ID="super-mario-bros-242404"
 EROM_NAME='Super Mario Bros'
 inherit nes-rom
 

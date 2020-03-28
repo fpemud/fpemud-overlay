@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}-ii-the-revenge"
+EROM_ID="double-dragon-ii-the-revenge"
 EROM_NAME='Double Dragon II - The Revenge'
 EROM_MAIN_FILE='Double Dragon II - The Revenge (U).nes'
 inherit nes-rom

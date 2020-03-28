@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romsmania.cc"
-EROM_ID="${PN}-240755"
+EROM_ID='excitebike-240755'
 EROM_NAME='Excitebike'
 inherit nes-rom
 

@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}-1"
+EROM_ID='double-dragon-1'
 EROM_NAME='Double Dragon'
 EROM_MAIN_FILE='Double Dragon (U).nes'
 inherit nes-rom

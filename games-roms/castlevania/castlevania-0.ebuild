@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}-1"
+EROM_ID="castlevania-1"
 EROM_NAME='Castlevania'
 EROM_MAIN_FILE='Castlevania (U) (PRG1) [o4].nes'
 inherit nes-rom
