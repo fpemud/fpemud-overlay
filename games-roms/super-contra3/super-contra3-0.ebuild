@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='super-contra3'
 EROM_NAME='Super Contra 3'
 inherit nes-rom
 

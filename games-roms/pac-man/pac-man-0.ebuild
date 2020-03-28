@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='pac-man'
 EROM_NAME='Pac-Man'
 EROM_MAIN_FILE='Pac-Man (U) [!].nes'
 inherit nes-rom

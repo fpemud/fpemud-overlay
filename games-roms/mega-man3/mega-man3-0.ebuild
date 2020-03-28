@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='mega-man3'
 EROM_NAME='Mega Man 3'
 EROM_MAIN_FILE='Mega Man 3 (U) [o1].nes'
 inherit nes-rom

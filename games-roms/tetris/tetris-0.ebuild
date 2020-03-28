@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='tetris'
 EROM_NAME='Tetris'
 EROM_MAIN_FILE='Tetris (U) [!].nes'
 inherit nes-rom

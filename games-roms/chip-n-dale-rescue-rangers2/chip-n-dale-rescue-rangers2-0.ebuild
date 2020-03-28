@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='chip-n-dale-rescue-rangers2'
 EROM_NAME="Chip 'n Dale Rescue Rangers 2"
 EROM_MAIN_FILE=$'Chip \'n Dale Rescue Rangers 2 (U).nes'
 inherit nes-rom

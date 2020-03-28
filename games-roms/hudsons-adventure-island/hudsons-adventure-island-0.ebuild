@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='hudsons-adventure-island'
 EROM_NAME=$'Hudson\'s Adventure Island'
 EROM_MAIN_FILE=$'Hudson\'s Adventure Island (U).nes'
 inherit nes-rom

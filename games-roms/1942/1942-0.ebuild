@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='1942'
 EROM_NAME="${PN}"
 EROM_MAIN_FILE='1942 (JU) [!].nes'
 inherit nes-rom

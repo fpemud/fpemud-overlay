@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='snow-bros'
 EROM_NAME='Snow Bros'
 EROM_MAIN_FILE='Snow Bros (U).nes'
 inherit nes-rom

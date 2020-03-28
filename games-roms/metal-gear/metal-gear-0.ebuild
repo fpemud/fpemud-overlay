@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='metal-gear'
 EROM_NAME="Metal Gear"
 EROM_MAIN_FILE='Metal Gear (U).nes'
 inherit nes-rom

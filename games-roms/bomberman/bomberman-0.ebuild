@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='bomberman'
 EROM_NAME='Bomberman'
 EROM_MAIN_FILE='Bomberman (U).nes'
 inherit nes-rom

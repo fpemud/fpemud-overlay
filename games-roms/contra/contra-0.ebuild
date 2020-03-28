@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='contra'
 EROM_NAME='Contra'
 EROM_MAIN_FILE='Contra (U) [o5].nes'
 inherit nes-rom

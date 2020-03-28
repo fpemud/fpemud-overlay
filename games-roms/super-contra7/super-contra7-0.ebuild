@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='super-contra7'
 EROM_NAME='Super Contra 7'
 EROM_MAIN_FILE='Super Contra 7 (Unl) [p1][t1].nes'
 inherit nes-rom

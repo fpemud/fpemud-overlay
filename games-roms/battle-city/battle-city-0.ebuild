@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='battle-city'
 EROM_NAME='Battle City'
 EROM_MAIN_FILE='Battle City (J).nes'
 inherit nes-rom

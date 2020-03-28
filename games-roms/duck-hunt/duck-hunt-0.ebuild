@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='duck-hunt'
 EROM_NAME="Duck Hunt"
 EROM_MAIN_FILE='Duck Hunt (JUE) [!].nes'
 inherit nes-rom

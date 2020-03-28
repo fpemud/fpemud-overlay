@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='teenage-mutant-ninja-turtles3'
 EROM_NAME='Teenage Mutant Ninja Turtles III - The Manhattan Project'
 EROM_MAIN_FILE='Teenage Mutant Ninja Turtles III - The Manhattan Project (U).nes'
 inherit nes-rom

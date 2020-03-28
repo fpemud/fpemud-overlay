@@ -5,7 +5,7 @@
 EAPI=6
 
 EROM_SITE="romhustler.org"
-EROM_ID="${PN}"
+EROM_ID='jackal'
 EROM_NAME="Jackal"
 EROM_MAIN_FILE='Jackal (U).nes'
 inherit nes-rom
