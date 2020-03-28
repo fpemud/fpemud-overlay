@@ -7,7 +7,7 @@ EAPI=6
 EROM_SITE="romhustler.org"
 EROM_ID="${PN}"
 EROM_NAME='Tetris'
-#EROM_MAIN_FILE='Battle City (J).nes'
+EROM_MAIN_FILE='Tetris (U) [!].nes'
 inherit nes-rom
 
 SRC_URI="http://dl.romhustler.net/download/cC0Tj72Mu5rdSUaZ0JcfFw/1585931584/nes/Tetris.7z -> ${PN}.7z"
