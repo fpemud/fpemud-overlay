@@ -71,7 +71,7 @@ nes-rom_src_install() {
 	else
 		[ -e "${WORKDIR}/${EROM_MAIN_FILE}" ] || die "\$EROM_MAIN_FILE not found"
 	fi
-	insinto /opt/nes-roms/${PN}
+	insinto /opt/games-roms/${PN}
 	doins *.nes
-	ln -sf "${PN}/${EROM_MAIN_FILE}" "${D}/opt/nes-roms/${PN}.nes"
+	ln -sf "${EROM_MAIN_FILE}" "${D}/opt/games-roms/${PN}/${PN}.nes"
 }
