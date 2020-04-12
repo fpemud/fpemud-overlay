@@ -11,7 +11,7 @@ MAIN_ROM_FILE='Super Mario World.nes'
 
 DESCRIPTION="Nintendo Game: ${ROM_NAME}"
 HOMEPAGE="https://romsmania.cc/rom/nintendo/super-mario-world-242484"
-SRC_URI="https://s2roms.cc/s3roms/Nintendo/UNK/Super%20Mario%20World.zip -> ${PN}.zip"
+SRC_URI="mirror://romsmania/nintendo/super-mario-world-242484/Super%20Mario%20World.zip -> ${PN}.zip"
 
 LICENSE="unknown"
 SLOT="0"

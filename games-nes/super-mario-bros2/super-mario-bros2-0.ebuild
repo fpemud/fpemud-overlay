@@ -11,7 +11,7 @@ MAIN_ROM_FILE='Super Mario Bros 2 (E) [!].nes'
 
 DESCRIPTION="Nintendo Game: ${ROM_NAME}"
 HOMEPAGE="https://romsmania.cc/rom/nintendo/super-mario-bros-2-242428"
-SRC_URI="https://s2roms.cc/s3roms/Nintendo/USA/P-T/Super%20Mario%20Bros%202%20%28E%29%20%5B%21%5D.zip -> ${PN}.zip"
+SRC_URI="mirror://romsmania/nintendo/super-mario-bros-2-242428/Super%20Mario%20Bros%202%20%28E%29%20%5B%21%5D.zip -> ${PN}.zip"
 
 LICENSE="unknown"
 SLOT="0"

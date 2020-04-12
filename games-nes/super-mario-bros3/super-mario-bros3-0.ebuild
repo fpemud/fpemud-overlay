@@ -11,7 +11,7 @@ MAIN_ROM_FILE='Super Mario Bros 3 (U) (PRG 1) [h2].nes'
 
 DESCRIPTION="Nintendo Game: ${ROM_NAME}"
 HOMEPAGE="https://romsmania.cc/rom/nintendo/super-mario-bros-3-242459"
-SRC_URI="https://s2roms.cc/s3roms/Nintendo/Hacks/M-Z/Super%20Mario%20Bros%203%20%28U%29%20%28PRG%201%29%20%5Bh2%5D.zip -> ${PN}.zip"
+SRC_URI="mirror://romsmania/nintendo/super-mario-bros-3-242459/Super%20Mario%20Bros%203%20%28U%29%20%28PRG%201%29%20%5Bh2%5D.zip -> ${PN}.zip"
 
 LICENSE="unknown"
 SLOT="0"
