@@ -11,7 +11,7 @@ MAIN_ROM_FILE='Excitebike (E).nes'
 
 DESCRIPTION="Nintendo Game: ${ROM_NAME}"
 HOMEPAGE="https://romsmania.cc/rom/nintendo/excitebike-240755"
-SRC_URI="https://s2roms.cc/s3roms/Nintendo/USA/D-F/Excitebike%20%28E%29.zip -> ${PN}.zip"
+SRC_URI="mirror://romsmania/nintendo/excitebike-240755/Excitebike%20%28E%29.zip -> ${PN}.zip"
 
 LICENSE="unknown"
 SLOT="0"

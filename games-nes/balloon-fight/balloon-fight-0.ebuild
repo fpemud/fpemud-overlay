@@ -11,7 +11,7 @@ MAIN_ROM_FILE='Balloon Fight (E).nes'
 
 DESCRIPTION="Nintendo Game: ${ROM_NAME}"
 HOMEPAGE="https://romsmania.cc/download/roms/nintendo/balloon-fight-240195"
-SRC_URI="https://s2roms.cc/s3roms/Nintendo/USA/A-C/Balloon%20Fight%20%28E%29.zip -> ${PN}.zip"
+SRC_URI="mirror://romsmania/nintendo/balloon-fight-240195/Balloon%20Fight%20%28E%29.zip -> ${PN}.zip"
 
 LICENSE="unknown"
 SLOT="0"
