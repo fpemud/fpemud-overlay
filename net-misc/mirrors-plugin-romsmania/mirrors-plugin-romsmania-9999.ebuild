@@ -17,5 +17,6 @@ IUSE=""
 
 RDEPEND="net-misc/mirrors
          www-client/google-chrome
-         www-apps/chromedriver-bin"
+         www-apps/chromedriver-bin
+         dev-python/fake-agent"
 DEPEND=""
