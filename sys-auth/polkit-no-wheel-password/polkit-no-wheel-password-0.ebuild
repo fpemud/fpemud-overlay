@@ -16,6 +16,6 @@ RDEPEND="sys-auth/polkit"
 S=${WORKDIR}
 
 src_install() {
-	dodir "/etc/polkit-1"
-	cp "${FILESDIR}/49-no-wheel-group-password.rules" "${D}/etc/polkit-1"
+	dodir "/etc/polkit-1/rules.d"
+	cp "${FILESDIR}/49-no-wheel-group-password.rules" "${D}/etc/polkit-1/rules.d"
 }
