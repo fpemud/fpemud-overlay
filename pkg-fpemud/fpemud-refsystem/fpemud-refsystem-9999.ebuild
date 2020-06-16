@@ -21,8 +21,6 @@ RDEPEND="sys-apps/systemd
          net-misc/stunnel
          net-misc/wget
          sys-apps/portage
-         dev-libs/c-list
-         dev-libs/c-dynbuf
          dev-util/patchutils
          dev-vcs/git
          dev-vcs/subversion
@@ -55,5 +53,15 @@ RDEPEND="sys-apps/systemd
          dev-python/requests
          dev-perl/Digest-SHA1
          dev-perl/Proc-ProcessTable"
+
+# dependencies for building linux kernel
+RDEPEND="${RDEPEND}
+         sys-devel/bc"
+
+# dependencies for lvm-lv-activate in initramfs
+RDEPEND="${RDEPEND}
+         dev-libs/c-list
+         dev-libs/c-dynbuf"
+
 DEPEND="${RDEPEND}
         virtual/pkgconfig"
