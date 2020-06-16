@@ -38,7 +38,7 @@ DEPEND="
 	gles? ( media-libs/libglvnd )
 	system-wfconfig? ( ~gui-libs/wf-config-${PV} )
 	!system-wfconfig? ( !gui-libs/wf-config )
-	system-wlroots? ( ~gui-libs/wlroots-0.10.1[elogind=,systemd=] )
+	system-wlroots? ( ~gui-libs/wlroots-9999[elogind=,systemd=] )
 	!system-wlroots? ( !gui-libs/wlroots )
 "
 
