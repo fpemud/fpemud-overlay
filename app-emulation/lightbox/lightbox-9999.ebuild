@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI="6"
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="A simple virtual machine player"
 EGIT_REPO_URI="https://github.com/fpemud/lightbox.git"
