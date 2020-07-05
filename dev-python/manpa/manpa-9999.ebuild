@@ -19,6 +19,7 @@ IUSE=""
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
         dev-python/fake-useragent[${PYTHON_USEDEP}]
         dev-python/xvfbwrapper[${PYTHON_USEDEP}]
+        dev-python/selenium[${PYTHON_USEDEP}]
         www-client/google-chrome
         www-apps/chromedriver-bin
         net-misc/fake-useragent-db"
