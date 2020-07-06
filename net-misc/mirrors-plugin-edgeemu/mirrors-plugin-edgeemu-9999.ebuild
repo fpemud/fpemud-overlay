@@ -16,5 +16,6 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="net-misc/mirrors
-         dev-python/manpa"
+         dev-python/manpa
+         net-misc/aria2"
 DEPEND=""
