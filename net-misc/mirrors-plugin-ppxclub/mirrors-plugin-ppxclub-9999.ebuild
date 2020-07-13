@@ -15,5 +15,6 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/mirrors"
+RDEPEND="net-misc/mirrors
+         dev-python/ftputil"
 DEPEND=""
