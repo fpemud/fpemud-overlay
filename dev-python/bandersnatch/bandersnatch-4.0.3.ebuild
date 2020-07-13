@@ -20,5 +20,6 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
         dev-python/aiohttp-xmlrpc
         dev-python/filelock
         dev-python/importlib_resources
+        dev-python/packaging
         dev-python/typing-extensions"
 RDEPEND=""
