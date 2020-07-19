@@ -3,13 +3,13 @@
 # $Header: $
 
 EAPI=6
-PYTHON_COMPAT=( python{3_6,3_7} )
+PYTHON_COMPAT=( python{3_6,3_7,3_8,3_9} )
 
 inherit distutils-r1
 
 DESCRIPTION="ftp client/server for asyncio"
 HOMEPAGE=""
-SRC_URI="https://files.pythonhosted.org/packages/83/d5/f6b10ec9d582f994fb98ea677f8c1f8e68a6e47914d74d716399f95cb699/aioftp-0.13.0.tar.gz"
+SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
