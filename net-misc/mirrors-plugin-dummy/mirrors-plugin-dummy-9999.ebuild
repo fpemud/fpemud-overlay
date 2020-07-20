@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-r3
 
-EGIT_REPO_URI="https://github.com/mirrorshq/mirrors-plugin-fullofmame.git"
+EGIT_REPO_URI="https://github.com/mirrorshq/mirrors-plugin-dummy.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
@@ -15,6 +15,5 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/mirrors
-         games-emulation/sdlmame"
+RDEPEND="net-misc/mirrors"
 DEPEND=""
