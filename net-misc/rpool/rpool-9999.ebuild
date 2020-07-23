@@ -20,6 +20,7 @@ RDEPEND="dev-python/asyncio-glib
          dev-python/aiohttp
          dev-python/jinja
          dev-python/aiohttp-jinja2
+         dev-python/mariadb-connector-python
          dev-db/mariadb"
 DEPEND=""
 

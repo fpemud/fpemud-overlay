@@ -16,7 +16,9 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE="zeroconf"
 
-RDEPEND="dev-python/croniter
+RDEPEND="acct-user/mirrors
+         acct-group/mirrors
+         dev-python/croniter
          dev-python/asyncio-glib
          dev-python/aiohttp
          dev-python/jinja
