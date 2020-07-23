@@ -16,7 +16,9 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE="zeroconf"
 
-RDEPEND="dev-python/asyncio-glib
+RDEPEND="acct-user/rpool
+         acct-group/rpool
+         dev-python/asyncio-glib
          dev-python/aiohttp
          dev-python/jinja
          dev-python/aiohttp-jinja2
