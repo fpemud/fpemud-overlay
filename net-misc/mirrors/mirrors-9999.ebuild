@@ -23,7 +23,7 @@ RDEPEND="acct-user/mirrors
          dev-python/aiohttp
          dev-python/jinja
          dev-python/aiohttp-jinja2
-         dev-python/aioftp
+         dev-python/pyftpdlib
          dev-python/dbus-python"
 DEPEND=""
 
