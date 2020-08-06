@@ -19,9 +19,10 @@ IUSE="zeroconf"
 RDEPEND="www-apps/klaus
          dev-python/asyncio-glib
          dev-python/aiohttp
-         dev-python/jinja
+         dev-python/aiohttp-wsgi
          dev-python/aiohttp-jinja2
-         dev-python/dbus-python"
+         dev-python/dbus-python
+         dev-python/jinja"
 DEPEND=""
 
 pkg_setup() {

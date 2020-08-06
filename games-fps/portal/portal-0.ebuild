@@ -8,7 +8,7 @@ inherit games
 
 DESCRIPTION="Portal"
 HOMEPAGE="http://www.valvesoftware.com/games/portal.html"
-SRC_URI="Portal.tar.gz"
+SRC_URI="mirror://fpemud-distfiles-private/Portal.tar.gz"
 
 LICENSE="unknown"
 SLOT="0"
