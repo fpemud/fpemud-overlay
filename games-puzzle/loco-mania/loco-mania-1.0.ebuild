@@ -7,12 +7,11 @@ inherit eutils games
 
 DESCRIPTION="Loco-mania is a simulation of a train dispatcher"
 HOMEPAGE="http://www.loco-mania.com"
-SRC_URI="ftp://fpemud-workstation/distfiles-private/Loco.Mania.zip"
+SRC_URI="mirror://fpemud-distfiles-private/Loco.Mania.zip"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
-RESTRICT="mirror"
 
 DEPEND="app-arch/uharc"
 RDEPEND="virtual/wine[abi_x86_32]
