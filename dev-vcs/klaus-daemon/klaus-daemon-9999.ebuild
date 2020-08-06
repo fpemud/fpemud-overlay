@@ -14,9 +14,10 @@ KEYWORDS="-* amd64 x86"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="zeroconf"
+IUSE="fklaus zeroconf"
 
-RDEPEND="www-apps/klaus
+RDEPEND="!fklaus? ( www-apps/klaus )
+         fklaus? ( www-apps/fklaus )
          dev-python/asyncio-glib
          dev-python/aiohttp
          dev-python/aiohttp-wsgi
