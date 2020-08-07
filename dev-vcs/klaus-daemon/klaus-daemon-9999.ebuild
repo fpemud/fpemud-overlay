@@ -23,7 +23,8 @@ RDEPEND="!fklaus? ( www-apps/klaus )
          dev-python/aiohttp-wsgi
          dev-python/aiohttp-jinja2
          dev-python/dbus-python
-         dev-python/jinja"
+         dev-python/jinja
+         dev-python/python-ctags"
 DEPEND=""
 
 pkg_setup() {
