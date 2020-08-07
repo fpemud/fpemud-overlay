@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{6,7,8} )
 
-inherit distutils-r1
+inherit distutils-r1 git-r3
 
 DESCRIPTION="An experimental git web manager"
 HOMEPAGE=""
@@ -34,5 +34,5 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 python_install_all() {
 	distutils-r1_python_install_all
-	doman ${PN}.1
+	doman klaus.1
 }
