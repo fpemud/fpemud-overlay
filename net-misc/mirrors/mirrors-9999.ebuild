@@ -27,8 +27,9 @@ RDEPEND="acct-user/mirrors
          dev-python/aiohttp-jinja2
          dev-python/dbus-python"
 RDEPEND="${RDEPEND}
+         www-servers/apache
          dev-python/pyftpdlib
-         www-servers/apache"
+         media-libs/gst-rtsp-server"
 DEPEND=""
 
 
