@@ -29,6 +29,7 @@ RDEPEND="acct-user/mirrors
 RDEPEND="${RDEPEND}
          www-servers/apache
          dev-python/pyftpdlib
+         dev-python/sqlparse
          media-libs/gst-rtsp-server"
 DEPEND=""
 
