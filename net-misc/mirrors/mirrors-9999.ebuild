@@ -29,6 +29,8 @@ RDEPEND="acct-user/mirrors
 RDEPEND="${RDEPEND}
          www-servers/apache
          dev-python/pyftpdlib
+         dev-db/mariadb
+         dev-python/mariadb-connector-python
          dev-python/sqlparse
          media-libs/gst-rtsp-server"
 DEPEND=""
