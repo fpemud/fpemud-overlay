@@ -32,6 +32,7 @@ RDEPEND="${RDEPEND}
          dev-db/mariadb
          dev-python/mariadb-connector-python
          dev-python/sqlparse
+         dev-db/neo4j-community
          media-libs/gst-rtsp-server"
 DEPEND=""
 
