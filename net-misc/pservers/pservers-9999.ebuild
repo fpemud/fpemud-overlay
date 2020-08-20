@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{3_6,3_7,3_8} )
 
 inherit git-r3
 
-EGIT_REPO_URI="https://github.com/pservers/pservers.git"
+EGIT_REPO_URI="https://github.com/fpemud/pservers.git"
 SRC_URI=""
 
 DESCRIPTION="--fixme"
