@@ -6,14 +6,14 @@ EAPI="7"
 
 inherit git-r3
 
-EGIT_REPO_URI="https://github.com/fpemud/mirrors-plugin-fpemud-distfiles-private.git"
+EGIT_REPO_URI="https://github.com/fpemud/pservers-plugin-fpemud-medialib.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
-DESCRIPTION="Mirrors plugin for hosting fpemud's private gentoo distfiles"
+DESCRIPTION="pservers plugin for hosting fpemud's media library"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/mirrors"
+RDEPEND="net-misc/pservers"
 DEPEND=""
