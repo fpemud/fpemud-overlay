@@ -3,10 +3,8 @@
 
 EAPI=7
 
-inherit acct-user
+inherit acct-group
 
-DESCRIPTION="Mirrors program user"
-ACCT_USER_ID=-1
-ACCT_USER_GROUPS=( mirrors )
-acct-user_add_deps
+DESCRIPTION="pservers program group"
+ACCT_GROUP_ID=-1
 SLOT="0"
