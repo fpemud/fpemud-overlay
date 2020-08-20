@@ -23,5 +23,7 @@ RDEPEND="acct-user/pservers
          dev-python/dbus-python"
 RDEPEND="${RDEPEND}
          www-servers/apache
-         dev-python/pyftpdlib"
+         www-apache/mod_wsgi
+         www-apps/fklaus
+         net-ftp/proftpd"
 DEPEND=""
