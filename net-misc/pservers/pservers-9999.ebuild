@@ -18,7 +18,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="acct-user/pserves
+RDEPEND="acct-user/pservers
          acct-group/pservers
          dev-python/dbus-python"
 RDEPEND="${RDEPEND}
