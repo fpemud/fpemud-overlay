@@ -6,10 +6,10 @@ EAPI=6
 
 inherit git-r3
 
-EGIT_REPO_URI="https://github.com/fpemud/rpool.git"
+EGIT_REPO_URI="git://fpemud-git.local/rpool"
 SRC_URI=""
 
-DESCRIPTION="A Resource Pool"
+DESCRIPTION="A Simple Resource Pool"
 KEYWORDS="-* amd64 x86"
 
 LICENSE="GPL-3"
