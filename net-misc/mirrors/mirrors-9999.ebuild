@@ -25,7 +25,8 @@ RDEPEND="acct-user/mirrors
          dev-python/aiohttp
          dev-python/jinja
          dev-python/aiohttp-jinja2
-         dev-python/dbus-python"
+         dev-python/dbus-python
+         dev-python/python-prctl"
 RDEPEND="${RDEPEND}
          www-servers/apache
          dev-python/pyftpdlib
