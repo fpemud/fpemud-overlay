@@ -26,5 +26,5 @@ RDEPEND="${RDEPEND}
          www-servers/apache
          www-apache/mod_wsgi
          www-apps/fklaus
-         net-ftp/proftpd"
+         dev-python/pyftpdlib"
 DEPEND=""
