@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin id="fpemud-distfiles-private">
+  <server id="fpemud-distfiles-private">
+    <domain-name>fpemud-distfiles.private</domain-name>
+    <server-type>file</server-type>
+    <advertise-type>http</advertise-type>
+    <advertise-type>ftp</advertise-type>
+  </server>
+</plugin>

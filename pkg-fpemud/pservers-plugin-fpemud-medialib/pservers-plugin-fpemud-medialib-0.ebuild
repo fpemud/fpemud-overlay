@@ -4,16 +4,19 @@
 
 EAPI="7"
 
-inherit git-r3
-
-EGIT_REPO_URI="https://github.com/fpemud/pservers-plugin-fpemud-medialib.git"
-SRC_URI=""
-KEYWORDS="-* amd64 x86"
-
 DESCRIPTION="pservers plugin for hosting fpemud's media library"
 LICENSE="GPL-3"
 SLOT="0"
+KEYWORDS="*"
 IUSE=""
 
 RDEPEND="net-misc/pservers"
 DEPEND=""
+
+S="${WORKDIR}"
+
+src_install() {
+        MYPATH="/usr/lib64/pservers/plugins/fpemud-medialib"
+	dodir "$MYPATH"
+	cp "${FILESDIR}/metadata.xml" "${D}${MYPATH}"
+}

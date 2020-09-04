@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin id="fpemud-git-private">
+  <server id="fpemud-git-private">
+    <domain-name>fpemud-git.private</domain-name>
+    <server-type>git</server-type>
+    <advertise-type>klaus</advertise-type>
+  </server>
+</plugin>
