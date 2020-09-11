@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=w3a-gentoo-bugs
+Exec=w3a-gentoo-bugs
+TryExec=w3a-gentoo-bugs
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;
+Icon=w3a-gentoo-bugs

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=w3a-gentoo-forums
+Exec=w3a-gentoo-forums
+TryExec=w3a-gentoo-forums
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;
+Icon=w3a-gentoo-forums

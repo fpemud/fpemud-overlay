@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=w3a-chiphell
+Exec=w3a-chiphell
+TryExec=w3a-chiphell
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;
+Icon=w3a-chiphell
