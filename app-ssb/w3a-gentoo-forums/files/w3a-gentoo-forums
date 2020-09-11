@@ -5,4 +5,5 @@ PROFILEDIR=`echo ~/.local/share/epiphany-w3a-gentoo-forums`
 
 mkdir -p $PROFILEDIR
 ln -sf /usr/share/applications/w3a-gentoo-forums.desktop $PROFILEDIR/epiphany-w3a-gentoo-forums.desktop
+ln -sf /usr/share/pixmaps/w3a-forums.png $PROFILEDIR/app-icon.png
 epiphany --application-mode --profile=$PROFILEDIR $URL

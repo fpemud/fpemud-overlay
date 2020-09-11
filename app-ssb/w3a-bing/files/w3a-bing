@@ -5,4 +5,5 @@ PROFILEDIR=`echo ~/.local/share/epiphany-w3a-bing`
 
 mkdir -p $PROFILEDIR
 ln -sf /usr/share/applications/w3a-bing.desktop $PROFILEDIR/epiphany-w3a-bing.desktop
+ln -sf /usr/share/pixmaps/w3a-bing.png $PROFILEDIR/app-icon.png
 epiphany --application-mode --profile=$PROFILEDIR $URL
