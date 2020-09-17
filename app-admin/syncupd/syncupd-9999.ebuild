@@ -6,7 +6,7 @@ EAPI=6
 
 inherit git-r3
 
-EGIT_REPO_URI="https://github.com/fpemud/syncupd.git"
+EGIT_REPO_URI="https://github.com/syncupd/syncupd.git"
 SRC_URI=""
 
 DESCRIPTION="Offload workload to another server by synchronizing the entire system up there."
