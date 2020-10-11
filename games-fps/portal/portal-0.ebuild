@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 
 IUSE=""
-RESTRICT="strip fetch"
+RESTRICT="strip mirror"
 
 DEPEND=""
 RDEPEND="dev-libs/nss[abi_x86_32]
