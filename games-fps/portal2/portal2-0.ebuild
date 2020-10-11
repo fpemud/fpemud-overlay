@@ -15,19 +15,18 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 
 IUSE=""
-RESTRICT="strip fetch"
+RESTRICT="strip mirror"
 
 DEPEND=""
 RDEPEND="sys-apps/util-linux[abi_x86_32]
          dev-libs/nss[abi_x86_32]
          dev-libs/nspr[abi_x86_32]
-         dev-libs/libgcrypt:11[abi_x86_32]
+         dev-libs/libgcrypt-compat:11[abi_x86_32]
+         media-libs/libpng-compat:1.2[abi_x86_32]
          media-libs/libsdl2[abi_x86_32]
          x11-libs/cairo[abi_x86_32]
          x11-libs/gtk+:2[abi_x86_32]
-         net-print/cups[abi_x86_32]
-         media-libs/libpng:1.2[abi_x86_32]
-         media-libs/libtxc_dxtn[abi_x86_32]"
+         net-print/cups[abi_x86_32]"
 
 S="${WORKDIR}"
 
@@ -52,4 +51,3 @@ src_install() {
 
 	prepgamesdirs
 }
-
