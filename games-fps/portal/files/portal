@@ -40,4 +40,3 @@ fi
 # run the game
 cd "${DATADIR}"
 ./portal.sh "$@"
-xrandr -s 0
