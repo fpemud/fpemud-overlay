@@ -8,7 +8,7 @@ inherit games
 
 DESCRIPTION="Portal"
 HOMEPAGE="http://www.valvesoftware.com/games/portal.html"
-SRC_URI="mirror://fpemud-distfiles-private/Portal.tar.gz"
+SRC_URI="http://fpemud-distfiles.local/Portal.tar.gz"
 
 LICENSE="unknown"
 SLOT="0"
@@ -20,14 +20,13 @@ RESTRICT="strip fetch"
 DEPEND=""
 RDEPEND="dev-libs/nss[abi_x86_32]
          dev-libs/nspr[abi_x86_32]
-         dev-libs/libgcrypt:11[abi_x86_32]
+         dev-libs/libgcrypt-compat:11[abi_x86_32]
+         media-libs/libpng-compat:1.2[abi_x86_32]
          media-libs/alsa-lib[abi_x86_32]
          media-libs/libsdl2[abi_x86_32]
          x11-libs/cairo[abi_x86_32]
          x11-libs/gtk+:2[abi_x86_32]
-         net-print/cups[abi_x86_32]
-         media-libs/libpng:1.2[abi_x86_32]
-         media-libs/libtxc_dxtn[abi_x86_32]"
+         net-print/cups[abi_x86_32]"
 
 S="${WORKDIR}"
 
@@ -55,4 +54,3 @@ src_install() {
 
 	prepgamesdirs
 }
-
