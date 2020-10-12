@@ -16,7 +16,8 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE="zeroconf"
 
-RDEPEND="dev-python/pyopenssl"
+RDEPEND="sys-fs/e2fsprogs[fuse]
+         dev-python/pyopenssl"
 DEPEND=""
 
 src_prepare() {
