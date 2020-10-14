@@ -6,8 +6,8 @@ EAPI=5
 
 DESCRIPTION="The .iso image of Microsoft Windows XP setup CD (x86)"
 HOMEPAGE="http://www.microsoft.com/en-us/windows"
-SRC_URI="ftp://fpemud-workstation/distfiles-private/en_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-73974.iso
-         ftp://fpemud-workstation/distfiles-private/mu_windows_xp_language_pack.iso"
+SRC_URI="ftp://fpemud-distfiles.local/en_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-73974.iso
+         ftp://fpemud-distfiles.local/mu_windows_xp_language_pack.iso"
 
 LICENSE="unknown"
 SLOT="0"
