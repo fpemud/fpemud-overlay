@@ -6,8 +6,8 @@ EAPI=5
 
 DESCRIPTION="The .iso image of Microsoft Windows 7 setup DVD (x64)"
 HOMEPAGE="http://www.microsoft.com/en-us/windows"
-SRC_URI="ftp://fpemud-workstation/distfiles-private/en_windows_7_ultimate_with_sp1_x64_dvd_618240.iso
-         ftp://fpemud-workstation/distfiles-private/mu_windows_7_sp1_language_pack_x64_dvd_619714.iso"
+SRC_URI="ftp://fpemud-distfiles.local/en_windows_7_ultimate_with_sp1_x64_dvd_618240.iso
+         ftp://fpemud-distfiles.local/mu_windows_7_sp1_language_pack_x64_dvd_619714.iso"
 
 LICENSE="unknown"
 SLOT="0"
