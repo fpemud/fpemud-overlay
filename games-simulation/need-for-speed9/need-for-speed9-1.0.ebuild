@@ -24,8 +24,7 @@ RESTRICT="mirror"
 
 DEPEND="app-arch/unzip
         app-arch/p7zip"
-RDEPEND="virtual/wine[abi_x86_32]
-         media-libs/libtxc_dxtn[abi_x86_32]"
+RDEPEND="virtual/wine[abi_x86_32]"
 
 CHECKREQS_DISK_BUILD=5G
 
