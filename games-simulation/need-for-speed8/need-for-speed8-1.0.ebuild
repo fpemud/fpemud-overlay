@@ -7,11 +7,11 @@ inherit eutils games check-reqs
 
 DESCRIPTION="Need For Speed 8 - Underground 2"
 HOMEPAGE=""
-SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}
-         ftp://fpemud-workstation/distfiles-private/${PN}.desktop
-         ftp://fpemud-workstation/distfiles-private/${PN}.png
-         ftp://fpemud-workstation/distfiles-private/Need.for.Speed.Underground.2.CD1.iso
-         ftp://fpemud-workstation/distfiles-private/Need.for.Speed.Underground.2.CD2.iso"
+SRC_URI="ftp://fpemud-distfiles.local/${PN}
+         ftp://fpemud-distfiles.local/${PN}.desktop
+         ftp://fpemud-distfiles.local/${PN}.png
+         ftp://fpemud-distfiles.local/Need.for.Speed.Underground.2.CD1.iso
+         ftp://fpemud-distfiles.local/Need.for.Speed.Underground.2.CD2.iso"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"

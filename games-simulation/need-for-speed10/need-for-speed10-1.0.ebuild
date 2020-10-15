@@ -7,10 +7,10 @@ inherit eutils games check-reqs
 
 DESCRIPTION="Need For Speed - Carbon"
 HOMEPAGE="http://www.ea.com/need-for-speed-carbon"
-SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}
-         ftp://fpemud-workstation/distfiles-private/${PN}.desktop
-         ftp://fpemud-workstation/distfiles-private/${PN}.png
-         ftp://fpemud-workstation/distfiles-private/Need.for.Speed.Carbon.iso"
+SRC_URI="ftp://fpemud-distfiles.local/${PN}
+         ftp://fpemud-distfiles.local/${PN}.desktop
+         ftp://fpemud-distfiles.local/${PN}.png
+         ftp://fpemud-distfiles.local/Need.for.Speed.Carbon.iso"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
@@ -20,8 +20,7 @@ RESTRICT="mirror"
 DEPEND="app-arch/unzip
         app-arch/p7zip"
 RDEPEND="virtual/wine[abi_x86_32]
-         >=app-emulation/winetricks-744
-         media-libs/libtxc_dxtn[abi_x86_32]"
+         >=app-emulation/winetricks-744"
 
 CHECKREQS_DISK_BUILD=10G
 
