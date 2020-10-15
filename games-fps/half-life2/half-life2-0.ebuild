@@ -7,7 +7,7 @@ inherit games
 
 DESCRIPTION="Half-life2"
 HOMEPAGE="http://orange.half-life2.com/portal.html"
-SRC_URI="mirror://fpemud-distfiles-private/HL2.tar.gz"
+SRC_URI="ftp://fpemud-distfiles.local/HL2.tar.gz"
 
 LICENSE="unknown"
 SLOT="0"
@@ -16,18 +16,17 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 RESTRICT="strip fetch"
 
-#         dev-libs/libgcrypt:11[abi_x86_32]
 
 DEPEND=""
 RDEPEND="dev-libs/nss[abi_x86_32]
          dev-libs/nspr[abi_x86_32]
          media-libs/alsa-lib[abi_x86_32]
-         dev-libs/libgcrypt[abi_x86_32]
+         dev-libs/libgcrypt-compat:11[abi_x86_32]
+         media-libs/libpng-compat:1.2[abi_x86_32]
          media-libs/libsdl2[abi_x86_32]
          x11-libs/cairo[abi_x86_32]
          x11-libs/gtk+:2[abi_x86_32]
          net-print/cups[abi_x86_32]
-         media-libs/libpng:1.2[abi_x86_32]
          media-fonts/font-ibm-type1"
 
 S="${WORKDIR}"
