@@ -22,7 +22,8 @@ SLOT="0"
 IUSE=""
 
 DEPEND=""
-RDEPEND="dev-qt/qtcore"
+RDEPEND="dev-qt/qtcore
+         dev-qt/qtwidgets"
 
 #src_prepare() {
 #	cmake-utils_src_prepare
