@@ -16,3 +16,6 @@ IUSE=""
 DEPEND=""
 RDEPEND="sci-libs/openblas"
 
+src_install() {
+        dobin bin/aobaz
+}

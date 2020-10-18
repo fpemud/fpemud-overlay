@@ -17,8 +17,6 @@ IUSE=""
 DEPEND=""
 RDEPEND="sci-libs/openblas"
 
-#src_unpack() {
-#	unpack "lc0-v${P}.tar.gz"
-#	cd "${S}" || die
-#        tar xf "${DISTDIR}/${P}-common.tar.gz" --strip-components 1 -C "./libs/lczero-common" || die "Failed to unpack ${P}-common.tar.gz"
-#}
+src_install() {
+	dobin bin/aobaz
+}

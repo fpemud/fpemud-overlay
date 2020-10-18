@@ -33,6 +33,8 @@ for X in ${LANGS};
 	do IUSE="${IUSE} linguas_${X}"
 done
 
+S="${WORKDIR}"
+
 src_unpack() {
 
 #	7z x "${DISTDIR}/Need.for.Speed.Most.Wanted.Black.Edition.CD1.iso" -o"${WORKDIR}/nfs9_cd1"
