@@ -15,7 +15,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND=""
-RDEPEND=""
+RDEPEND="sci-libs/openblas"
 
 #src_unpack() {
 #	unpack "lc0-v${P}.tar.gz"
