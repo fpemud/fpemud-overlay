@@ -7,10 +7,7 @@ inherit eutils games check-reqs
 
 DESCRIPTION="Need For Speed 8 - Underground 2"
 HOMEPAGE=""
-SRC_URI="ftp://fpemud-distfiles.local/${PN}
-         ftp://fpemud-distfiles.local/${PN}.desktop
-         ftp://fpemud-distfiles.local/${PN}.png
-         ftp://fpemud-distfiles.local/Need.for.Speed.Underground.2.CD1.iso
+SRC_URI="ftp://fpemud-distfiles.local/Need.for.Speed.Underground.2.CD1.iso
          ftp://fpemud-distfiles.local/Need.for.Speed.Underground.2.CD2.iso"
 LICENSE="unknown"
 SLOT="0"
@@ -24,8 +21,9 @@ RDEPEND="virtual/wine[abi_x86_32]"
 
 CHECKREQS_DISK_BUILD=2G
 
-src_unpack() {
+S="${WORKDIR}"
 
+src_unpack() {
 	7z x "${DISTDIR}/Need.for.Speed.Underground.2.CD1.iso" -o"${WORKDIR}/nfs8_cd1"
 	7z x "${DISTDIR}/Need.for.Speed.Underground.2.CD2.iso" -o"${WORKDIR}/nfs8_cd2"
 
@@ -48,11 +46,10 @@ src_unpack() {
 }
 
 src_prepare() {
-
 	# Prepare the wrapper script
 	sed -e "s/^GAMEDIR=.*$/GAMEDIR=\/opt\/${PN}/g" \
 	    -e "s/^DATADIR=.*$/DATADIR=~\/.cache\/${PN}/g" \
-	    -e "s/^CFGDIR=.*$/CFGDIR=~\/.config\/${PN}/g" "${DISTDIR}/${PN}" > "${WORKDIR}/${PN}"
+	    -e "s/^CFGDIR=.*$/CFGDIR=~\/.config\/${PN}/g" "${FILESDIR}/${PN}" > "${WORKDIR}/${PN}"
 }
 
 src_install() {
@@ -60,8 +57,8 @@ src_install() {
 	cp -r "Need for Speed Underground 2" "${D}/${GAMES_PREFIX_OPT}/${PN}"
 
 	dogamesbin "${PN}"
-	doicon "${DISTDIR}/${PN}.png"
-	domenu "${DISTDIR}/${PN}.desktop"
+	doicon "${FILESDIR}/${PN}.png"
+	domenu "${FILESDIR}/${PN}.desktop"
 
 	prepgamesdirs
 }
