@@ -18,25 +18,29 @@ fi
 
 LICENSE=""
 SLOT="0"
-IUSE=""
+IUSE="opencl cuda eigen"
 
 DEPEND=""
 RDEPEND=""
 
-#src_prepare() {
-#	cmake-utils_src_prepare
-#	sed -i 's/-Werror //' CMakeLists.txt
-#	echo 'INCLUDE_DIRECTORIES(/usr/include/libnl3)' >> CMakeLists.txt
-#}
+S="${WORKDIR}/KataGo-${PV}/cpp"
 
-#src_configure() {
-#	cmake-utils_src_configure
-#}
+src_configure() {
+        local mycmakeargs=(
+		-DNO_GIT_REVISION=1
+	)
+	if use opencl; then
+		mycmakeargs+=(-DUSE_BACKEND=OPENCL)
+	fi
+	if use cuda; then
+		mycmakeargs+=(-DUSE_BACKEND=CUDA)
+	fi
+	if use eigen; then
+		mycmakeargs+=(-DUSE_BACKEND=EIGEN)
+	fi
+	cmake-utils_src_configure
+}
 
-#src_install() {
-#	cmake-utils_src_install
-#
-#	install -d "${D}/etc/config"
-#	touch "${D}/etc/config/network"
-#	touch "${D}/etc/config/wireless"
-#}
+src_install() {
+	dobin ${BUILD_DIR}/katago
+}
