@@ -7,22 +7,22 @@ inherit eutils games
 
 DESCRIPTION="Command & Conquer - Redalert"
 HOMEPAGE="http://www.commandandconquer.com/en/games/bygameid/ra"
-SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}
-         ftp://fpemud-workstation/distfiles-private/${PN}.desktop
-         ftp://fpemud-workstation/distfiles-private/Command.And.Conquer.Red.Alert.CD1.iso
-         ftp://fpemud-workstation/distfiles-private/Command.And.Conquer.Red.Alert.CD2.iso
-         ftp://fpemud-workstation/distfiles-private/Command.And.Conquer.Red.Alert.Counterstrike.ccd
-         ftp://fpemud-workstation/distfiles-private/Command.And.Conquer.Red.Alert.Counterstrike.img
-         ftp://fpemud-workstation/distfiles-private/Command.And.Conquer.Red.Alert.Counterstrike.sub
-         ftp://fpemud-workstation/distfiles-private/Command.And.Conquer.Red.Alert.The.Aftermath.iso
-         ftp://fpemud-workstation/distfiles-private/${PN}_patch_antvqa.zip
-         ftp://fpemud-workstation/distfiles-private/${PN}_patch_TLF.zip
-         ftp://fpemud-workstation/distfiles-private/ra303eng.zip
-         ftp://fpemud-workstation/distfiles-private/ra303fra.zip
-         ftp://fpemud-workstation/distfiles-private/ra303ger.zip
-         ftp://fpemud-workstation/distfiles-private/${PN}_main.reg
-         ftp://fpemud-workstation/distfiles-private/${PN}_counterstrike.reg
-         ftp://fpemud-workstation/distfiles-private/${PN}_aftermath.reg"
+SRC_URI="ftp://fpemud-distfiles.local/${PN}
+         ftp://fpemud-distfiles.local/${PN}.desktop
+         ftp://fpemud-distfiles.local/Command.And.Conquer.Red.Alert.CD1.iso
+         ftp://fpemud-distfiles.local/Command.And.Conquer.Red.Alert.CD2.iso
+         ftp://fpemud-distfiles.local/Command.And.Conquer.Red.Alert.Counterstrike.ccd
+         ftp://fpemud-distfiles.local/Command.And.Conquer.Red.Alert.Counterstrike.img
+         ftp://fpemud-distfiles.local/Command.And.Conquer.Red.Alert.Counterstrike.sub
+         ftp://fpemud-distfiles.local/Command.And.Conquer.Red.Alert.The.Aftermath.iso
+         ftp://fpemud-distfiles.local/${PN}_patch_antvqa.zip
+         ftp://fpemud-distfiles.local/${PN}_patch_TLF.zip
+         ftp://fpemud-distfiles.local/ra303eng.zip
+         ftp://fpemud-distfiles.local/ra303fra.zip
+         ftp://fpemud-distfiles.local/ra303ger.zip
+         ftp://fpemud-distfiles.local/${PN}_main.reg
+         ftp://fpemud-distfiles.local/${PN}_counterstrike.reg
+         ftp://fpemud-distfiles.local/${PN}_aftermath.reg"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"

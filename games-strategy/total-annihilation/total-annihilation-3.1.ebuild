@@ -7,24 +7,24 @@ inherit eutils gnome2-utils games
 
 DESCRIPTION="Total Annihilation"
 HOMEPAGE=""
-SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}
-         ftp://fpemud-workstation/distfiles-private/${PN}.desktop
-         ftp://fpemud-workstation/distfiles-private/${PN}_16x16x4.png
-         ftp://fpemud-workstation/distfiles-private/${PN}_32x32x4.png
-         ftp://fpemud-workstation/distfiles-private/Total.Annihilation.CD1.ccd
-         ftp://fpemud-workstation/distfiles-private/Total.Annihilation.CD1.img
-         ftp://fpemud-workstation/distfiles-private/Total.Annihilation.CD1.sub
-         ftp://fpemud-workstation/distfiles-private/Total.Annihilation.CD1.iso
-         ftp://fpemud-workstation/distfiles-private/Total.Annihilation.CD2.ccd
-         ftp://fpemud-workstation/distfiles-private/Total.Annihilation.CD2.img
-         ftp://fpemud-workstation/distfiles-private/Total.Annihilation.CD2.sub
-         ftp://fpemud-workstation/distfiles-private/Total.Annihilation.CD2.iso
-         ftp://fpemud-workstation/distfiles-private/Total.Annihilation.The.Core.Contingency.iso
-         ftp://fpemud-workstation/distfiles-private/Total.Annihilation.Battle.Tactics.iso
-         ftp://fpemud-workstation/distfiles-private/ta1x-31c.zip
-         ftp://fpemud-workstation/distfiles-private/Cavedog_units.ufo
-         ftp://fpemud-workstation/distfiles-private/Total.Annihilation.CD1.zip
-         ftp://fpemud-workstation/distfiles-private/installed-ta.zip"
+SRC_URI="ftp://fpemud-distfiles.local/${PN}
+         ftp://fpemud-distfiles.local/${PN}.desktop
+         ftp://fpemud-distfiles.local/${PN}_16x16x4.png
+         ftp://fpemud-distfiles.local/${PN}_32x32x4.png
+         ftp://fpemud-distfiles.local/Total.Annihilation.CD1.ccd
+         ftp://fpemud-distfiles.local/Total.Annihilation.CD1.img
+         ftp://fpemud-distfiles.local/Total.Annihilation.CD1.sub
+         ftp://fpemud-distfiles.local/Total.Annihilation.CD1.iso
+         ftp://fpemud-distfiles.local/Total.Annihilation.CD2.ccd
+         ftp://fpemud-distfiles.local/Total.Annihilation.CD2.img
+         ftp://fpemud-distfiles.local/Total.Annihilation.CD2.sub
+         ftp://fpemud-distfiles.local/Total.Annihilation.CD2.iso
+         ftp://fpemud-distfiles.local/Total.Annihilation.The.Core.Contingency.iso
+         ftp://fpemud-distfiles.local/Total.Annihilation.Battle.Tactics.iso
+         ftp://fpemud-distfiles.local/ta1x-31c.zip
+         ftp://fpemud-distfiles.local/Cavedog_units.ufo
+         ftp://fpemud-distfiles.local/Total.Annihilation.CD1.zip
+         ftp://fpemud-distfiles.local/installed-ta.zip"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"

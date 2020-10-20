@@ -7,18 +7,18 @@ inherit eutils games
 
 DESCRIPTION="Command & Conquer - Redalert 2 with YURI's Revenge"
 HOMEPAGE=""
-SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}
-         ftp://fpemud-workstation/distfiles-private/${PN}.desktop
-         ftp://fpemud-workstation/distfiles-private/${PN}_16x16x8.png
-         ftp://fpemud-workstation/distfiles-private/${PN}_32x32x8.png
-         ftp://fpemud-workstation/distfiles-private/${PN}-yuri
-         ftp://fpemud-workstation/distfiles-private/${PN}-yuri.desktop
-         ftp://fpemud-workstation/distfiles-private/${PN}-yuri_16x16x8.png
-         ftp://fpemud-workstation/distfiles-private/${PN}-yuri_32x32x8.png
-         ftp://fpemud-workstation/distfiles-private/RA2_YURI.zip
-         ftp://fpemud-workstation/distfiles-private/RA2_YURI-language-pack-zh_TW.zip
-         ftp://fpemud-workstation/distfiles-private/RA2_YURI-default-config.zip
-         ftp://fpemud-workstation/distfiles-private/RA2_YURI-extra-icon.zip"
+SRC_URI="ftp://fpemud-distfiles.local/${PN}
+         ftp://fpemud-distfiles.local/${PN}.desktop
+         ftp://fpemud-distfiles.local/${PN}_16x16x8.png
+         ftp://fpemud-distfiles.local/${PN}_32x32x8.png
+         ftp://fpemud-distfiles.local/${PN}-yuri
+         ftp://fpemud-distfiles.local/${PN}-yuri.desktop
+         ftp://fpemud-distfiles.local/${PN}-yuri_16x16x8.png
+         ftp://fpemud-distfiles.local/${PN}-yuri_32x32x8.png
+         ftp://fpemud-distfiles.local/RA2_YURI.zip
+         ftp://fpemud-distfiles.local/RA2_YURI-language-pack-zh_TW.zip
+         ftp://fpemud-distfiles.local/RA2_YURI-default-config.zip
+         ftp://fpemud-distfiles.local/RA2_YURI-extra-icon.zip"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
