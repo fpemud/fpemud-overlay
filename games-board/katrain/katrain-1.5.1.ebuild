@@ -15,3 +15,5 @@ LICENSE="unknown"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
+RDEPEND="dev-python/kivy[${PYTHON_USEDEP}]
+         dev-python/kivymd[${PYTHON_USEDEP}]"
