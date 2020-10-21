@@ -6,9 +6,9 @@ EAPI=5
 
 DESCRIPTION="Final neural networks for the June 2020 (\"g170\") run"
 HOMEPAGE="https://github.com/lightvector/KataGo"
-SRC_URI="https://github.com/lightvector/KataGo/releases/download/v1.4.5/g170-b40c256x2-s5095420928-d1229425124.bin.gz -> ${P}_b40.bin.gz
-         https://github.com/lightvector/KataGo/releases/download/v1.4.5/g170-b30c320x2-s4824661760-d1229536699.bin.gz -> ${P}_b30.bin.gz
-         https://github.com/lightvector/KataGo/releases/download/v1.4.5/g170e-b20c256x2-s5303129600-d1228401921.bin.gz -> ${P}_b20.bin.gz"
+SRC_URI="https://github.com/lightvector/KataGo/releases/download/v1.4.5/g170-b40c256x2-s5095420928-d1229425124.bin.gz
+         https://github.com/lightvector/KataGo/releases/download/v1.4.5/g170-b30c320x2-s4824661760-d1229536699.bin.gz
+         https://github.com/lightvector/KataGo/releases/download/v1.4.5/g170e-b20c256x2-s5303129600-d1228401921.bin.gz"
 
 LICENSE="unknown"
 SLOT="0"
@@ -20,7 +20,7 @@ RESTRICT="mirror"
 S=${WORKDIR}
 
 src_unpack() {
-	return
+	cp "${A}" "${WORKDIR}"
 }
 
 src_install() {
@@ -36,7 +36,7 @@ src_install() {
 	fi
 	for item in $instlist; do
 		fn=*$item*
-		insinto "/usr/share/${PN%-*}"
-		ln -f -s "$fn" "${D}/usr/share/${PN%-*}/block${item}.bin.gz"
+		insinto "/usr/share/${PN}"
+		ln -f -s "$fn" "${D}/usr/share/${PN}/block${item}.bin.gz"
 	done
 }
