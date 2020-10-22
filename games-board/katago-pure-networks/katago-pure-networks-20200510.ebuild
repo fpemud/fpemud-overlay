@@ -20,29 +20,21 @@ RESTRICT="mirror"
 S=${WORKDIR}
 
 src_unpack() {
-	for fn in ${A}; do
-		cp "${DISTDIR}/${fn}" "${WORKDIR}"
-	done
+	return
 }
 
 src_install() {
-	instlist=()
-	if use block20; then
-		instlist+=(20)
-	fi
-	if use block30; then
-		instlist+=(30)
-	fi
-	if use block40; then
-		instlist+=(40)
-	fi
-	for item in $instlist; do
-		fn=`ls ${WORKDIR}/*$item*`
-		bfn = `basename $fn`
-		insinto "/usr/share/katago-networks"
-		doins $fn
-		echo "$fn" >> "${D}/usr/share/katago-networks/bbb"
-		echo "$bfn" >> "${D}/usr/share/katago-networks/ccc"
-		ln -sf "$bfn" "${D}/usr/share/katago-networks/pure-block${item}.bin.gz"
-	done
+	insinto "/usr/share/katago-networks"
+
+	fn=`echo ${A} | cut -d " " -f 1`
+	doins "${DISTDIR}/${fn}"
+	dosym "${fn}" /usr/share/katago-networks/pure-block40.bin.gz
+
+	fn=`echo ${A} | cut -d " " -f 2`
+	doins "${DISTDIR}/${fn}"
+	dosym "${fn}" /usr/share/katago-networks/pure-block30.bin.gz
+
+	fn=`echo ${A} | cut -d " " -f 3`
+	doins "${DISTDIR}/${fn}"
+	dosym "${fn}" /usr/share/katago-networks/pure-block20.bin.gz
 }

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=7
 
 DESCRIPTION="Final neural networks for the June 2020 (\"g170\") run"
 HOMEPAGE="https://github.com/lightvector/KataGo"
@@ -20,23 +20,21 @@ RESTRICT="mirror"
 S=${WORKDIR}
 
 src_unpack() {
-	cp "${A}" "${WORKDIR}"
+	return
 }
 
 src_install() {
-	instlist=()
-	if use block20; then
-		instlist+=(20)
-	fi
-	if use block30; then
-		instlist+=(30)
-	fi
-	if use block40; then
-		instlist+=(40)
-	fi
-	for item in $instlist; do
-		fn=*$item*
-		insinto "/usr/share/${PN}"
-		ln -f -s "$fn" "${D}/usr/share/${PN}/block${item}.bin.gz"
-	done
+	insinto "/usr/share/${PN}"
+
+	fn=`echo ${A} | cut -d " " -f 1`
+	doins "${DISTDIR}/${fn}"
+	dosym "${fn}" /usr/share/${PN}/block40.bin.gz
+
+	fn=`echo ${A} | cut -d " " -f 2`
+	doins "${DISTDIR}/${fn}"
+	dosym "${fn}" /usr/share/${PN}/block30.bin.gz
+
+	fn=`echo ${A} | cut -d " " -f 3`
+	doins "${DISTDIR}/${fn}"
+	dosym "${fn}" /usr/share/${PN}/block20.bin.gz
 }
