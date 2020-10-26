@@ -30,3 +30,5 @@ src_install() {
 	prepgamesdirs
 }
 
+
+# https://github.com/jruffet/docker-shogigui/blob/master/Dockerfile
