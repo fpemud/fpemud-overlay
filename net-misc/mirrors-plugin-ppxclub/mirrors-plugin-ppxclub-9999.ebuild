@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-r3
 
-EGIT_REPO_URI="https://github.com/mirrorshq/mirrors-plugin-ppxclub.git"
+EGIT_REPO_URI="git://fpemud-git.local/mirrors-plugin-ppxclub"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
