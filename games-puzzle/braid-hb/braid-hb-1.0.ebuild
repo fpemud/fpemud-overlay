@@ -19,7 +19,7 @@ IUSE=""
 RESTRICT="strip"
 
 DEPEND="app-arch/unzip"
-RDEPEND=""
+RDEPEND="x11-libs/libXinerama[abi_x86_32]"
 #RDEPEND="media-libs/libsdl[sound,joystick,video]
 #         x11-libs/libX11
 #         x11-libs/libXau
@@ -27,8 +27,6 @@ RDEPEND=""
 #         x11-libs/libXdmcp
 #         x11-libs/libXext
 #         virtual/opengl"
-#       media-gfx/nvidia-cg-toolkit"
-#	video_cards_nvidia? ( media-gfx/nvidia-cg-toolkit )"
 
 S=${WORKDIR}/data
 
