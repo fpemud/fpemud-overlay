@@ -41,12 +41,16 @@ src_unpack() {
 	cp "${DISTDIR}/${A}" "${WORKDIR}"
 	chmod +x "${WORKDIR}/${A}"
         "${WORKDIR}/${A}" --appimage-extract
-	use system-libs && rm -rf "${S}/usr/bin/game/lib"
+	use system-libs && rm -rf ${S}/usr/bin/game/lib/*
 }
 
 src_install() {
 	dodir "${GAMES_PREFIX_OPT}/Braid"
 	cp -r usr/bin/* "${D}/${GAMES_PREFIX_OPT}/Braid"
+
+	# braid can only find library directly in /usr/lib
+	use system-libs && ln -sf "/usr/lib/fltk/libfltk.so.1.3" "${D}/${GAMES_PREFIX_OPT}/Braid/game/lib"
+
 	doicon "Braid.png"
 	domenu "Braid.desktop"
 	games_make_wrapper "braid" "./game/Braid.bin.x86" "${GAMES_PREFIX_OPT}/Braid"
