@@ -6,6 +6,7 @@ EAPI=4
 
 inherit games
 
+MY_PN=braid
 DESCRIPTION="Platform game where you manipulate flow of time"
 HOMEPAGE="http://braid-game.com"
 SRC_URI="http://fpemud-distfiles.local/Braid.linux"
@@ -19,7 +20,7 @@ IUSE=""
 RESTRICT="strip"
 
 DEPEND="app-arch/unzip"
-RDEPEND="x11-libs/libXinerama[abi_x86_32]"
+RDEPEND="!games-puzzle/braid-gog"
 #RDEPEND="media-libs/libsdl[sound,joystick,video]
 #         x11-libs/libX11
 #         x11-libs/libXau
@@ -38,9 +39,9 @@ pkg_nofetch() {
 
 src_unpack() {
 	# remove the exe stuff
-	tail --bytes=+$(( ${ZIP_OFFSET} + 1 )) "${DISTDIR}/${A}" > "${MY_P}.zip"
-	unzip -q "${MY_P}.zip" || die "unpacking failed"
-	rm -f "${MY_P}.zip"
+	tail --bytes=+$(( ${ZIP_OFFSET} + 1 )) "${DISTDIR}/${A}" > "${MY_PN}.zip"
+	unzip -q "${MY_PN}.zip" || die "unpacking failed"
+	#rm -f "${MY_PN}.zip"
 }
 
 src_install() {
@@ -54,8 +55,8 @@ src_install() {
 
 	doicon "gamedata/braid.png" || die "doicon failed"
 
-	games_make_wrapper "${PN}" "./${PN}" "${dir}"
-	make_desktop_entry "${PN}" "Braid" "${PN}"
+	games_make_wrapper "${MY_PN}" "./${MY_PN}" "${dir}"
+	make_desktop_entry "${MY_PN}" "Braid" "${MY_PN}"
 
 	prepgamesdirs
 }
