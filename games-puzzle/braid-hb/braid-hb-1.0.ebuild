@@ -8,7 +8,7 @@ inherit games
 
 DESCRIPTION="Platform game where you manipulate flow of time"
 HOMEPAGE="http://braid-game.com"
-SRC_URI="mirror://fpemud-distfiles-private/Braid.linux"
+SRC_URI="http://fpemud-distfiles.local/Braid.linux"
 ZIP_OFFSET="191620"
 
 LICENSE="Arphic CCPL-Attribution-ShareAlike-NonCommercial-1.0 MIT"
