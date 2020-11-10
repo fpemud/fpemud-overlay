@@ -18,15 +18,11 @@ IUSE=""
 RESTRICT="strip"
 
 DEPEND="app-arch/unzip"
-RDEPEND="x11-libs/libXinerama[abi_x86_32]
+RDEPEND="media-libs/libsdl2[sound,joystick,video]
+         x11-libs/libXft[abi_x86_32]
+         x11-libs/libXinerama[abi_x86_32]
+         x11-libs/fltk[abi_x86_32]
          !games-puzzle/braid-hb"
-#RDEPEND="media-libs/libsdl[sound,joystick,video]
-#         x11-libs/libX11
-#         x11-libs/libXau
-#         x11-libs/libxcb
-#         x11-libs/libXdmcp
-#         x11-libs/libXext
-#         virtual/opengl"
 
 S=${WORKDIR}/squashfs-root
 
