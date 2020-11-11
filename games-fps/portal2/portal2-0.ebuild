@@ -8,14 +8,14 @@ inherit games
 
 DESCRIPTION="Portal 2"
 HOMEPAGE="http://www.valvesoftware.com/games/portal2.html"
-SRC_URI="ftp://fpemud-distfiles.local/Portal2.tar.gz"
+SRC_URI="mirror://linuxgame/Portal2.tar.gz"
 
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 
 IUSE=""
-RESTRICT="strip mirror"
+RESTRICT="strip"
 
 DEPEND=""
 RDEPEND="sys-apps/util-linux[abi_x86_32]
