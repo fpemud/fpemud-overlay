@@ -6,6 +6,7 @@ EAPI=4
 
 inherit games
 
+MY_PN="braid"
 DESCRIPTION="Platform game where you manipulate flow of time"
 HOMEPAGE="http://braid-game.com"
 SRC_URI="mirror://linuxgame/Braid_i386.appimage"
@@ -52,7 +53,7 @@ src_install() {
 	use system-libs && ln -sf "/usr/lib/fltk/libfltk.so.1.3" "${D}/${GAMES_PREFIX_OPT}/Braid/game/lib"
 
 	doicon "Braid.png"
-	domenu "Braid.desktop"
-	games_make_wrapper "braid" "./game/Braid.bin.x86" "${GAMES_PREFIX_OPT}/Braid"
+	make_desktop_entry "${MY_PN}" "Braid" "Braid"
+	games_make_wrapper "${MY_PN}" "./game/Braid.bin.x86" "${GAMES_PREFIX_OPT}/Braid"
 	prepgamesdirs
 }

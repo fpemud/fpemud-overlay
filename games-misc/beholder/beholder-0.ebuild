@@ -7,20 +7,29 @@ inherit eutils games
 
 DESCRIPTION="Beholder"
 HOMEPAGE="http://www.neighbours-from-hell.com"
-SRC_URI="ftp://fpemud-workstation/distfiles-private/${PN}.zip"
+SRC_URI="mirror://linuxgame/Beholder_amd64.AppImage"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
-RESTRICT="mirror"
+RESTRICT=""
 
 DEPEND="app-arch/unzip"
-RDEPEND="virutal/wine[abi_x86_32]"
+RDEPEND=""
 
-S=${WORKDIR}
+S=${WORKDIR}/squashfs-root
+
+pkg_nofetch() {
+	echo
+	elog "Download ${SRC_URI} from ${HOMEPAGE} and place it in ${DISTDIR}"
+	echo
+}
 
 src_unpack() {
-	return
+	cp "${DISTDIR}/${A}" "${WORKDIR}"
+	chmod +x "${WORKDIR}/${A}"
+	"${WORKDIR}/${A}" --appimage-extract
+	rm -f ${S}/usr/bin/Beholder.x86
 }
 
 src_prepare() {
@@ -28,12 +37,10 @@ src_prepare() {
 }
 
 src_install() {
-	dodir "/opt/${PN}"
-	unzip -q "${DISTDIR}/${PN}.zip" -d "${D}/opt/${PN}"
-
-	dogamesbin "${FILESDIR}/${PN}"
+	dodir "${GAMES_PREFIX_OPT}/Beholder"
+	cp -r usr/bin/* "${D}/${GAMES_PREFIX_OPT}/Beholder"
 	doicon "${FILESDIR}/${PN}.png"
-	domenu "${FILESDIR}/${PN}.desktop"
-
+	make_desktop_entry "${PN}" "Beholder" "${PN}"
+	games_make_wrapper "${PN}" "./Beholder.x86_64" "${GAMES_PREFIX_OPT}/Beholder"
 	prepgamesdirs
 }

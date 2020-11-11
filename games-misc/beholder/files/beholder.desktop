@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Beholder
-Type=Application
-Comment=The game Beholder
-Exec=beholder
-TryExec=beholder
-Icon=beholder
-Categories=Game;
