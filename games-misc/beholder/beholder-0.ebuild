@@ -29,7 +29,10 @@ src_unpack() {
 	cp "${DISTDIR}/${A}" "${WORKDIR}"
 	chmod +x "${WORKDIR}/${A}"
 	"${WORKDIR}/${A}" --appimage-extract
+
+	# remove 32-bit stuff
 	rm -f ${S}/usr/bin/Beholder.x86
+	find ${S}/usr/bin -wholename "*/x86" | xargs rm -rf
 }
 
 src_prepare() {
@@ -39,6 +42,7 @@ src_prepare() {
 src_install() {
 	dodir "${GAMES_PREFIX_OPT}/Beholder"
 	cp -r usr/bin/* "${D}/${GAMES_PREFIX_OPT}/Beholder"
+
 	doicon "${FILESDIR}/${PN}.png"
 	make_desktop_entry "${PN}" "Beholder" "${PN}"
 	games_make_wrapper "${PN}" "./Beholder.x86_64" "${GAMES_PREFIX_OPT}/Beholder"
