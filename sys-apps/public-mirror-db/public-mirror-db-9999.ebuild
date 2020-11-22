@@ -19,8 +19,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-#S=${WORKDIR}
-
 src_install() {
 	dodir "/usr/share/${PN}"
 	cp -r mirrors-* "${D}/usr/share/${PN}"
