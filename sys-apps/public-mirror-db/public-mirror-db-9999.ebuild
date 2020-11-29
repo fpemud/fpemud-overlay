@@ -21,6 +21,5 @@ IUSE=""
 
 src_install() {
 	dodir "/usr/share/${PN}"
-	cp -r mirrors-* "${D}/usr/share/${PN}"
-	cp -r schema "${D}/usr/share/${PN}"
+	find ./* -maxdepth 0 -type d -not -path '*/\.*' -exec cp -r {} "${D}/usr/share/${PN}" \;
 }
