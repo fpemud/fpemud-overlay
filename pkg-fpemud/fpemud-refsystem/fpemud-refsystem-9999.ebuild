@@ -16,7 +16,6 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="sys-apps/systemd
-         sys-apps/public-mirror-db
          app-admin/gentoo-bashrc
          app-portage/gentoolkit
          net-misc/stunnel
