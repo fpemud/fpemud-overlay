@@ -4,7 +4,9 @@
 
 EAPI=7
 
-inherit git-r3
+PYTHON_COMPAT=( python{3_6,3_7,3_8,3_9} )
+
+inherit distutils-r1 git-r3
 
 EGIT_REPO_URI="https://github.com/fpemud/partner"
 SRC_URI=""
@@ -18,3 +20,21 @@ IUSE=""
 RDEPEND="dev-python/pygobject
          dev-python/toposort"
 DEPEND=""
+
+# install partner program by make
+# install partner python module by distutils
+
+src_prepare() {
+	distutils-r1_src_prepare
+}
+
+src_compile() {
+	emake || die "emake failed"
+	distutils-r1_src_compile
+}
+
+src_install() {
+	emake DESTDIR="${D}" install
+	distutils-r1_src_install
+}
+
