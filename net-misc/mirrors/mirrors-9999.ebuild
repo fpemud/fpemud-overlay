@@ -27,14 +27,6 @@ RDEPEND="acct-user/mirrors
          dev-python/aiohttp-jinja2
          dev-python/dbus-python
          dev-python/python-prctl"
-RDEPEND="${RDEPEND}
-         www-servers/apache
-         dev-python/pyftpdlib
-         dev-db/mariadb
-         dev-python/mariadb-connector-python
-         dev-python/sqlparse
-         dev-db/neo4j-community
-         media-libs/gst-rtsp-server"
 DEPEND=""
 
 
