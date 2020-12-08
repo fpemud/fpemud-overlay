@@ -16,7 +16,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="net-misc/mirrors
-         net-misc/mirror-advertiser-httpdir
-         net-misc/mirror-advertiser-ftp
-         net-misc/mirror-advertiser-rsync"
+         net-misc/mirrors-advertiser-httpdir
+         net-misc/mirrors-advertiser-ftp
+         net-misc/mirrors-advertiser-rsync"
 DEPEND=""
