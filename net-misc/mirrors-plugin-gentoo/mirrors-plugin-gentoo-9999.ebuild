@@ -15,5 +15,8 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/mirrors"
+RDEPEND="net-misc/mirrors
+         net-misc/mirror-advertiser-httpdir
+         net-misc/mirror-advertiser-ftp
+         net-misc/mirror-advertiser-rsync"
 DEPEND=""

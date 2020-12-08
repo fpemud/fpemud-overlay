@@ -16,5 +16,6 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="net-misc/mirrors
+         net-misc/mirrors-advertiser-git
          dev-python/PyGithub"
 DEPEND=""

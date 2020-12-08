@@ -16,6 +16,8 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="net-misc/mirrors
+         net-misc/mirrors-advertiser-httpdir
+         net-misc/mirrors-advertiser-ftp
          app-arch/p7zip
          sys-apps/file[python]"
 DEPEND=""
