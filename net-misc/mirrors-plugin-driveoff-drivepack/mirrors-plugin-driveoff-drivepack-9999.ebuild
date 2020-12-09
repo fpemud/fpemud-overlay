@@ -15,9 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/mirrors
-         net-misc/mirrors-advertiser-httpdir
-         net-misc/mirrors-advertiser-ftp
+RDEPEND="net-misc/mirrors[mirrors_advertiser_ftp,mirrors_advertiser_httpdir]
          app-arch/p7zip
          sys-apps/file[python]"
 DEPEND=""

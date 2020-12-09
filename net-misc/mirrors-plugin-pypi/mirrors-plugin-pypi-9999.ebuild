@@ -15,7 +15,6 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/mirrors
-         net-misc/mirrors-advertiser-httpdir
+RDEPEND="net-misc/mirrors[mirrors_advertiser_httpdir]
          dev-python/bandersnatch"
 DEPEND=""
