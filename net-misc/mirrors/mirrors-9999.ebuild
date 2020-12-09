@@ -52,14 +52,14 @@ src_prepare() {
 	if ! use zeroconf ; then
 		sed -i -e "s/self.avahiSupport = .*/self.avahiSupport = False/g" "${WORKDIR}/${P}/lib/mc_param.py"
 	fi
-	for s in ALL_STORAGE ; do
+	for s in "${ALL_STORAGE[@]}" ; do
 		if ! use mirrors_storage_$s ; then
-			rm -rf "${WORDIR}/${P}/lib/storage/$s
+			rm -rf "${WORKDIR}/${P}/lib/storage/${s}"
 		fi
 	done
-	for s in ALL_ADVERTISERS ; do
+	for s in "${ALL_ADVERTISERS[@]}" ; do
 		if ! use mirrors_advertiser_$s ; then
-			rm -rf "${WORDIR}/${P}/lib/advertiser/$s
+			rm -rf "${WORKDIR}/${P}/lib/advertiser/${s}"
 		fi
 	done
 
