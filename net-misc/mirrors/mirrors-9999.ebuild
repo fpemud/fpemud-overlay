@@ -19,7 +19,7 @@ SLOT="0"
 
 ALL_STORAGE=( mariadb mongodb neo4j )
 ALL_STORAGE_EXP=( "${ALL_STORAGE[@]/#/mirrors_storage_}" )
-ALL_ADVERTISERS=( ftp git httpdir mediawiki rsync )
+ALL_ADVERTISERS=( ftp git klaus httpdir mediawiki rsync )
 ALL_ADVERTISERS_EXP=( "${ALL_ADVERTISERS[@]/#/mirrors_advertiser_}" )
 IUSE="zeroconf ${ALL_STORAGE_EXP[*]} ${ALL_ADVERTISERS_EXP[*]}"
 
@@ -39,6 +39,9 @@ RDEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
          mirrors_advertiser_ftp? ( dev-python/pyftpdlib )
          mirrors_advertiser_git? ( dev-vcs/git )
+         mirrors_advertiser_klaus? ( www-servers/apache
+                                     www-apache/mod_wsgi
+                                     www-apps/klaus )
          mirrors_advertiser_httpdir? ( www-servers/apache )"
 
 DEPEND=""
