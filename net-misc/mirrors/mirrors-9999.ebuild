@@ -31,7 +31,8 @@ RDEPEND="acct-user/mirrors
          dev-python/jinja
          dev-python/aiohttp-jinja2
          dev-python/dbus-python
-         dev-python/python-prctl"
+         dev-python/python-prctl
+         dev-python/psutil"
 RDEPEND="${RDEPEND}
          mirrors_storage_mariadb? ( dev-db/mariadb
                                     dev-python/mariadb-connector-python

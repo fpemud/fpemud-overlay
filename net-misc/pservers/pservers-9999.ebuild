@@ -21,7 +21,8 @@ IUSE=""
 RDEPEND="acct-user/pservers
          acct-group/pservers
          dev-python/dbus-python
-         dev-python/python-prctl"
+         dev-python/python-prctl
+         dev-python/psutil"
 RDEPEND="${RDEPEND}
          www-servers/apache
          www-apache/mod_wsgi
