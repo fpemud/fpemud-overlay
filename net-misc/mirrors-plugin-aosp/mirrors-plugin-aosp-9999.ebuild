@@ -15,6 +15,6 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/mirrors[mirrors_advertiser_httpdir,mirrors_advertiser_rsync]
+RDEPEND="net-misc/mirrors[mirrors_advertiser_git,mirrors_advertiser_klaus]
          dev-vcs/repo"
 DEPEND=""
