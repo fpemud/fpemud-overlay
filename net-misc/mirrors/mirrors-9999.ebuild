@@ -37,7 +37,8 @@ RDEPEND="${RDEPEND}
          mirrors_storage_mariadb? ( dev-db/mariadb
                                     dev-python/mariadb-connector-python
                                     dev-python/sqlpars )
-         mirrors_storage_mongodb? ( dev-db/mongodb )"
+         mirrors_storage_mongodb? ( dev-db/mongodb )
+         mirrors_storage_neo4j? ( dev-db/neo4j-community )"
 RDEPEND="${RDEPEND}
          mirrors_advertiser_ftp? ( dev-python/pyftpdlib )
          mirrors_advertiser_git? ( dev-vcs/git )
