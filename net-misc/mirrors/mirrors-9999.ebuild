@@ -36,7 +36,8 @@ RDEPEND="acct-user/mirrors
 RDEPEND="${RDEPEND}
          mirrors_storage_mariadb? ( dev-db/mariadb
                                     dev-python/mariadb-connector-python
-                                    dev-python/sqlpars )"
+                                    dev-python/sqlpars )
+         mirrors_storage_mongodb? ( dev-db/mongodb )"
 RDEPEND="${RDEPEND}
          mirrors_advertiser_ftp? ( dev-python/pyftpdlib )
          mirrors_advertiser_git? ( dev-vcs/git )
