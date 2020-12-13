@@ -26,6 +26,6 @@ RDEPEND="acct-user/pservers
 RDEPEND="${RDEPEND}
          www-servers/apache
          www-apache/mod_wsgi
-         www-apps/fklaus
+         www-apps/klaus
          dev-python/pyftpdlib"
 DEPEND=""
