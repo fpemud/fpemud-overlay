@@ -45,7 +45,8 @@ RDEPEND="${RDEPEND}
          mirrors_advertiser_klaus? ( www-servers/apache
                                      www-apache/mod_wsgi
                                      www-apps/klaus )
-         mirrors_advertiser_httpdir? ( www-servers/apache )"
+         mirrors_advertiser_httpdir? ( www-servers/apache )
+         mirrors_advertiser_mediawiki? ( www-apps/mediawiki )"
 
 DEPEND=""
 
