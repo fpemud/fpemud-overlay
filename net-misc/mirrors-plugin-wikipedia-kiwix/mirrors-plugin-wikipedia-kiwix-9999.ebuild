@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-r3
 
-EGIT_REPO_URI="https://github.com/mirrorshq/mirrors-plugin-wikipedia.git"
+EGIT_REPO_URI="https://github.com/mirrorshq/mirrors-plugin-wikipedia-kiwix.git"
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 
@@ -15,5 +15,6 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="net-misc/mirrors[mirrors_storage_mariadb,mirrors_advertiser_mediawiki]"
+RDEPEND="net-misc/mirrors[mirrors_advertiser_kiwix,mirrors_advertiser_httpdir,mirrors_advertiser_ftp,mirrors_advertiser_rsync]
+         dev-pyton/atomicwrites"
 DEPEND=""
