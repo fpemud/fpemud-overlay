@@ -19,7 +19,7 @@ SLOT="0"
 
 ALL_STORAGE=( mariadb mongodb neo4j )
 ALL_STORAGE_EXP=( "${ALL_STORAGE[@]/#/mirrors_storage_}" )
-ALL_ADVERTISERS=( ftp git klaus httpdir mediawiki rsync )
+ALL_ADVERTISERS=( httpdir ftp rsync git klaus mediawiki kiwix )
 ALL_ADVERTISERS_EXP=( "${ALL_ADVERTISERS[@]/#/mirrors_advertiser_}" )
 IUSE="zeroconf ${ALL_STORAGE_EXP[*]} ${ALL_ADVERTISERS_EXP[*]}"
 
@@ -40,13 +40,18 @@ RDEPEND="${RDEPEND}
          mirrors_storage_mongodb? ( dev-db/mongodb )
          mirrors_storage_neo4j? ( dev-db/neo4j-community )"
 RDEPEND="${RDEPEND}
-         mirrors_advertiser_ftp? ( dev-python/pyftpdlib )
+         mirrors_advertiser_httpdir? ( www-servers/apache
+                                       dev-python/atomicwrites )
+         mirrors_advertiser_ftp? ( dev-python/pyftpdlib
+                                   dev-python/atomicwrites )
+         mirrors_advertiser_rsync? ( dev-python/atomicwrites )
          mirrors_advertiser_git? ( dev-vcs/git )
          mirrors_advertiser_klaus? ( www-servers/apache
                                      www-apache/mod_wsgi
-                                     www-apps/klaus )
-         mirrors_advertiser_httpdir? ( www-servers/apache )
-         mirrors_advertiser_mediawiki? ( www-apps/mediawiki[mysql] )"
+                                     www-apps/klaus
+                                     dev-python/atomicwrites )
+         mirrors_advertiser_mediawiki? ( www-apps/mediawiki[mysql] )
+         mirrors_advertiser_kiwix? ( www-misc/kiwix-tools )"
 
 DEPEND=""
 
