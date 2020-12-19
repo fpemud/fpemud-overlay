@@ -36,7 +36,7 @@ RDEPEND="acct-user/mirrors
 RDEPEND="${RDEPEND}
          mirrors_storage_mariadb? ( dev-db/mariadb
                                     dev-python/mariadb-connector-python
-                                    dev-python/sqlpars )
+                                    dev-python/sqlparse )
          mirrors_storage_mongodb? ( dev-db/mongodb )
          mirrors_storage_neo4j? ( dev-db/neo4j-community )"
 RDEPEND="${RDEPEND}
@@ -46,7 +46,7 @@ RDEPEND="${RDEPEND}
                                      www-apache/mod_wsgi
                                      www-apps/klaus )
          mirrors_advertiser_httpdir? ( www-servers/apache )
-         mirrors_advertiser_mediawiki? ( www-apps/mediawiki )"
+         mirrors_advertiser_mediawiki? ( www-apps/mediawiki[mysql] )"
 
 DEPEND=""
 
