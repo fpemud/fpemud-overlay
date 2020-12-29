@@ -4,7 +4,9 @@
 
 EAPI=6
 
-inherit git-r3
+PYTHON_COMPAT=( python{3_6,3_7,3_8,3_9} )
+
+inherit distutils-r1 git-r3
 
 EGIT_REPO_URI="git://fpemud-git.local/rpool"
 SRC_URI=""
@@ -22,13 +24,29 @@ RDEPEND="acct-user/rpool
          dev-python/aiohttp
          dev-python/jinja
          dev-python/aiohttp-jinja2
-         dev-python/mariadb-connector-python
-         dev-db/mariadb"
+         dev-python/pymongo
+         dev-db/mongodb"
 DEPEND=""
+
+
+# install rpool program by make
+# install rpool python module by distutils
 
 src_prepare() {
 	eapply_user
 	if ! use zeroconf ; then
 		sed -i -e "s/self.avahiSupport = .*/self.avahiSupport = False/g" "${WORKDIR}/${P}/lib/rp_param.py"
 	fi
+
+	distutils-r1_src_prepare
+}
+
+src_compile() {
+	emake || die "emake failed"
+	distutils-r1_src_compile
+}
+
+src_install() {
+	emake DESTDIR="${D}" install
+	distutils-r1_src_install
 }
