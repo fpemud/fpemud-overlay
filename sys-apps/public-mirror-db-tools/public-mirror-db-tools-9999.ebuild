@@ -16,5 +16,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND="dev-python/jsonschema
+        dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
