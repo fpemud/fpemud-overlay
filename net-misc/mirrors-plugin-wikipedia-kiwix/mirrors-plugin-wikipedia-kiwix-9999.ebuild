@@ -16,5 +16,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="net-misc/mirrors[mirrors_advertiser_kiwix,mirrors_advertiser_httpdir,mirrors_advertiser_ftp,mirrors_advertiser_rsync]
-         dev-python/atomicwrites"
+         dev-python/atomicwrites
+         dev-python/pysvn
+         net-misc/aria2"
 DEPEND=""
