@@ -3,11 +3,11 @@
 # $Header: $
 
 EAPI=6
-PYTHON_COMPAT=( python{3_6,3_7,3_8} )
+PYTHON_COMPAT=( python{3_6,3_7,3_8,3_9} )
 
 inherit distutils-r1 git-r3
 
-DESCRIPTION="Python module used for operating passwd/group/shadow in a strict manner"
+DESCRIPTION="Python module used for operating passwd/group/shadow in a strict manner."
 HOMEPAGE=""
 EGIT_REPO_URI="https://github.com/fpemud/strict_pgs.git"
 
