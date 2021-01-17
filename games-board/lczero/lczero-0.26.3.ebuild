@@ -16,7 +16,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND=""
-RDEPEND=""
+RDEPEND="sci-libs/tensorflow"
 
 S="${WORKDIR}/lc0-${PV}"
 

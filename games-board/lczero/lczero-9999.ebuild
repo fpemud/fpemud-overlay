@@ -15,5 +15,5 @@ SLOT="0"
 IUSE=""
 
 DEPEND=""
-RDEPEND=""
+RDEPEND="sci-libs/tensorflow"
 
