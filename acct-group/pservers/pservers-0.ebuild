@@ -7,4 +7,3 @@ inherit acct-group
 
 DESCRIPTION="pservers program group"
 ACCT_GROUP_ID=-1
-SLOT="0"

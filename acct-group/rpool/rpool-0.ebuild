@@ -7,4 +7,4 @@ inherit acct-group
 
 DESCRIPTION="RPool program group"
 ACCT_GROUP_ID=-1
-SLOT="0"
+
