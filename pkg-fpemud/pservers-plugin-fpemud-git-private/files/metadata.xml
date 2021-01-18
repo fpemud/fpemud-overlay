@@ -3,6 +3,6 @@
   <server id="fpemud-git-private">
     <domain-name>fpemud-git.private</domain-name>
     <server-type>git</server-type>
-    <advertise-type>klaus</advertise-type>
+    <advertise-type>http</advertise-type>
   </server>
 </plugin>
