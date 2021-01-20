@@ -4,5 +4,6 @@
     <domain-name>fpemud-git.private</domain-name>
     <server-type>git</server-type>
     <advertise-type>http</advertise-type>
+    <advertise-type>git</advertise-type>
   </server>
 </plugin>
