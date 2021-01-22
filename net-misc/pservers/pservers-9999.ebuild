@@ -29,3 +29,17 @@ RDEPEND="${RDEPEND}
          www-apps/klaus
          dev-python/pyftpdlib"
 DEPEND=""
+
+
+# install pservers program by make
+# install pservers python module by distutils
+
+src_compile() {
+        emake || die "emake failed"
+        distutils-r1_src_compile
+}
+
+src_install() {
+        emake DESTDIR="${D}" install
+        distutils-r1_src_install
+}
