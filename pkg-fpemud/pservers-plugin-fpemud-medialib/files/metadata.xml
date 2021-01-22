@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<plugin id="fpemud-medialib">
-  <server id="fpemud-medialib">
-    <domain-name>fpemud-medialib.private</domain-name>
-    <server-type>file</server-type>
-    <advertise-type>http</advertise-type>
-    <advertise-type>ftp</advertise-type>
-  </server>
-</plugin>
