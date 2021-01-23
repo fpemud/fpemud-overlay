@@ -4,8 +4,7 @@
 
 EAPI="7"
 
-
-DESCRIPTION="pservers plugin for hosting fpemud's private gentoo distfiles"
+DESCRIPTION="private server for hosting fpemud's private gentoo distfiles"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="*"
@@ -17,7 +16,7 @@ DEPEND=""
 S="${WORKDIR}"
 
 src_install() {
-        MYPATH="/usr/lib64/pservers/plugins/fpemud-distfiles-private"
+        MYPATH="/usr/lib/pservers/servers.d"
 	dodir "$MYPATH"
-	cp "${FILESDIR}/metadata.xml" "${D}${MYPATH}"
+	cp ${FILESDIR}/* "${D}${MYPATH}"
 }
