@@ -23,6 +23,7 @@ src_unpack() {
 	rm -f "${WORKDIR}/tmp/uninst.exe.nsis"
 	7z x "${WORKDIR}/tmp/app.7z" -o"${WORKDIR}/tmp"
 	rm -f "${WORKDIR}/tmp/app.7z"
+	find "${WORKDIR}/tmp" -type d | xargs chmod 755		# don't know why the extracted directories have permission 700, change them
 }
 
 src_prepare() {

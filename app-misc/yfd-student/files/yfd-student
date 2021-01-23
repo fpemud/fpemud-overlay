@@ -78,7 +78,7 @@ create_wine_dir "$DATADIR"
 
 # Make links of "$APPDIR/*" to "$DATADIR"
 if [ ! -e "$DATADIR/drive_c/yfd-student" ] ; then
-    create_link "$APPDIR/yfd-student" "$DATADIR/drive_c"
+    create_link "$APPDIR" "$DATADIR/drive_c"
 fi
 
 # run the application
