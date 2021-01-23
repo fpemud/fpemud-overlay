@@ -77,10 +77,10 @@ CFGDIR=			# fill by ebuild
 create_wine_dir "$DATADIR"
 
 # Make links of "$APPDIR/*" to "$DATADIR"
-if [ ! -e "$DATADIR/drive_c/Xes_Live_Client" ] ; then
-    create_link "$APPDIR/Xes_Live_Client" "$DATADIR/drive_c"
+if [ ! -e "$DATADIR/drive_c/yfd-student" ] ; then
+    create_link "$APPDIR/yfd-student" "$DATADIR/drive_c"
 fi
 
 # run the application
-cd "$DATADIR/drive_c/Xes_Live_Client"
-WINEPREFIX="$DATADIR" wine pcs.exe
+cd "$DATADIR/drive_c/yfd-student"
+WINEPREFIX="$DATADIR" wine 猿辅导.exe

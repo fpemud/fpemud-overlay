@@ -18,9 +18,11 @@ DEPEND="app-arch/p7zip"
 RDEPEND="virtual/wine[abi_x86_32]"
 
 src_unpack() {
-	7z x "${DISTDIR}/xes_live_win_v${PV}.exe" -o"${WORKDIR}/tmp"
-	mv "${WORKDIR}/tmp/\$LOCALAPPDATA/Xes_Live_Client/${PV}" "${WORKDIR}/Xes_Live_Client"
-	find "${WORKDIR}/Xes_Live_Client" -type d | xargs chmod 755
+	7z x "${DISTDIR}/yfdstudent-${PV}-installer.exe" -o"${WORKDIR}/tmp"
+	rm -rf "${WORKDIR}/tmp/\$PLUGINSDIR"
+	rm -f "${WORKDIR}/tmp/uninst.exe.nsis"
+	7z x "${WORKDIR}/tmp/app.7z" -o"${WORKDIR}/tmp"
+	rm -f "${WORKDIR}/tmp/app.7z"
 }
 
 src_prepare() {
@@ -31,7 +33,7 @@ src_prepare() {
 
 src_install() {
 	dodir "opt/${PN}"
-	cp -r "Xes_Live_Client" "${D}/opt/${PN}"
+	cp -r tmp/* "${D}/opt/${PN}"
 
 	dobin "${PN}"
 	#doicon "${DISTDIR}/${PN}.png"
