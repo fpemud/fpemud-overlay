@@ -21,7 +21,7 @@ ALL_STORAGE=( mariadb mongodb neo4j )
 ALL_STORAGE_EXP=( "${ALL_STORAGE[@]/#/mirrors_storage_}" )
 ALL_ADVERTISERS=( httpdir ftp rsync git klaus mediawiki kiwix )
 ALL_ADVERTISERS_EXP=( "${ALL_ADVERTISERS[@]/#/mirrors_advertiser_}" )
-IUSE="zeroconf ${ALL_STORAGE_EXP[*]} ${ALL_ADVERTISERS_EXP[*]}"
+IUSE="pservers zeroconf ${ALL_STORAGE_EXP[*]} ${ALL_ADVERTISERS_EXP[*]}"
 
 RDEPEND="acct-user/mirrors
          acct-group/mirrors
@@ -32,7 +32,9 @@ RDEPEND="acct-user/mirrors
          dev-python/aiohttp-jinja2
          dev-python/dbus-python
          dev-python/python-prctl
-         dev-python/psutil"
+         dev-python/psutil
+         pservers? ( net-misc/pservers )
+         zeroconf? ( net-dns/avahi )"
 RDEPEND="${RDEPEND}
          mirrors_storage_mariadb? ( dev-db/mariadb
                                     dev-python/mariadb-connector-python
@@ -61,6 +63,9 @@ DEPEND=""
 
 src_prepare() {
 	eapply_user
+	if ! use pservers ; then
+		sed -i -e "s/self.pserversSupport = .*/self.pserversSupport = False/g" "${WORKDIR}/${P}/lib/mc_param.py"
+	fi
 	if ! use zeroconf ; then
 		sed -i -e "s/self.avahiSupport = .*/self.avahiSupport = False/g" "${WORKDIR}/${P}/lib/mc_param.py"
 	fi
