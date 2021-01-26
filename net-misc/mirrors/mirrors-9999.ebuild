@@ -98,10 +98,14 @@ pkg_extra_files()
 {
         echo "/etc/mirrors"
         echo "/etc/mirrors/***"
+
         echo "/var/lib/mirrors"
-        echo "/var/lib/mirrors/***"
+
         echo "/var/cache/mirrors"
-        echo "/var/cache/mirrors/***"
+
         echo "/var/log/mirrors"
-        echo "/var/log/mirrors/***"
+        echo "/var/log/mirrors/mirrors.out"
+        echo "/var/log/mirrors/main-httpd.log"
+        echo "/var/log/mirrors/advertiser-*"
+        echo "/var/log/mirrors/advertiser-*/***"
 }
