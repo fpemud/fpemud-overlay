@@ -6,7 +6,7 @@ EAPI=5
 
 DESCRIPTION="The .iso image of Microsoft Windows 10 setup DVD (x64)"
 HOMEPAGE="http://www.microsoft.com/en-us/windows"
-SRC_URI="ftp://fpemud-distfiles.local/en_windows_10_x64_preview.iso"
+SRC_URI="http://fpemud-distfiles.local/pub/en_windows_10_x64_preview.iso"
 
 LICENSE="unknown"
 SLOT="0"

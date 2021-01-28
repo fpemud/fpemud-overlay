@@ -7,7 +7,7 @@ inherit eutils
 
 DESCRIPTION="Xue Er Si Live Client"
 HOMEPAGE="https://www.xueersi.com"
-SRC_URI="ftp://fpemud-distfiles.local/xes_live_win_v${PV}.exe"
+SRC_URI="http://fpemud-distfiles.local/pub/xes_live_win_v${PV}.exe"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"

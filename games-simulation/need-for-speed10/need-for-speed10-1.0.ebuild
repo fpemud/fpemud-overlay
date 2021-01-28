@@ -7,7 +7,7 @@ inherit eutils games check-reqs
 
 DESCRIPTION="Need For Speed - Carbon"
 HOMEPAGE="http://www.ea.com/need-for-speed-carbon"
-SRC_URI="ftp://fpemud-distfiles.local/Need.for.Speed.Carbon.iso"
+SRC_URI="http://fpemud-distfiles.local/pub/Need.for.Speed.Carbon.iso"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"

@@ -7,7 +7,7 @@ inherit games
 
 DESCRIPTION="Counter Strike: Source"
 HOMEPAGE="http://orange.half-life2.com/portal.html"
-SRC_URI="ftp://fpemud-distfiles.local/Counter-Strike-Source.tar.gz"
+SRC_URI="http://fpemud-distfiles.local/pub/Counter-Strike-Source.tar.gz"
 
 LICENSE="unknown"
 SLOT="0"

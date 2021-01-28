@@ -7,15 +7,15 @@ inherit eutils games check-reqs
 
 DESCRIPTION="Need For Speed 9 - Most Wanted Black Edition"
 HOMEPAGE="http://www.ea.com/need-for-speed-most-wanted"
-SRC_URI="ftp://fpemud-distfiles.local/${PN}.png
-         ftp://fpemud-distfiles.local/Need.for.Speed.Most.Wanted.Black.Edition.zh_TW.CD1.iso
-         ftp://fpemud-distfiles.local/Need.for.Speed.Most.Wanted.Black.Edition.zh_TW.CD2.iso
-         ftp://fpemud-distfiles.local/Need.for.Speed.Most.Wanted.Black.Edition.zh_TW.CD3.iso
-         ftp://fpemud-distfiles.local/Need.for.Speed.Most.Wanted.Black.Edition.zh_TW.CD4.iso
-         ftp://fpemud-distfiles.local/${PN}_update_zh_1.3.zip
-         ftp://fpemud-distfiles.local/${PN}_en_US.reg
-         ftp://fpemud-distfiles.local/${PN}_zh_TW.reg
-         ftp://fpemud-distfiles.local/nfs9_cd1.zip"
+SRC_URI="http://fpemud-distfiles.local/pub/${PN}.png
+         http://fpemud-distfiles.local/pub/Need.for.Speed.Most.Wanted.Black.Edition.zh_TW.CD1.iso
+         http://fpemud-distfiles.local/pub/Need.for.Speed.Most.Wanted.Black.Edition.zh_TW.CD2.iso
+         http://fpemud-distfiles.local/pub/Need.for.Speed.Most.Wanted.Black.Edition.zh_TW.CD3.iso
+         http://fpemud-distfiles.local/pub/Need.for.Speed.Most.Wanted.Black.Edition.zh_TW.CD4.iso
+         http://fpemud-distfiles.local/pub/${PN}_update_zh_1.3.zip
+         http://fpemud-distfiles.local/pub/${PN}_en_US.reg
+         http://fpemud-distfiles.local/pub/${PN}_zh_TW.reg
+         http://fpemud-distfiles.local/pub/nfs9_cd1.zip"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"

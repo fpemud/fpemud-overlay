@@ -7,7 +7,7 @@ inherit games
 
 DESCRIPTION="Half-life2"
 HOMEPAGE="http://orange.half-life2.com/portal.html"
-SRC_URI="ftp://fpemud-distfiles.local/HL2.tar.gz"
+SRC_URI="http://fpemud-distfiles.local/pub/HL2.tar.gz"
 
 LICENSE="unknown"
 SLOT="0"

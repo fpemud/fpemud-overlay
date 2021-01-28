@@ -7,22 +7,22 @@ inherit eutils games
 
 DESCRIPTION="Command & Conquer - Redalert"
 HOMEPAGE="http://www.commandandconquer.com/en/games/bygameid/ra"
-SRC_URI="ftp://fpemud-distfiles.local/${PN}
-         ftp://fpemud-distfiles.local/${PN}.desktop
-         ftp://fpemud-distfiles.local/Command.And.Conquer.Red.Alert.CD1.iso
-         ftp://fpemud-distfiles.local/Command.And.Conquer.Red.Alert.CD2.iso
-         ftp://fpemud-distfiles.local/Command.And.Conquer.Red.Alert.Counterstrike.ccd
-         ftp://fpemud-distfiles.local/Command.And.Conquer.Red.Alert.Counterstrike.img
-         ftp://fpemud-distfiles.local/Command.And.Conquer.Red.Alert.Counterstrike.sub
-         ftp://fpemud-distfiles.local/Command.And.Conquer.Red.Alert.The.Aftermath.iso
-         ftp://fpemud-distfiles.local/${PN}_patch_antvqa.zip
-         ftp://fpemud-distfiles.local/${PN}_patch_TLF.zip
-         ftp://fpemud-distfiles.local/ra303eng.zip
-         ftp://fpemud-distfiles.local/ra303fra.zip
-         ftp://fpemud-distfiles.local/ra303ger.zip
-         ftp://fpemud-distfiles.local/${PN}_main.reg
-         ftp://fpemud-distfiles.local/${PN}_counterstrike.reg
-         ftp://fpemud-distfiles.local/${PN}_aftermath.reg"
+SRC_URI="http://fpemud-distfiles.local/pub/${PN}
+         http://fpemud-distfiles.local/pub/${PN}.desktop
+         http://fpemud-distfiles.local/pub/Command.And.Conquer.Red.Alert.CD1.iso
+         http://fpemud-distfiles.local/pub/Command.And.Conquer.Red.Alert.CD2.iso
+         http://fpemud-distfiles.local/pub/Command.And.Conquer.Red.Alert.Counterstrike.ccd
+         http://fpemud-distfiles.local/pub/Command.And.Conquer.Red.Alert.Counterstrike.img
+         http://fpemud-distfiles.local/pub/Command.And.Conquer.Red.Alert.Counterstrike.sub
+         http://fpemud-distfiles.local/pub/Command.And.Conquer.Red.Alert.The.Aftermath.iso
+         http://fpemud-distfiles.local/pub/${PN}_patch_antvqa.zip
+         http://fpemud-distfiles.local/pub/${PN}_patch_TLF.zip
+         http://fpemud-distfiles.local/pub/ra303eng.zip
+         http://fpemud-distfiles.local/pub/ra303fra.zip
+         http://fpemud-distfiles.local/pub/ra303ger.zip
+         http://fpemud-distfiles.local/pub/${PN}_main.reg
+         http://fpemud-distfiles.local/pub/${PN}_counterstrike.reg
+         http://fpemud-distfiles.local/pub/${PN}_aftermath.reg"
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="-* amd64 x86"

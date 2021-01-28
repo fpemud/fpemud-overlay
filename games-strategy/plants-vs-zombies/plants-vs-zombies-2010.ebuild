@@ -7,7 +7,7 @@ inherit eutils games
 
 DESCRIPTION="Plants vs Zombies the game"
 HOMEPAGE=""
-SRC_URI="ftp://fpemud-distfiles.local/${P}.zip"
+SRC_URI="http://fpemud-distfiles.local/pub/${P}.zip"
 LICENSE="unknown"
 SLOT="2010"
 KEYWORDS="-* amd64 x86"
