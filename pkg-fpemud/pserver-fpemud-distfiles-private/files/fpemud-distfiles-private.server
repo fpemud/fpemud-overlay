@@ -1,4 +1,4 @@
 {
     "domain-name": "fpemud-distfiles.private",
-    "server-type": "file"
+    "server-type": "keeley"
 }

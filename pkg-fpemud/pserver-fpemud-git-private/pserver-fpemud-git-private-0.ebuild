@@ -10,13 +10,14 @@ SLOT="0"
 KEYWORDS="*"
 IUSE=""
 
-RDEPEND="net-misc/pservers"
+RDEPEND="net-misc/pservers
+         net-misc/pservers-plugin-klaus"
 DEPEND=""
 
 S="${WORKDIR}"
 
 src_install() {
-        MYPATH="/usr/lib/pservers/servers.d"
+        MYPATH="/usr/lib/pservers/servers"
 	dodir "$MYPATH"
 	cp ${FILESDIR}/* "${D}${MYPATH}"
 }
