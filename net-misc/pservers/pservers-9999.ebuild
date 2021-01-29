@@ -22,11 +22,8 @@ RDEPEND="acct-user/pservers
          acct-group/pservers
          dev-python/dbus-python
          dev-python/python-prctl
-         dev-python/psutil"
-RDEPEND="${RDEPEND}
-         www-servers/apache[apache2_modules_proxy,apache2_modules_proxy_http]
-         www-apache/mod_wsgi
-         www-apps/klaus"
+         dev-python/psutil
+         www-servers/apache[apache2_modules_proxy,apache2_modules_proxy_http]"
 DEPEND=""
 
 
