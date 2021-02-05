@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{3_6,3_7,3_8,3_9} )
 
 inherit distutils-r1 git-r3
 
-EGIT_REPO_URI="git://fpemud-git.local/rpool"
+EGIT_REPO_URI="http://fpemud-git.local/rpool"
 SRC_URI=""
 
 DESCRIPTION="A Simple Resource Pool"
