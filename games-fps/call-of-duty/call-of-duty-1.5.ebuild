@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 inherit eutils gnome2-utils games
 
 DESCRIPTION="Call of Duty"
@@ -52,4 +52,8 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_icon_cache_update
+}
+
+pkg_extra_files() {
+	echo "~/.local/share/call-of-duty/***"
 }
