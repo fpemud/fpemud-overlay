@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=3
 inherit eutils games
 
 DESCRIPTION="Command & Conquer - Redalert"
@@ -100,8 +100,4 @@ src_install() {
 	domenu "${DISTDIR}/${PN}.desktop"
 
 	prepgamesdirs
-}
-
-pkg_extra_files() {
-	echo "~/.local/share/command-and-conquer-redalert/***"
 }

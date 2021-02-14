@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=3
 inherit eutils gnome2-utils games
 
 DESCRIPTION="Kerbal Space Program"
@@ -53,6 +53,3 @@ src_install() {
 #	gnome2_icon_cache_update
 #}
 
-pkg_cruft_filter() {
-	echo "~/.local/share/KSP_linux/***"
-}

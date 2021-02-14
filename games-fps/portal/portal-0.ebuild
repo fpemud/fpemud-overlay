@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=4
 
 inherit games
 
@@ -53,8 +53,4 @@ src_install() {
 	make_desktop_entry "${PN}" "Portal" "${PN}"
 
 	prepgamesdirs
-}
-
-pkg_extra_files() {
-	echo "~/.local/share/Portal/***"
 }

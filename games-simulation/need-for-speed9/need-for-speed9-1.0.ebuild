@@ -104,8 +104,3 @@ src_install() {
 
 	prepgamesdirs
 }
-
-pkg_cruft_filter() {
-	echo ".config/need-for-speed9/***"
-	echo ".local/share/need-for-speed9/***"
-}

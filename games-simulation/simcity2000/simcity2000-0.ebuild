@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=3
 inherit eutils games
 
 DESCRIPTION="SimCity 2000"
@@ -43,8 +43,4 @@ src_install() {
 	domenu "${DISTDIR}/${PN}.desktop"
 
 	prepgamesdirs
-}
-
-pkg_cruft_filter() {
-	echo "~/.local/share/simcity2000/***"
 }

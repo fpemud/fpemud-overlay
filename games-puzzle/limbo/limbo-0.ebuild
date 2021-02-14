@@ -48,7 +48,3 @@ src_install() {
 
 	prepgamesdirs
 }
-
-pkg_extra_files() {
-        echo "~/.local/share/limbo/***"
-}

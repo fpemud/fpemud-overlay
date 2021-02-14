@@ -64,8 +64,3 @@ src_install() {
 
 	prepgamesdirs
 }
-
-pkg_cruft_filter() {
-	echo "~/.config/need-for-speed10/***"
-	echo "~/.local/share/need-for-speed10/***"
-}

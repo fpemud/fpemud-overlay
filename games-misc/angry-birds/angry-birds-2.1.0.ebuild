@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=3
 inherit eutils gnome2-utils games
 
 DESCRIPTION="Angry Birds"
@@ -52,8 +52,4 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_icon_cache_update
-}
-
-pkg_cruft_filter() {
-	echo "~/.local/share/angry-birds/***"
 }
