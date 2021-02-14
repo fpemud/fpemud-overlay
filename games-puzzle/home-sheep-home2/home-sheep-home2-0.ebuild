@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Home Sheep Home 2 - A Little Epic"
@@ -53,4 +53,8 @@ src_install() {
 	domenu "${DISTDIR}/${PN}.desktop"
 
 	prepgamesdirs
+}
+
+pkg_extra_files() {
+	echo "~/.local/share/home-sheep-home2/***"
 }
