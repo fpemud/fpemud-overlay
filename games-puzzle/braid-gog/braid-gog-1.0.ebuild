@@ -57,3 +57,7 @@ src_install() {
 	games_make_wrapper "${MY_PN}" "./game/Braid.bin.x86" "${GAMES_PREFIX_OPT}/Braid"
 	prepgamesdirs
 }
+
+pkg_extra_files() {
+	echo "~/.Braid/***"
+}
