@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="F-22 Lightning 2"
@@ -40,4 +40,8 @@ src_install() {
 	domenu "${FILESDIR}/${PN}.desktop"
 
 	prepgamesdirs
+}
+
+pkg_cruft_filter() {
+	echo "~/.local/share/f22-lightning2/***"
 }
