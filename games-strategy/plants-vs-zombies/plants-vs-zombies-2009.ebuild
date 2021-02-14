@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Plants vs Zombies the game"
@@ -33,4 +33,8 @@ src_install() {
 	domenu "${FILESDIR}/${P}.desktop"
 
 	prepgamesdirs
+}
+
+pkg_extra_files() {
+	echo "~/.local/share/plants-vs-zombies-2009/***"
 }

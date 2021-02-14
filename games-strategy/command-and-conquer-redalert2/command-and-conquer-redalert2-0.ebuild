@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Command & Conquer - Redalert 2 with YURI's Revenge"
@@ -76,4 +76,8 @@ src_install() {
 	domenu "${DISTDIR}/${PN}-yuri.desktop"
 
 	prepgamesdirs
+}
+
+pkg_extra_files() {
+        echo "~/.local/share/command-and-conquer-redalert2/***"
 }
