@@ -52,3 +52,7 @@ pkg_postinst() {
 pkg_postrm() {
 	gnome2_icon_cache_update
 }
+
+pkg_cruft_filter() {
+	echo "~/.local/share/angry-birds-rio/***"
+}
