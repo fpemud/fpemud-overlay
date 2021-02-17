@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-inherit gnome2-utils git-2
+inherit gnome2-utils git-r3
 
 DESCRIPTION=""
 HOMEPAGE="https://github.com/fpemud/clippy"

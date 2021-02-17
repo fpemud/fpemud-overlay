@@ -104,3 +104,8 @@ src_install() {
 
 	prepgamesdirs
 }
+
+pkg_extra_files() {
+	echo ".config/need-for-speed9/***"
+	echo ".local/share/need-for-speed9/***"
+}

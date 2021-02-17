@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 
-inherit gnome2-utils git-2
+inherit gnome2-utils git-r3
 
 DESCRIPTION="Icon theme for Linux Mint"
 HOMEPAGE="https://github.com/linuxmint/mint-x-icons"

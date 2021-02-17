@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="CISCO HEAT"
@@ -37,4 +37,8 @@ src_install() {
 	domenu "${FILESDIR}/${PN}.desktop"
 
 	prepgamesdirs
+}
+
+pkg_extra_files() {
+	echo "~/.local/share/ciscoheat/***"
 }

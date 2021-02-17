@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="Manager for Microsoft Windows virtual machine"
 SRC_URI=""

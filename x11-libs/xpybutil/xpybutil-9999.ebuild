@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit git-2 eutils python
+inherit git-r3 eutils python
 
 DESCRIPTION="An incomplete xcb-util port plus some extras"
 HOMEPAGE="https://github.com/BurntSushi/xpybutil"

@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="GTK Theme for Linux Mint"
 HOMEPAGE="https://github.com/linuxmint/mint-x-theme"

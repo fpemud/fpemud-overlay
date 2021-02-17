@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 
 inherit eutils games
 
@@ -45,4 +45,9 @@ src_install() {
 	domenu "${DISTDIR}/${PN}.desktop"
 
 	prepgamesdirs
+}
+
+pkg_extra_files() {
+	echo "~/.config/gta3-vice-city/***"
+	echo "~/.local/share/gta3-vice-city/***"
 }

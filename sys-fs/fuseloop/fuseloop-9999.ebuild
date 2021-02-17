@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit git-2
+inherit git-r3
 
 EGIT_REPO_URI="https://github.com/jmattsson/fuseloop"
 SRC_URI=""

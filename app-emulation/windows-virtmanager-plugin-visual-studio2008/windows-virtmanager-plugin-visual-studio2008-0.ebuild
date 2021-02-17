@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="Microsoft Visual Studio 2008 plugin for windows-virtmanager"
 EGIT_REPO_URI="git://fpemud-workstation/windows-virtmanager-plugin-visual-studio2008.git"

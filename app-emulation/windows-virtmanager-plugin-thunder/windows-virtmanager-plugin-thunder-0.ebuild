@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="Thunder plugin for windows-virtmanager"
 EGIT_REPO_URI="git://fpemud-workstation/windows-virtmanager-plugin-thunder.git"

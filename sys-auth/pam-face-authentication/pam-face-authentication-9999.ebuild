@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit cmake-utils eutils git-2
+inherit cmake-utils eutils git-r3
 
 DESCRIPTION="This is Pluggable Authentication Module for Face based Authentication"
 HOMEPAGE="http://pam-face-authentication.org"

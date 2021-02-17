@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit git-2
+inherit git-r3
 EGIT_REPO_URI="https://coding.net/u/fpemud/p/fpemud-vcc"
 DESCRIPTION="Version Control System for fpemud's Configuration"
 SRC_URI=""

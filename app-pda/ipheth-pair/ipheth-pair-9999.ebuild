@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit autotools eutils git-2 udev
+inherit autotools eutils git-r3 udev
 
 DESCRIPTION="iPhone USB Ethernet Driver for Linux pairing helper"
 HOMEPAGE="http://giagio.com/wiki/moin.cgi/iPhoneEthernetDriver"

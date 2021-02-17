@@ -54,3 +54,7 @@ pkg_postrm() {
 	gnome2_icon_cache_update
 }
 
+
+pkg_extra_files() {
+	echo "~/.local/share/angry-birds-space/***"
+}

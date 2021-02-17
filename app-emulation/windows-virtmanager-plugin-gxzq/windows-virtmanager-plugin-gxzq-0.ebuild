@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="GuoXinZhengQuan Network Trading System plugin for windows-virtmanager"
 EGIT_REPO_URI="git://fpemud-workstation/windows-virtmanager-plugin-gxzq.git"

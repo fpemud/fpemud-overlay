@@ -5,7 +5,7 @@
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit distutils-r1 git-2
+inherit distutils-r1 git-r3
 
 DESCRIPTION="Simple GUI for Bup, a very efficient backup system"
 HOMEPAGE="https://github.com/emersion/bups"

@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="Victory Icon Theme, A Gtk Icon Theme for Linux"
 HOMEPAGE="https://github.com/newhoa/victory-icon-theme"

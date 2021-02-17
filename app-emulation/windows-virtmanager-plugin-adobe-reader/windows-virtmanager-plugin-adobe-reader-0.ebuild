@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="Adobe Reader plugin for windows-virtmanager"
 EGIT_REPO_URI="git://fpemud-workstation/windows-virtmanager-plugin-adobe-reader.git"

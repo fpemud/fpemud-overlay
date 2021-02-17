@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="7-zip plugin for windows-virtmanager"
 EGIT_REPO_URI="git://fpemud-workstation/windows-virtmanager-plugin-p7zip.git"

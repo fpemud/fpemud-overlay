@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit git-2 multilib
+inherit git-r3 multilib
 
 DESCRIPTION="Synchronization for GNOME"
 HOMEPAGE="http://www.conduit-project.org"

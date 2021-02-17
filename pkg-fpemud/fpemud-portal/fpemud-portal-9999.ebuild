@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-inherit user git-2
+inherit user git-r3
 
 EGIT_REPO_URI="https://github.com/fpemud/fpemud-portal.git"
 SRC_URI=""

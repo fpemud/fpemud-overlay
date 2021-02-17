@@ -5,7 +5,7 @@
 EAPI="4"
 
 #EGIT_REPO_URI="https://github.com/fpemud/fpemud-portage.git"
-#inherit git-2
+#inherit git-r3
 SRC_URI=""
 KEYWORDS="-* amd64 x86"
 DESCRIPTION="Web site viewer for Element Desktop"

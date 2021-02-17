@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit git-2 fdo-mime eutils
+inherit git-r3 fdo-mime eutils
 
 DESCRIPTION="DMovie"
 HOMEPAGE="https://github.com/fpemud/dmovie"

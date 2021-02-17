@@ -6,7 +6,7 @@ EAPI=5
 
 EGIT_REPO_URI="git://github.com/n1k0/${PN}.git"
 EGIT_COMMIT="1.1-beta5"
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="Navigation scripting & testing utility written in Javascript and based on PhantomJS"
 HOMEPAGE="http://casperjs.org/"

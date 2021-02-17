@@ -6,7 +6,7 @@ EAPI="4"
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/fpemud/selfnetd.git"
-	inherit git-2
+	inherit git-r3
 	SRC_URI=""
 	KEYWORDS="-* amd64 x86"
 else

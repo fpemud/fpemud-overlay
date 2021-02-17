@@ -5,7 +5,7 @@
 EAPI=4
 PYTHON_DEPEND=2
 
-inherit python git-2
+inherit python git-r3
 
 DESCRIPTION="Download scripts for xunlei vip users"
 HOMEPAGE="https://github.com/iambus/xunlei-lixian"
