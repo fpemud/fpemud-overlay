@@ -40,6 +40,7 @@ RDEPEND="sys-apps/systemd
          app-arch/xz-utils
          app-arch/zip
          sys-libs/tdb
+         dev-python/asyncio-pool
          dev-python/crcmod
          dev-python/lxml
          dev-python/passlib
