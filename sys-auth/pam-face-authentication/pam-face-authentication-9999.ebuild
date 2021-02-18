@@ -35,3 +35,7 @@ src_prepare() {
 	sed -i cmake/modules/FindOpenCV.cmake \
 		-e 's:${OpenCV_INSTALL_PATH}:/usr:' || die
 }
+
+pkg_extra_files() {
+        echo "~/.pam-face-authentication/***"
+}
