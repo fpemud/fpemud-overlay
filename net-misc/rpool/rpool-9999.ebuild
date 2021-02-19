@@ -50,3 +50,8 @@ src_install() {
 	emake DESTDIR="${D}" install
 	distutils-r1_src_install
 }
+
+pkg_extra_files() {
+	echo "/var/lib/rpool/***"
+	echo "/var/log/rpool/***"
+}
