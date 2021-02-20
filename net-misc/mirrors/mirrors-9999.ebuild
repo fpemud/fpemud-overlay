@@ -101,12 +101,13 @@ pkg_extra_files() {
 
 	echo "/var/cache/mirrors"
 
-	echo "/var/log/mirrors"
-	echo "/var/log/mirrors/mirrors.out"
-	echo "/var/log/mirrors/main-httpd.log"
-	for s in "${ALL_ADVERTISERS[@]}"; do
-		if ! use mirrors_advertiser_$s ; then
-			echo "/var/log/mirrors/advertiser-${s}/***"
-		fi
-	done
+	echo "/var/log/mirrors/***"
+#	echo "/var/log/mirrors"
+#	echo "/var/log/mirrors/mirrors.out"
+#	echo "/var/log/mirrors/main-httpd.log"
+#	for s in "${ALL_ADVERTISERS[@]}"; do
+#		if ! use mirrors_advertiser_$s ; then
+#			echo "/var/log/mirrors/advertiser-${s}/***"
+#		fi
+#	done
 }
