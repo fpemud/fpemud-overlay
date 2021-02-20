@@ -21,3 +21,7 @@ src_install() {
 	dodir "$MYPATH"
 	cp ${FILESDIR}/* "${D}${MYPATH}"
 }
+
+pkg_extra_files() {
+	echo "/var/lib/pservers/fpemud-medialib/***"
+}
