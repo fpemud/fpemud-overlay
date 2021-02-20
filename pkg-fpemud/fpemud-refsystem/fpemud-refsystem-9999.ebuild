@@ -67,3 +67,8 @@ RDEPEND="${RDEPEND}
 
 DEPEND="${RDEPEND}
         virtual/pkgconfig"
+
+pkg_extra_files() {
+	echo "/var/lib/portage/***"
+	echo "/var/cache/portage/***"
+}
