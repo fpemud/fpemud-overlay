@@ -17,3 +17,9 @@ IUSE=""
 
 RDEPEND="net-misc/mirrors[mirrors_advertiser_ftp,mirrors_advertiser_httpdir]"
 DEPEND=""
+
+pkg_extra_files() {
+	echo "/var/lib/mirrors/kernel/***"
+	echo "/var/cache/mirrors/kernel/***"
+	echo "/var/log/mirrors/mirror-site-kernel/***"
+}

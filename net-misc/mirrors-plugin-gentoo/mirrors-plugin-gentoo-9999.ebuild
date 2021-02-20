@@ -17,3 +17,13 @@ IUSE=""
 
 RDEPEND="net-misc/mirrors[mirrors_advertiser_ftp,mirrors_advertiser_httpdir,mirrors_advertiser_rsync]"
 DEPEND=""
+
+pkg_extra_files() {
+	echo "/var/lib/mirrors/gentoo/***"
+	echo "/var/cache/mirrors/gentoo/***"
+	echo "/var/log/mirrors/mirror-site-gentoo/***"
+
+	echo "/var/lib/mirrors/gentoo-portage/***"
+	echo "/var/cache/mirrors/gentoo-portage/***"
+	echo "/var/log/mirrors/mirror-site-gentoo-portage/***"
+}

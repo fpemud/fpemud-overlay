@@ -17,3 +17,9 @@ IUSE=""
 
 RDEPEND="net-misc/mirrors"
 DEPEND=""
+
+pkg_extra_files() {
+	echo "/var/lib/mirrors/dummy/***"
+	echo "/var/cache/mirrors/dummy/***"
+	echo "/var/log/mirrors/mirror-site-dummy/***"
+}

@@ -18,3 +18,9 @@ IUSE=""
 RDEPEND="net-misc/mirrors[mirrors_advertiser_git,mirrors_advertiser_klaus]
          dev-vcs/repo"
 DEPEND=""
+
+pkg_extra_files() {
+	echo "/var/lib/mirrors/aosp/***"
+	echo "/var/cache/mirrors/aosp/***"
+	echo "/var/log/mirrors/mirror-site-aosp/***"
+}

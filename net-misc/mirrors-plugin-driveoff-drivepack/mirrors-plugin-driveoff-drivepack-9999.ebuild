@@ -19,3 +19,9 @@ RDEPEND="net-misc/mirrors[mirrors_advertiser_ftp,mirrors_advertiser_httpdir]
          app-arch/p7zip
          sys-apps/file[python]"
 DEPEND=""
+
+pkg_extra_files() {
+	echo "/var/lib/mirrors/driveoff-drivepack/***"
+	echo "/var/cache/mirrors/driveoff-drivepack/***"
+	echo "/var/log/mirrors/mirror-site-driveoff-drivepack/***"
+}

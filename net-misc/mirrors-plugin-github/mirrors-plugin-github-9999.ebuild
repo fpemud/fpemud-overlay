@@ -18,3 +18,9 @@ IUSE=""
 RDEPEND="net-misc/mirrors[mirrors_advertiser_git,mirrors_advertiser_klaus]
          dev-python/PyGithub"
 DEPEND=""
+
+pkg_extra_files() {
+	echo "/var/lib/mirrors/github/***"
+	echo "/var/cache/mirrors/github/***"
+	echo "/var/log/mirrors/mirror-site-github/***"
+}

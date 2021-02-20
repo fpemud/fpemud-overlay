@@ -18,3 +18,9 @@ IUSE=""
 RDEPEND="net-misc/mirrors[mirrors_advertiser_httpdir]
          dev-python/bandersnatch"
 DEPEND=""
+
+pkg_extra_files() {
+	echo "/var/lib/mirrors/pypi/***"
+	echo "/var/cache/mirrors/pypi/***"
+	echo "/var/log/mirrors/mirror-site-pypi/***"
+}

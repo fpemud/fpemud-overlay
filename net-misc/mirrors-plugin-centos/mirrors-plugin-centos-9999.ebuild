@@ -17,3 +17,9 @@ IUSE=""
 
 RDEPEND="net-misc/mirrors[mirrors_advertiser_httpdir,mirrors_advertiser_rsync]"
 DEPEND=""
+
+pkg_extra_files() {
+	echo "/var/lib/mirrors/centos/***"
+	echo "/var/cache/mirrors/centos/***"
+	echo "/var/log/mirrors/mirror-site-centos/***"
+}

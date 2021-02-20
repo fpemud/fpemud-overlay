@@ -20,3 +20,9 @@ RDEPEND="net-misc/mirrors[mirrors_advertiser_httpdir,mirrors_advertiser_ftp,mirr
          dev-python/pysvn
          net-misc/aria2"
 DEPEND=""
+
+pkg_extra_files() {
+	echo "/var/lib/mirrors/stackexchange-kiwix/***"
+	echo "/var/cache/mirrors/stackexchange-kiwix/***"
+	echo "/var/log/mirrors/mirror-site-stackexchange-kiwix/***"
+}
