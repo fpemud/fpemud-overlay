@@ -104,6 +104,9 @@ pkg_extra_files() {
 	echo "/var/log/mirrors"
 	echo "/var/log/mirrors/mirrors.out"
 	echo "/var/log/mirrors/main-httpd.log"
-	echo "/var/log/mirrors/advertiser-*"
-	echo "/var/log/mirrors/advertiser-*/***"
+	for s in "${ALL_ADVERTISERS[@]}"; do
+		if ! use mirrors_advertiser_$s ; then
+			echo "/var/log/mirrors/advertiser-${s}/***"
+		fi
+	done
 }
