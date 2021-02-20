@@ -39,3 +39,14 @@ src_install() {
         emake DESTDIR="${D}" install
         distutils-r1_src_install
 }
+
+pkg_extra_files() {
+	echo "/etc/pservers/***"
+
+	echo "/var/lib/pservers"
+
+	echo "/var/log/pservers"
+	echo "/var/log/pservers/httpd-access.log"
+	echo "/var/log/pservers/httpd-error.log"
+	echo "/var/log/pservers/pservers.out"
+}
