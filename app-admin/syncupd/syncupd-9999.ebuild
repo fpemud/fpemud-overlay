@@ -26,3 +26,9 @@ src_prepare() {
 		sed -i -e "s/self.avahiSupport = .*/self.avahiSupport = False/g" "${WORKDIR}/${P}/lib/gbs_param.py"
 	fi
 }
+
+pkg_extra_files() {
+	echo "/etc/syncupd/***"
+	echo "/var/cache/syncupd/***"
+	echo "/var/log/syncupd/***"
+}
