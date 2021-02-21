@@ -22,4 +22,8 @@ pkg_extra_files() {
 	echo "/var/lib/mirrors/centos/***"
 	echo "/var/cache/mirrors/centos/***"
 	echo "/var/log/mirrors/mirror-site-centos/***"
+
+	echo "/var/lib/mirrors/centos-altarch/***"
+	echo "/var/cache/mirrors/centos-altarch/***"
+	echo "/var/log/mirrors/mirror-site-centos-altarch/***"
 }
