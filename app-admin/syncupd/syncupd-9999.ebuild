@@ -30,5 +30,6 @@ src_prepare() {
 pkg_extra_files() {
 	echo "/etc/syncupd/***"
 	echo "/var/cache/syncupd/***"
+	echo "/var/lib/syncupd/***"
 	echo "/var/log/syncupd/***"
 }
