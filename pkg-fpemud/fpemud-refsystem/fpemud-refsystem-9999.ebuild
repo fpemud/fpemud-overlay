@@ -69,7 +69,6 @@ DEPEND="${RDEPEND}
         virtual/pkgconfig"
 
 pkg_extra_files() {
-	echo "/usr/src/linux/***"
 	echo "/var/cache/portage/***"
 	echo "/var/lib/portage/***"
 }
